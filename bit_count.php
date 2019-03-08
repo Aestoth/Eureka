@@ -13,7 +13,7 @@ function from_bitfield($bitfield) {
   $halfdays = array();
   for ($i = 0; $i < 14; $i++) {
     if ($bitfield & 1 == 1) {
-      $halfdays[] = $i; 
+      $halfdays[] = $i;
     }
     $bitfield >>= 1;
   }
@@ -24,7 +24,7 @@ function matching($bitfield1, $bitfield2) {
   return from_bitfield($bitfield1 & $bitfield2);
 }
 
-$values = [0,7,10,10];
+$values = [0,7,10];
 $bitfield = to_bitfield($values);
 print_r($values);
 echo "<br>";
@@ -32,5 +32,5 @@ print_r($bitfield);
 echo "<br>";
 print_r(from_bitfield($bitfield));
 echo "<br>";
-print_r(matching(201, 51));
+print_r(matching(7, 51));
 ?>

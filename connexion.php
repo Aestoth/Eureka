@@ -613,10 +613,9 @@ class Connexion {
     return $nombEtatProjet;
 }
 
-//Function Etreprise par Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function Get Entreprise liste de Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function getEtrepriseMotCles($idEtreprise) {
-
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT nom FROM MotCles m
@@ -633,10 +632,9 @@ function getEtrepriseMotCles($idEtreprise) {
 
 }
 
-//Function Etudiant par Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function Get Etudiant liste de Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function getEtudiantMotCles($idEtudiant) {
-
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT nom FROM MotCles m
@@ -655,13 +653,13 @@ function getEtudiantMotCles($idEtudiant) {
 
 
 
-//Function Projet par Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function Get Projet liste de Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function getProjetMotCles($idProjet) {
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT nom FROM MotCles m
-        INNER JOIN MotCles_projet 
+        INNER JOIN MotCles_projet
         ON idMotCles = m.Id
         WHERE idProjet = :Id");
 
@@ -674,6 +672,59 @@ function getProjetMotCles($idProjet) {
 
 }
 
+
+//Function Etudiant by mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function geEtudiantByMotCles($idMotCles){
+
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM MotCles_etudiant me
+    INNER JOIN Etudiant e
+    ON me.idEtudiant = e.id
+    where me.idMotCles = :idMotCles");
+     $requete_prepare->execute(array("idMotCles"=>$idMotCles));
+
+     $resultat = $requete_prepare->fetchObject("Etudiant");
+     return $resultat;
+
+}
+
+
+//Function Etreprise by mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function geEtudiantByMotCles($idMotCles){
+
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM MotCles_entreprise me
+    INNER JOIN Entreprise e
+    ON me.idEntreprise = e.id
+    where me.idMotCles = :idMotCles");
+     $requete_prepare->execute(array("idMotCles"=>$idMotCles));
+
+     $resultat = $requete_prepare->fetchObject("Entreprise");
+     return $resultat;
+
+}
+
+
+//Function Projet by mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function geEtudiantByMotCles($idMotCles){
+
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM MotCles_projet me
+    INNER JOIN Projet e
+    ON me.idProjet = e.id
+    where me.idMotCles = :idMotCles");
+     $requete_prepare->execute(array("idMotCles"=>$idMotCles));
+
+     $resultat = $requete_prepare->fetchObject("Projet");
+     return $resultat;
+
+}
 
 
 

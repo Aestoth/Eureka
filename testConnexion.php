@@ -11,7 +11,7 @@ if($appliBD != null){
 }
 
 
-//$etudiant = $appliBD->insertEtudiant('Mascarenhas', 'Gutembergue', 'blablabla', 'gmascarenhas3001@gmail.com', '079-425-8576', 'avatar', 7);
+//$etudiant = $appliBD->insertEtudiant('Luiz', 'Inacio', 'blablabla', 'gmascarenhas3001@gmail.com', '079-425-8576', 'avatar', 7);
 
 //var_dump($etudiant);
 
@@ -42,7 +42,7 @@ if($appliBD != null){
 //$categories = $appliBD->insertCategories('Autres');
 //echo $categories;
 
-//$motCles = $appliBD->insertMotCles("Internet");
+//$motCles = $appliBD->insertMotCles("Graphisme");
 //echo $motCles;
 
 //$motClesEntreprise = $appliBD->insertMotCles_entreprise(1, 2);
@@ -54,8 +54,10 @@ if($appliBD != null){
 
 //$setEntCntact1 = $appliBD->setEntrepriseContact1(1, " de Castro", "Josue", "josue@gmail.com");
 
+//$motCles_etudiant = $appliBD->insertMotCles_etudiant(1, 6);
 
-
+//$motClesEtudiant = $appliBD->geEtudiantByMotCles(3);
+//echo $motClesEtudiant->getNom();
 
 
 
