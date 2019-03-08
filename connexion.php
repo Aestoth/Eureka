@@ -553,6 +553,23 @@ class Connexion {
 
 }
 
+//Function Set Etudiant telephone/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEtudiantTelephone($id, $telephone) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Etudiant
+      SET telephone = '$telephone'
+       WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   //print_r($requete_prepare->errorInfo());
+
+   $newTelephone = $requete_prepare->fetchObject("Etudiant");
+    return $newTelephone;
+
+}
+
 //Function Set Etudiant Jour Disponibles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function setEtudiantJourDisponibles($id, $jourDisponibles) {
@@ -635,10 +652,10 @@ function getEtrepriseMotCles($idEtreprise) {
 
 //Function Get Etudiant liste de Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function getEtudiantMotCles($idEtudiant) {
+function getEtudiantListeMotCles($idEtudiant) {
 
     $requete_prepare=$this->connexion->prepare(
-        "SELECT nom FROM MotCles m
+        "SELECT * FROM MotCles m
         INNER JOIN MotCles_etudiant
         ON idMotCles = m.Id
         WHERE idEtudiant = :Id");
@@ -694,7 +711,7 @@ public function geEtudiantByMotCles($idMotCles){
 
 //Function Etreprise by mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function geEtudiantByMotCles($idMotCles){
+public function getEntrepriseByMotCles($idMotCles){
 
    $requete_prepare = $this->connexion->prepare(
    "SELECT *
@@ -712,7 +729,7 @@ public function geEtudiantByMotCles($idMotCles){
 
 //Function Projet by mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function geEtudiantByMotCles($idMotCles){
+public function getProjetByMotCles($idMotCles){
 
    $requete_prepare = $this->connexion->prepare(
    "SELECT *

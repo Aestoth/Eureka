@@ -1,8 +1,9 @@
 <?php
 
 $MotClesEtudiant = [2, 3, 4];
-$MotClesProjet = [8, 6, 5];
-$MotClesEntreprise = [9, 1, 5];
+$MotClesProjet = [8, 1, 5];
+$MotClesEntreprise = [2, 4, 5];
+
 $match = 0;
 foreach ($MotClesEtudiant as $motClesE) {
   foreach ($MotClesProjet as $motClesP) {
@@ -20,8 +21,13 @@ foreach ($MotClesEtudiant as $motClesE) {
     }
   }
 
+if($match != null){
 echo $match;
 
+} else{
+echo "Pas de Match!";
+
+}
 
 
 ?>

@@ -60,7 +60,8 @@ if($appliBD != null){
 //echo $motClesEtudiant->getNom();
 
 
-
+$listeMotCles = $appliBD->getEtudiantListeMotCles(1);
+var_dump($listeMotCles);
 
 
 
