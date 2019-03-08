@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
@@ -134,167 +135,98 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-envelope-o"></i> Mailbox</h1>
-          <p>A Mailbox page sample</p>
+          <h1><i class="fas fa-folder-plus"></i> Nouveau Projet</h1>
+          <p>Full Calander page for managing events</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Mailbox</a></li>
+          <li class="breadcrumb-item"><a href="#">Calendar</a></li>
         </ul>
       </div>
       <div class="row">
-        <div class="col-md-3"><a class="mb-2 btn btn-primary btn-block" href="">Compose Mail</a>
-          <div class="tile p-0">
-            <h4 class="tile-title folder-head">Folders</h4>
+        <div class="col">
+          <div class="tile">
             <div class="tile-body">
-              <ul class="nav nav-pills flex-column mail-nav">
-                <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-inbox fa-fw"></i> Inbox<span class="badge badge-pill badge-primary float-right">12</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-envelope-o fa-fw"></i> Sent</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-file-text-o fa-fw"></i> Drafts</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-filter fa-fw"></i> Junk <span class="badge badge-pill badge-primary float-right">8</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-trash-o fa-fw"></i> Trash</a></li>
-              </ul>
+              <form>
+              <div class="row mt-3">
+                <div class="form-group col-md-6">
+                  <label class="control-label">Titre</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="control-label">Photo</label>
+                  <input class="form-control" type="file" placeholder="Enter email address">
+                </div>
+              </div>
+                <div class="form-group">
+                  <label class="control-label">Description</label>
+                  <textarea class="form-control" rows="4" placeholder="Enter your address"></textarea>
+                </div>
+
+                <div class="col-md-6">
+                  <h4>Dates Possibles</h4>
+                  <div class="tile">
+                    <div class="tile-body">
+                        <div class="form-group row">
+                          <label class="control-label col-md-3">Date 1</label>
+                          <div class="col-md-6">
+                            <input class="form-control" type="date" placeholder="Enter full name">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="control-label col-md-3">Date 2</label>
+                          <div class="col-md-8">
+                            <input class="form-control col-md-8" type="date" placeholder="Enter email address">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="control-label col-md-3">Date 3</label>
+                          <div class="col-md-8">
+                            <input class="form-control col-md-8" type="date" placeholder="Enter email address">
+                          </div>
+                        </div>
+                   </div>
+                </div>
+           </div>
+        <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">I accept the terms and conditions
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-3">
+            <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Register</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+          </div>
+        </div>
+      </form>
+            </div>
+            <div class="tile-footer">
+
             </div>
           </div>
         </div>
-        <div class="col-md-9">
+        
+        <div class="clearix"></div><!--Class CLEARIX/////////////////////////////////////777777-->
+
+        <div class="col-md-12">
           <div class="tile">
-            <div class="mailbox-controls">
-              <div class="animated-checkbox">
-                <label>
-                  <input type="checkbox"><span class="label-text"></span>
-                </label>
-              </div>
-              <div class="btn-group">
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-trash-o"></i></button>
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-reply"></i></button>
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-share"></i></button>
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-refresh"></i></button>
-              </div>
-            </div>
-            <div class="table-responsive mailbox-messages">
-              <table class="table table-hover">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star-o"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td><i class="fa fa-paperclip"></i></td>
-                    <td>8 mins ago</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td><b>A report on some good project</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td></td>
-                    <td>15 mins ago</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star-o"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td><i class="fa fa-paperclip"></i></td>
-                    <td>30 mins ago</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td></td>
-                    <td>25 December</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star-o"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td><i class="fa fa-paperclip"></i></td>
-                    <td>20 December</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td></td>
-                    <td>20 December</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td><i class="fa fa-paperclip"></i></td>
-                    <td>20 December</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="animated-checkbox">
-                        <label>
-                          <input type="checkbox"><span class="label-text"> </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td><a href="#"><i class="fa fa-star-o"></i></a></td>
-                    <td><a href="read-mail.html">John Doe</a></td>
-                    <td class="mail-subject"><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td>
-                    <td></td>
-                    <td>20 December</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="text-right"><span class="text-muted mr-2">Showing 1-15 out of 60</span>
-              <div class="btn-group">
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-chevron-left"></i></button>
-                <button class="btn btn-primary btn-sm" type="button"><i class="fa fa-chevron-right"></i></button>
-              </div>
+            <h3 class="tile-title">Subscribe</h3>
+            <div class="tile-body">
+              <form class="row">
+                <div class="form-group col-md-3">
+                  <label class="control-label">Name</label>
+                  <input class="form-control" type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group col-md-3">
+                  <label class="control-label">Email</label>
+                  <input class="form-control" type="text" placeholder="Enter your email">
+                </div>
+                <div class="form-group col-md-4 align-self-end">
+                  <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Subscribe</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

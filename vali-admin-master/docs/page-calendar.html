@@ -22,6 +22,26 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+    .app-header {
+      background-color: #ff4444;
+    }
+
+    .app-header__logo {
+      background-color: #f44336;
+    }
+
+    footer {
+            background-color: #f44336;
+        }
+
+    .app-sidebar__toggle:focus, .app-sidebar__toggle:hover{
+      background: rgba(0, 0, 0, 0.1);
+      color: #f6f6f6;
+            }
+
+    </style>
+
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
@@ -135,7 +155,7 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-calendar"></i> Calendar</h1>
+          <h1><i class="fas fa-sign-in-alt"></i> Inscription Entreprise</h1>
           <p>Full Calander page for managing events</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -144,25 +164,183 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <div class="tile row">
-            <div class="col-md-3">
-              <div id="external-events">
-                <h4 class="mb-4">Draggable Events</h4>
-                <div class="fc-event">My Event 1</div>
-                <div class="fc-event">My Event 2</div>
-                <div class="fc-event">My Event 3</div>
-                <div class="fc-event">My Event 4</div>
-                <div class="fc-event">My Event 5</div>
-                <p class="animated-checkbox mt-20">
-                  <label>
-                    <input id="drop-remove" type="checkbox"><span class="label-text">Remove after drop</span>
-                  </label>
-                </p>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Information Société</h3>
+            <div class="tile-body">
+              <form>
+                <div class="form-group">
+                  <label class="control-label">Name</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Password</label>
+                  <input class="form-control" type="password" placeholder="*******">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">URL Site</label>
+                  <input class="form-control" type="email" placeholder="www.societe.com">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Address</label>
+                  <textarea class="form-control" rows="4" placeholder="Enter your address"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Description</label>
+                  <textarea class="form-control" rows="4" placeholder="Enter your address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword4">Centre d'interet</label><br>
+                    <select name="categories" class="custom-select">
+                <option selected>Centre d'interet</option>
+                <option value="norriture">Internet</option>
+                <option value="nettoyage">Comunication</option>
+                <option value="locaux">Droit</option>
+                <option value="autres">Commerce</option>
+              </select>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Logo</label>
+                  <input class="form-control" type="file">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Facebook</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Linkdin</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Instagram</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                  <label class="control-label">Secteur d'ativité</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group col-md-4">
+                  <label class="control-label">Nombres Collaborateur</label>
+                  <input class="form-control" type="text" placeholder="Enter full name">
+                </div>
+            </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox">I accept the terms and conditions
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tile-footer">
+              <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Register</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Contacts</h3>
+              <h5 class="mt-3 mb-4">Contact 1</h5>
+            <div class="tile-body">
+              <form class="form-horizontal">
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Nom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Prénom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Email</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="email" placeholder="Enter email address">
+                  </div>
+                </div>
+                <h5 class="mt-3 mb-4">Contact 2</h5>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Nom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Prénom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Email</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="email" placeholder="Enter email address">
+                  </div>
+                </div>
+                <h5 class="mt-3 mb-4">Contact 3</h5>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Nom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Prénom</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="Enter full name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Email</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="email" placeholder="Enter email address">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-8 col-md-offset-3">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox">I accept the terms and conditions
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tile-footer">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-3">
+                  <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Register</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+                </div>
               </div>
             </div>
-            <div class="col-md-9">
-              <div id="calendar"></div>
+          </div>
+        </div>
+        <div class="clearix"></div>
+        <div class="col-md-12">
+          <div class="tile">
+            <h3 class="tile-title">Subscribe</h3>
+            <div class="tile-body">
+              <form class="row">
+                <div class="form-group col-md-3">
+                  <label class="control-label">Name</label>
+                  <input class="form-control" type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group col-md-3">
+                  <label class="control-label">Email</label>
+                  <input class="form-control" type="text" placeholder="Enter your email">
+                </div>
+                <div class="form-group col-md-4 align-self-end">
+                  <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Subscribe</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
