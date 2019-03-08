@@ -2,7 +2,7 @@
 
 $MotClesEtudiant = [2, 3, 4];
 $MotClesProjet = [8, 6, 5];
-$MotClesEntreprise = [3, 1, 2];
+$MotClesEntreprise = [9, 1, 5];
 $match = 0;
 foreach ($MotClesEtudiant as $motClesE) {
   foreach ($MotClesProjet as $motClesP) {
@@ -12,7 +12,6 @@ foreach ($MotClesEtudiant as $motClesE) {
   }
 }
 
-//if($match != null){
   foreach ($MotClesEtudiant as $motClesE) {
     foreach ($MotClesEntreprise as $motClesEnt) {
       if($motClesE == $motClesEnt){
@@ -20,7 +19,7 @@ foreach ($MotClesEtudiant as $motClesE) {
      }
     }
   }
-//}
+
 echo $match;
 
 

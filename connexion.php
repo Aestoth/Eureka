@@ -478,7 +478,7 @@ class Connexion {
 
 }
 
-//Function Set Contac Entreprise 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function Set Entreprise Contac 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function setEntrepriseContact2($id, $contactNom2, $contactPrenom2, $contactEmail2) {
     $requete_prepare = $this->connexion->prepare(
@@ -516,7 +516,7 @@ class Connexion {
 
 //Function Set Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function setEtudiant($id, $nom, $prenom, $description, $email, $avatar, $jourDisponibles) {
+  public function setEtudiant($id, $nom, $prenom, $description, $email, $telephone, $avatar, $jourDisponibles) {
 
     $requete_prepare = $this->connexion->prepare(
      "UPDATE Etudiant
@@ -524,6 +524,7 @@ class Connexion {
        prenom = '$prenom',
        description = '$description',
        email = '$email',
+       telephone = '$telephone',
        avatar = '$avatar',
        jourDisponibles = '$jourDisponibles'
      WHERE id = :id"
