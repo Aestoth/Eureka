@@ -596,7 +596,7 @@
                     <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
                         <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                             <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase"><i class="far fa-newspaper" style="margin-right:10px;"></i>Nouveau Projet</h1>
+                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Administrateur</h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -615,7 +615,7 @@
             </div>
         </section>
         <!-- end page title section -->
-        <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.annoncerlacouleur.be%2Fsites%2Ffiles_alc%2Fprojet%2Ffichier%2FAPP_Visuel%2520lancement%2520ALC.jpg&f=1');">
+        <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.AK6J2uZ4p-A2q2KSIaAqywHaFT%26pid%3D15.1&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">
@@ -639,7 +639,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Nouveau Projet</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Ajouter Fournisseur</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
@@ -649,45 +649,45 @@
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Titre *" class="big-input">
+                            <input type="text" name="name" id="name" placeholder="Nom Société *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="file" name="phone" id="phone" placeholder="Photo" class="big-input">
+                            <input type="text" name="name" id="name" placeholder="Prix *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Type de Projet</option>
-                                    <option value="internet">Workshop</option>
-                                    <option value="Technologie">Bootcamp</optio>
-                                </select>
-                            </div>
+                            <input type="text" name="name" id="name" placeholder="Nom du Service *" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
                                 <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                     <option value="">Categorie du Service</option>
+                                    <option value="internet">Nettoyage</option>
+                                    <option value="Technologie">Nourriture</option>
+                                    <option value="Commerce">Locaux</option>
+                                    <option value="Economie">Autres</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <input type="date" name="name" id="name" placeholder="Titre *" class="big-input">
+                        <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="Contact Nom *" class="big-input">
                         </div>
-                        <div class="col-md-4">
-                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
+                        <div class="col-md-6">
+                            <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
                         </div>
-                        <div class="col-md-4">
-                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
+                        <div class="col-md-6">
+                            <input type="text" name="phone" id="phone" placeholder="Email" class="big-input">
                         </div>
-
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <input type="text" name="phone" id="phone" placeholder="Téléphone" class="big-input">
+                        </div>
+                        <div class="col-md-6">
                             <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <textarea name="comment" id="comment" placeholder="Adresse" rows="6" class="big-textarea"></textarea>
                         </div>
 
 
@@ -700,6 +700,19 @@
                 </form>
             </div>
         </section>
+
+        <div class="container">
+  <h4 class="alt-font font-weight-700 text-extra-dark-gray text-center">Liste de Founisseurs</h4>
+  <p class="text-center">Type something in the input field to search the list for specific items:</p>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <ul class="list-group" id="myList">
+    <li class="list-group-item">First item</li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+    <li class="list-group-item">Fourth</li>
+  </ul>
+</div>
         <!-- end form section -->
         <section class="wow fadeIn bg-light-gray">
             <div class="container">
@@ -719,6 +732,7 @@
                 </div>
             </div>
         </section>
+
         <!-- start footer -->
         <footer class="footer-standard-dark bg-extra-dark-gray">
             <div class="footer-widget-area padding-five-tb xs-padding-30px-tb">
@@ -839,6 +853,16 @@
         <!-- revolution -->
         <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myList li").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
         <!-- revolution slider extensions (load below extensions JS files only on local file systems to make the slider work! The following part can be removed on server for on demand loading) -->
         <!--<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
