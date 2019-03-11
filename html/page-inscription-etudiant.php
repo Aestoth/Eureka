@@ -649,20 +649,20 @@
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
+                            <input type="text" name="nom" id="name" placeholder="Nom *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
+                            <input type="text" name="prenom" id="phone" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="Téléphone *" class="big-input">
+                            <input type="text" name="telephone" id="email" placeholder="Téléphone *" class="big-input">
                         </div>
                         <div class="col-md-6">
 
-                            <input type="file" name="email" id="email" placeholder="Avatar *" class="big-input">
+                            <input type="password" name="password" id="email" placeholder="Password" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
@@ -677,7 +677,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
+                            <textarea name="comment" id="comment" placeholder="Description" rows="6" class="big-textarea"></textarea>
                         </div>
 
                                   <div class="form-group col-md-12 mt-3">

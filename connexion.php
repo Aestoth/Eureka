@@ -517,12 +517,13 @@ class Connexion {
 
 //Function Set Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function setEtudiant($id, $nom, $prenom, $description, $email, $telephone, $avatar, $jourDisponibles) {
+  public function setEtudiant($id, $nom, $prenom, $password,  $description, $email, $telephone, $avatar, $jourDisponibles) {
 
     $requete_prepare = $this->connexion->prepare(
      "UPDATE Etudiant
      SET nom = '$nom',
        prenom = '$prenom',
+       password = '$password',
        description = '$description',
        email = '$email',
        telephone = '$telephone',
@@ -583,6 +584,21 @@ class Connexion {
 
    $newJourDisponibles = $requete_prepare->fetchObject("Etudiant");
    return $newJourDisponibles;
+
+}
+
+//Function Set Etudiant Password///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEtudiantPassword($id, $password) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Etudiant
+     SET password = '$password'
+     WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newPassword = $requete_prepare->fetchObject("Etudiant");
+   return $newPassword;
 
 }
 
