@@ -596,7 +596,7 @@
                     <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
                         <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                             <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Inscription Entreprises</h1>
+                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Nouveau Projet</h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -639,7 +639,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Inscription Etudiant</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Nouveau Projet</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
@@ -649,20 +649,19 @@
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
+                            <input type="text" name="name" id="name" placeholder="Titre *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
+                            <input type="file" name="phone" id="phone" placeholder="Photo" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="Téléphone *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-
-                            <input type="file" name="email" id="email" placeholder="Avatar *" class="big-input">
+                            <div class="select-style big-select">
+                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                                     <option value="">Type de Projet</option>
+                                    <option value="internet">Workshop</option>
+                                    <option value="Technologie">Bootcamp</optio>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
@@ -676,56 +675,22 @@
                                 </select>
                             </div>
                         </div>
+
+                        <div class="col-md-4">
+                            <input type="date" name="name" id="name" placeholder="Titre *" class="big-input">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
+                        </div>
+
                         <div class="col-md-12">
                             <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
                         </div>
 
-                                  <div class="form-group col-md-12 mt-3">
-                                    <div class="tile">
-                                      <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                      <h6 class="mb-3 text-center">Jours Disponibles</h6>
-                                      <thead>
-                                        <tr class="text-center">
-                                          <th class="text-center">#</th>
-                                          <th class="text-center">Lu</th>
-                                          <th class="text-center">Ma</th>
-                                          <th class="text-center">Me</th>
-                                          <th class="text-center">Je</th>
-                                          <th class="text-center">Ve</th>
-                                          <th class="text-center">Sa</th>
-                                          <th class="text-center">Di</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr class="text-center">
-                                          <td>am</td>
-                                          <td><input type="checkbox" name="vehicle1" value= "0"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="2"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="4"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="6"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="8"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="10"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="12"></td>
-                                        </tr>
-                                      </tbody>
 
-                                      <tbody>
-                                        <tr class="text-center">
-                                          <td>pm</td>
-                                          <td><input type="checkbox" name="vehicle1" value="1"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="3"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="5"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="7"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="9"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="11"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="13"></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </div>
-                             </div>
                            </div>
 
                         <div class="col-md-12 text-center">

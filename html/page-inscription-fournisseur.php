@@ -596,7 +596,7 @@
                     <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
                         <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                             <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Inscription Etudiant</h1>
+                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Nouveau Projet</h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -615,7 +615,23 @@
             </div>
         </section>
         <!-- end page title section -->
-
+        <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('http://placehold.it/1920x450');">
+            <div class="opacity-medium bg-extra-dark-gray"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
+                        <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
+                            <!-- start sub title -->
+                            <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We are located in downtown New York</span>
+                            <!-- end sub title -->
+                            <!-- start page title -->
+                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">PHOTO</h1>
+                            <!-- end page title -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- end contact section -->
         <!-- start form section -->
@@ -623,7 +639,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Inscription Etudiant</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Nouveau Projet</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
@@ -633,83 +649,48 @@
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
+                            <input type="text" name="name" id="name" placeholder="Nom Société *" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="Prix *" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="Nom du Service *" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="select-style big-select">
+                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                                     <option value="">Categorie du Service</option>
+                                    <option value="internet">Nettoyage</option>
+                                    <option value="Technologie">Nourriture</option>
+                                    <option value="Commerce">Locaux</option>
+                                    <option value="Economie">Autres</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="Contact Nom *" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                            <input type="text" name="phone" id="phone" placeholder="Email" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="Téléphone *" class="big-input">
+                            <input type="text" name="phone" id="phone" placeholder="Téléphone" class="big-input">
                         </div>
                         <div class="col-md-6">
-
-                            <input type="file" name="email" id="email" placeholder="Avatar *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
                             <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
                         </div>
 
-                                  <div class="form-group col-md-12 mt-3">
-                                    <div class="tile">
-                                      <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                      <h6 class="mb-3 text-center">Jours Disponibles</h6>
-                                      <thead>
-                                        <tr class="text-center">
-                                          <th class="text-center">#</th>
-                                          <th class="text-center">Lu</th>
-                                          <th class="text-center">Ma</th>
-                                          <th class="text-center">Me</th>
-                                          <th class="text-center">Je</th>
-                                          <th class="text-center">Ve</th>
-                                          <th class="text-center">Sa</th>
-                                          <th class="text-center">Di</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr class="text-center">
-                                          <td>am</td>
-                                          <td><input type="checkbox" name="vehicle1" value= "0"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="2"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="4"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="6"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="8"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="10"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="12"></td>
-                                        </tr>
-                                      </tbody>
 
-                                      <tbody>
-                                        <tr class="text-center">
-                                          <td>pm</td>
-                                          <td><input type="checkbox" name="vehicle1" value="1"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="3"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="5"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="7"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="9"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="11"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="13"></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </div>
-                             </div>
+                        <div class="col-md-6">
+                            <textarea name="comment" id="comment" placeholder="Adresse" rows="6" class="big-textarea"></textarea>
+                        </div>
+
+
                            </div>
 
                         <div class="col-md-12 text-center">
