@@ -754,6 +754,78 @@
                 </div>
             </div>
         </section>
+
+        <div class="row">
+          <div class="col-md-9">
+             <div class="tile">
+           <!-- Editable table -->
+                 <div class="card">
+                   <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gutembergue Mascarenhas</h3>
+                   <div class="card-body">
+                     <div class="row">
+                               <div class="col-md-12 col-lg-6">
+                                   <table class="table table-hover text-left">
+                                       <tbody>
+                                           <tr>
+                                               <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
+                                               <td>Mascarenhas<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                       modifier</button></td>
+                                           </tr>
+                                           <tr>
+                                               <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
+                                               <td>Gutembergue<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                       modifier</button></td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                               <div class="col-md-12 col-lg-6">
+                                   <table class="table table-hover text-left">
+                                       <tbody>
+                                         <tr>
+                                             <th scope="row"><i class="fas fa-envelope"></i> Email</th>
+                                             <td>gmascarenhas3001@gmail.com<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                     modifier</button></td>
+                                         </tr>
+                                           <tr>
+                                               <th scope="row">Téléphone</th>
+                                               <td>078 675 1234<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                       modifier</button></td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                               <div class="col-md-12 col-lg-6">
+                                   <table class="table table-hover text-left">
+                                       <tbody>
+                                           <tr>
+                                               <th scope="row"><i class="fas fa-theater-masks"></i>Avatar</th>
+                                               <td>Guto<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                       modifier</button></td>
+                                           </tr>
+
+                                       </tbody>
+                                   </table>
+                               </div>
+                               <div class="col-md-12 col-lg-6">
+                                   <table class="table table-hover text-left">
+                                       <tbody>
+
+                                           <tr>
+                                               <th scope="row"><i class="fas fa-key"></i> MOT DE PASSE</th>
+                                               <td>****** <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                       modifier</button></td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                               </div>
+                           </div>
+
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
         <!-- start footer -->
         <footer class="footer-standard-dark bg-extra-dark-gray">
             <div class="footer-widget-area padding-five-tb xs-padding-30px-tb">

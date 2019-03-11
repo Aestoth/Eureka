@@ -75,14 +75,15 @@ class Connexion {
 
   //Function InsertEtudiant//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertEtudiant($nom, $prenom, $description, $email, $telephone, $avatar, $jourDisponibles){
+  public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles){
 
       $requete_prepare = $this->connexion->prepare("
-       INSERT INTO Etudiant (nom, prenom, description, email, telephone, avatar, jourDisponibles) values (:nom, :prenom, :description, :email, :telephone, :avatar, :jourDisponibles)");
+       INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles)");
       $requete_prepare->execute(
         array(
               'nom'=> $nom,
               'prenom'=> $prenom,
+              'password'=> $password,
               'description' => $description,
               'email' => $email,
               'telephone' => $telephone,

@@ -717,7 +717,7 @@
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
                             <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
                                 <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-html5-video-post.html"><img src="http://placehold.it/1200x840" alt=""></a>
+                                    <a href="blog-html5-video-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fuconn-today-universityofconn.netdna-ssl.com%2Fwp-content%2Fuploads%2F2011%2F09%2Fentrepreneurshiplecture110924b032_F.jpg&f=1" alt=""></a>
                                 </div>
                             </div>
                             <div class="blog-text col-md-6 display-table no-padding">
@@ -736,7 +736,7 @@
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
                             <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
                                 <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-youtube-video-post.html"><img src="http://placehold.it/1200x840" alt=""></a>
+                                    <a href="blog-youtube-video-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.laschools.org%2Fgraphics%2Fsbop%2Fboot-camp-grads-large.jpg&f=1" alt=""></a>
                                 </div>
                             </div>
                             <div class="blog-text col-md-6 display-table no-padding">
