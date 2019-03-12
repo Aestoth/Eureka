@@ -59,9 +59,10 @@ if($appliBD != null){
 //$motClesEtudiant = $appliBD->geEtudiantByMotCles(3);
 //echo $motClesEtudiant->getNom();
 
-
-$listeMotCles = $appliBD->getEtudiantListeMotCles(1);
-var_dump($listeMotCles);
+$listeEtudiant = $appliBD->getListeEtudiant();
+var_dump($listeEtudiant);
+/* $listeMotCles = $appliBD->getEtudiantListeMotCles(1);
+var_dump($listeMotCles); */
 
 
 
