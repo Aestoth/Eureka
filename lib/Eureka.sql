@@ -119,3 +119,26 @@ CREATE TABLE RelationCategories (
   FOREIGN KEY (idCategories) REFERENCES Categories(id),
   FOREIGN KEY (idFournisseur) REFERENCES Fournisseur(id)
 );
+
+
+CREATE TABLE Relation_Etudiant_projet (
+  idEtudiant int(100),
+  idProjet int(100),
+  PRIMARY KEY (idEtudiant, idProjet),
+  FOREIGN KEY (idProjet) REFERENCES Projet(id),
+  FOREIGN KEY (idEtudiant) REFERENCES Etudiant(id)
+);
+
+CREATE TABLE Avatar (
+  id int(100) AUTO_INCREMENT,
+  imageAvatar VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE User (
+  id int(100) AUTO_INCREMENT,
+  email VARCHAR(255),
+  password VARCHAR(255),
+  role int(100),
+  PRIMARY KEY (id)
+);

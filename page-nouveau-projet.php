@@ -45,6 +45,10 @@
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
+        <style>
+
+
+        </style>
     </head>
     <body>
         <!-- start header -->
@@ -649,26 +653,12 @@
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-<<<<<<< HEAD:page-inscription-etudiant.php
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
-=======
                             <input type="text" name="name" id="name" placeholder="Titre *" class="big-input">
->>>>>>> d79c00da9766b53cd5276b5bd68604d4a56c866e:html/page-nouveau-projet.php
                         </div>
                         <div class="col-md-6">
                             <input type="file" name="phone" id="phone" placeholder="Photo" class="big-input">
                         </div>
                         <div class="col-md-6">
-<<<<<<< HEAD:page-inscription-etudiant.php
-                            <input type="text" name="phone" id="phone" placeholder="Téléphone *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-
-                            <input type="file" name="photo" id="photo" placeholder="Avatar *" class="big-input">
-=======
                             <div class="select-style big-select">
                                 <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
                                      <option value="">Type de Projet</option>
@@ -676,7 +666,6 @@
                                     <option value="Technologie">Bootcamp</optio>
                                 </select>
                             </div>
->>>>>>> d79c00da9766b53cd5276b5bd68604d4a56c866e:html/page-nouveau-projet.php
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
@@ -691,22 +680,31 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <input type="date" name="name" id="name" placeholder="Titre *" class="big-input">
-                        </div>
-                        <div class="col-md-4">
-                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
-                        </div>
-                        <div class="col-md-4">
-                            <input type="date" name="phone" id="phone" placeholder="Photo" class="big-input">
-                        </div>
-
                         <div class="col-md-12">
-                            <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
+                            <textarea name="comment" id="comment" placeholder="Description du Projet" rows="6" class="big-textarea"></textarea>
                         </div>
 
+                        <div class="col-md-6">
+                            <input type="date" name="name" id="name" placeholder="" class="big-input">
+                        </div>
 
-                           </div>
+                        <div class="col-md-6">
+                          <input type="radio" name="chooseone" value="HTML"><label for="HTML"> am</label>
+                          <input type="radio" name="chooseone" value="CSS"><label for="CSS"> pm</label>
+
+
+
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="date" name="phone" id="phone" placeholder="" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="date" name="phone" id="phone" placeholder="" class="big-input">
+                        </div>
+
+                   </div>
 
                         <div class="col-md-12 text-center">
                             <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Valider</button>

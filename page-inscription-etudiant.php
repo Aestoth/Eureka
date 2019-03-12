@@ -615,7 +615,7 @@
             </div>
         </section>
         <!-- end page title section -->
-        <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('http://placehold.it/1920x450');">
+        <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fconsomac.fr%2Fimages%2Fnews%2Fapple-etudiant-sans-justificatif-amphi.jpg&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">

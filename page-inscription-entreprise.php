@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="css/bootsnav.css">
     <!-- style -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cssadded.css" />
     <!-- responsive css -->
     <link rel="stylesheet" href="css/responsive.css" />
     <!--[if IE]>
@@ -55,7 +54,7 @@
     <!-- start header -->
     <header>
         <!-- start navigation -->
-        <nav class="navbar navbar-default bootsnav bg-transparent navbar-scroll-top nav-box-width header-light">
+        <nav class="navbar navbar-default bootsnav bg-white header-light nav-box-width navbar-top">
             <div class="container-fluid nav-header-container">
                 <div class="row">
                     <!-- start logo -->
@@ -782,51 +781,165 @@
     </header>
     <!-- end header -->
     <!-- start page title section -->
-      <div class="login-content">
-        <div class="logo">
-          <h1>Vali</h1>
-        </div>
-        <div class="login-box">
-          <form class="login-form" action="index.html">
-            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
-            <div class="form-group">
-              <label class="control-label">USERNAME</label>
-              <input class="form-control" type="text" placeholder="Email" autofocus>
-            </div>
-            <div class="form-group">
-              <label class="control-label">PASSWORD</label>
-              <input class="form-control" type="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <div class="utility">
-                <div class="animated-checkbox">
-                  <label>
-                    <input type="checkbox"><span class="label-text">Stay Signed in</span>
-                  </label>
+    <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
+        <div class="container">
+            <div class="row equalize xs-equalize-auto">
+                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
+                    <div class="display-table-cell vertical-align-middle text-left xs-text-center">
+                        <!-- start page title -->
+                        <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">
+                            Inscription Entreprise</h1>
+                        <!-- end page title -->
+                    </div>
                 </div>
-                <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p>
-              </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
+                    <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
+                        <!-- breadcrumb -->
+                        <ul class="xs-text-center">
+                            <li><a href="#" class="text-dark-gray">Pages</a></li>
+                            <li><a href="#" class="text-dark-gray">Contact</a></li>
+                            <li class="text-dark-gray">Contact us classic</li>
+                        </ul>
+                        <!-- end breadcrumb -->
+                    </div>
+                </div>
             </div>
-            <div class="form-group btn-container">
-              <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
-            </div>
-          </form>
-          <form class="forget-form" action="index.html">
-            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
-            <div class="form-group">
-              <label class="control-label">EMAIL</label>
-              <input class="form-control" type="text" placeholder="Email">
-            </div>
-            <div class="form-group btn-container">
-              <button class="btn btn-primary btn-block"><i class="fa fa-unlock fa-lg fa-fw"></i>RESET</button>
-            </div>
-            <div class="form-group mt-3">
-              <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
-            </div>
-          </form>
         </div>
-    </div>
-    <!-- end form style 04 section -->
+    </section>
+    <!-- end page title section -->
+    <section class="wow fadeIn cover-background background-position-top top-space"
+        style="background-image:url('http://placehold.it/1920x450');">
+        <div class="opacity-medium bg-extra-dark-gray"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
+                    <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
+                        <!-- start sub title -->
+                        <span
+                            class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We
+                            are located in downtown New York</span>
+                        <!-- end sub title -->
+                        <!-- start page title -->
+                        <h1 class="alt-font text-white font-weight-600 no-margin-bottom">PHOTO</h1>
+                        <!-- end page title -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end contact section -->
+    <!-- start form section -->
+    <section class="wow fadeIn" id="start-your-project">
+        <div class="row">
+            <div
+                class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
+                <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Inscription Entreprise</h5>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply
+                    dummy text.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form class="col-md-6" id="project-contact-form" action="javascript:void(0)" method="post">
+                    <h5 class="title text-center">Information Société</h5>
+
+                    <div class="col-md-12">
+                        <div id="success-project-contact-form" class="no-margin-lr"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="name" id="name" placeholder="Name*" class="big-input">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="password" name="password" id="password" placeholder="Password" class="big-input">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="url" name="url" id="url" placeholder="Lien site *" class="big-input">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="address1" id="address1" placeholder="Address Line 1" class="big-input">
+                    </div>
+                    <div class="col-md-12">
+                        <textarea name="description" id="description" placeholder="Description de votre société"
+                            rows="6" class="big-textarea"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="select-style big-select">
+                            <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                                <option value="">Centre d'Interet</option>
+                                <option value="internet">Internet</option>
+                                <option value="Technologie">Technologia</option>
+                                <option value="Commerce">Commerce</option>
+                                <option value="Economie">Economie</option>
+                                <option value="Finance">Finance</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="col-md-6" id="project-contact-form" action="javascript:void(0)" method="post">
+                    <h5 class="title text-center">Contacts 1</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="register-enterprise" class="no-margin-lr"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                        </div>
+                        <h5 class="title text-center mt-4">Contacts 2</h5>
+                        <div class="col-md-12 mt-4">
+                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12 text-center">
+                <button id="project-contact-us-button" type="submit"
+                    class="btn btn-transparent-dark-gray btn-large margin-20px-top ">Valider</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- end form section -->
+    <section class="wow fadeIn bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center social-style-4 border round">
+                    <span
+                        class="text-medium font-weight-600 text-uppercase display-block alt-font text-extra-dark-gray margin-30px-bottom">On
+                        social networks</span>
+                    <div class="social-icon-style-4">
+                        <ul class="margin-30px-top large-icon">
+                            <li><a class="facebook" href="http://facebook.com" target="_blank"><i
+                                        class="fab fa-facebook-f"></i><span></span></a></li>
+                            <li><a class="twitter" href="http://twitter.com" target="_blank"><i
+                                        class="fab fa-twitter"></i><span></span></a></li>
+                            <li><a class="google" href="http://google.com" target="_blank"><i
+                                        class="fab fa-google-plus-g"></i><span></span></a></li>
+                            <li><a class="dribbble" href="http://dribbble.com" target="_blank"><i
+                                        class="fab fa-dribbble"></i><span></span></a></li>
+                            <li><a class="linkedin" href="http://linkedin.com" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i><span></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- start footer -->
     <footer class="footer-standard-dark bg-extra-dark-gray">
         <div class="footer-widget-area padding-five-tb xs-padding-30px-tb">
