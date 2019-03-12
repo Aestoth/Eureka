@@ -596,7 +596,7 @@
                     <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
                         <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                             <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Inscription Etudiant</h1>
+                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Profil Etudiant</h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -625,7 +625,7 @@
                             <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We are located in downtown New York</span>
                             <!-- end sub title -->
                             <!-- start page title -->
-                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Inscription</h1>
+                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Editer</h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -639,43 +639,82 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Inscription Etudiant</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase">Editer</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
                 <form id="project-contact-form" action="javascript:void(0)" method="post">
                     <div class="row">
-                         <div class="col-md-12">
-                            <div id="success-project-contact-form" class="no-margin-lr"></div>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="Téléphone *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
+                           <div class="tile">
+                         <!-- Editable table -->
+                               <div class="card">
 
-                            <input type="file" name="email" id="email" placeholder="Avatar *" class="big-input">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
-                                </select>
-                            </div>
-                        </div>
+                                 <div class="card-body">
+                                   <div class="row">
+                                             <div class="col-md-12 col-lg-6">
+                                                 <table class="table table-hover text-left">
+                                                     <tbody>
+                                                         <tr>
+                                                             <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
+                                                             <td>Mascarenhas<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                     modifier</button></td>
+                                                         </tr>
+                                                         <tr>
+                                                             <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
+                                                             <td>Gutembergue<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                     modifier</button></td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                             <div class="col-md-12 col-lg-6">
+                                                 <table class="table table-hover text-left">
+                                                     <tbody>
+                                                       <tr>
+                                                           <th scope="row"><i class="fas fa-envelope"></i> Email</th>
+                                                           <td>gmascarenhas3001@gmail.com<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                   modifier</button></td>
+                                                       </tr>
+                                                         <tr>
+                                                             <th scope="row"><i class="fas fa-phone-volume"></i>Téléphone</th>
+                                                             <td>078 675 1234<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                     modifier</button></td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                             <div class="col-md-12 col-lg-6">
+                                                 <table class="table table-hover text-left">
+                                                     <tbody>
+                                                         <tr>
+                                                             <th scope="row"><i class="fas fa-theater-masks"></i>Avatar</th>
+                                                             <td>Guto<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                     modifier</button></td>
+                                                         </tr>
+
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                             <div class="col-md-12 col-lg-6">
+                                                 <table class="table table-hover text-left">
+                                                     <tbody>
+
+                                                         <tr>
+                                                             <th scope="row"><i class="fas fa-key"></i> MOT DE PASSE</th>
+                                                             <td>****** <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                                                                     modifier</button></td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                         </div>
+
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
                         <div class="col-md-12">
                             <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
                         </div>
@@ -735,6 +774,7 @@
                 </form>
             </div>
         </section>
+
         <!-- end form section -->
         <section class="wow fadeIn bg-light-gray">
             <div class="container">
@@ -755,77 +795,6 @@
             </div>
         </section>
 
-        <div class="row">
-          <div class="col-md-9">
-             <div class="tile">
-           <!-- Editable table -->
-                 <div class="card">
-                   <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gutembergue Mascarenhas</h3>
-                   <div class="card-body">
-                     <div class="row">
-                               <div class="col-md-12 col-lg-6">
-                                   <table class="table table-hover text-left">
-                                       <tbody>
-                                           <tr>
-                                               <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
-                                               <td>Mascarenhas<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                       modifier</button></td>
-                                           </tr>
-                                           <tr>
-                                               <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
-                                               <td>Gutembergue<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                       modifier</button></td>
-                                           </tr>
-                                       </tbody>
-                                   </table>
-                               </div>
-                               <div class="col-md-12 col-lg-6">
-                                   <table class="table table-hover text-left">
-                                       <tbody>
-                                         <tr>
-                                             <th scope="row"><i class="fas fa-envelope"></i> Email</th>
-                                             <td>gmascarenhas3001@gmail.com<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                     modifier</button></td>
-                                         </tr>
-                                           <tr>
-                                               <th scope="row">Téléphone</th>
-                                               <td>078 675 1234<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                       modifier</button></td>
-                                           </tr>
-                                       </tbody>
-                                   </table>
-                               </div>
-                               <div class="col-md-12 col-lg-6">
-                                   <table class="table table-hover text-left">
-                                       <tbody>
-                                           <tr>
-                                               <th scope="row"><i class="fas fa-theater-masks"></i>Avatar</th>
-                                               <td>Guto<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                       modifier</button></td>
-                                           </tr>
-
-                                       </tbody>
-                                   </table>
-                               </div>
-                               <div class="col-md-12 col-lg-6">
-                                   <table class="table table-hover text-left">
-                                       <tbody>
-
-                                           <tr>
-                                               <th scope="row"><i class="fas fa-key"></i> MOT DE PASSE</th>
-                                               <td>****** <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
-                                                       modifier</button></td>
-                                           </tr>
-                                       </tbody>
-                                   </table>
-                               </div>
-                           </div>
-
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
         <!-- start footer -->
         <footer class="footer-standard-dark bg-extra-dark-gray">
             <div class="footer-widget-area padding-five-tb xs-padding-30px-tb">
