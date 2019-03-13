@@ -120,7 +120,7 @@ class Connexion {
               'date2' => $date2,
               'periode2' => $periode2,
               'date3'=> $date3,
-              'periode3' => $periode3,              
+              'periode3' => $periode3,
               'typeEvenement'=> $typeEvenement,
               'etatProjet'=> $etatProjet,
               'idEntreprise'=> $idEntreprise
@@ -799,6 +799,27 @@ function getListeMotCles() {
 }
 
 
+
+
+
+//Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getListeProjetEtudiant($idEtudiant) {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Projet p
+        INNER JOIN Relation_Etudiant_projet
+        ON idProjet = p.Id
+        WHERE idEtudiant = :Id");
+
+    $requete_prepare->execute(
+        array("Id"=> $idEtudiant));
+
+    $listeProjetEtudiant = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $listeProjetEtudiant;
+
+}
 
 
 
