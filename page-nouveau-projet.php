@@ -685,22 +685,42 @@
                         </div>
 
                         <div class="col-md-6">
-                            <input type="date" name="name" id="name" placeholder="" class="big-input">
+                            <input type="date" name="date1" id="name" placeholder="" class="big-input">
                         </div>
 
-                        <div class="col-md-3">
-                          <input type="radio" name="chooseone" value="HTML"><label for="HTML"> am</label>
-
+                        <div class="col-md-6">
+                            <div class="select-style big-select">
+                                <select name="periode1" id="budget" class="bg-transparent no-margin-bottom">
+                                     <option value="">Période</option>
+                                    <option value="internet">AM</option>
+                                    <option value="Technologie">PM</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                          <input type="radio" name="chooseone" value="HTML"><label for="HTML"> pm</label>
 
+                        <div class="col-md-6">
+                            <input type="date" name="date2" id="phone" placeholder="" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="date" name="phone" id="phone" placeholder="" class="big-input">
+                            <div class="select-style big-select">
+                                <select name="periode2" id="budget" class="bg-transparent no-margin-bottom">
+                                     <option value="">Période</option>
+                                    <option value="internet">AM</option>
+                                    <option value="Technologie">PM</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <input type="date" name="phone" id="phone" placeholder="" class="big-input">
+                            <input type="date" name="date3" id="phone" placeholder="" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="select-style big-select">
+                                <select name="periode3" id="budget" class="bg-transparent no-margin-bottom">
+                                     <option value="">Période</option>
+                                    <option value="internet">AM</option>
+                                    <option value="Technologie">PM</option>
+                                </select>
+                            </div>
                         </div>
 
                    </div>

@@ -849,16 +849,17 @@
                         <div id="success-project-contact-form" class="no-margin-lr"></div>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="name" id="name" placeholder="Name*" class="big-input">
+                        <input type="text" name="nom" id="name" placeholder="Nom*" class="big-input">
                     </div>
                     <div class="col-md-12">
                         <input type="password" name="password" id="password" placeholder="Password" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <input type="url" name="url" id="url" placeholder="Lien site *" class="big-input">
+                        <input type="url" name="urlSite" id="url" placeholder="Lien site *" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="address1" id="address1" placeholder="Address Line 1" class="big-input">
+                        <textarea name="adresse" id="description" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
+                            rows="6" class="big-textarea"></textarea>
                     </div>
                     <div class="col-md-12">
                         <textarea name="description" id="description" placeholder="Description de votre société"
@@ -894,6 +895,16 @@
                             <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 2</h5>
+                        <div class="col-md-12 mt-4">
+                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                        </div>
+                        <h5 class="title text-center mt-4">Contacts 3</h5>
                         <div class="col-md-12 mt-4">
                             <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
                         </div>
