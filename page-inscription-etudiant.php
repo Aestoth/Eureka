@@ -643,30 +643,33 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
-                <form id="project-contact-form" action="javascript:void(0)" method="post">
+                <form id="project-contact-form" action="validation_user.php" method="post">
                     <div class="row">
                          <div class="col-md-12">
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Name *" class="big-input">
+                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="phone" id="phone" placeholder="Prénom" class="big-input">
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" id="email" placeholder="Téléphone *" class="big-input">
+                            <input type="text" name="telephone" id="telephone" placeholder="Téléphone *" class="big-input">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="file" name="avatar" id="avatar" placeholder="Avatar*" class="big-input">
                         </div>
                         <div class="col-md-6">
 
-                            <input type="file" name="email" id="email" placeholder="Avatar *" class="big-input">
+                            <input type="password" name="password" id="password" placeholder="Mot de passe*" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                                <select name="Motsclesetudiant" id="Motsclesetudiant" class="bg-transparent no-margin-bottom">
                                      <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -677,7 +680,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <textarea name="comment" id="comment" placeholder="Describe your project" rows="6" class="big-textarea"></textarea>
+                            <textarea name="description" id="description" placeholder="Votre description" rows="6" class="big-textarea"></textarea>
                         </div>
 
                                   <div class="form-group col-md-12 mt-3">
@@ -700,26 +703,26 @@
                                       <tbody>
                                         <tr class="text-center">
                                           <td>am</td>
-                                          <td><input type="checkbox" name="vehicle1" value= "0"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="2"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="4"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="6"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="8"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="10"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="12"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value= "0"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="2"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="4"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="6"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="8"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="10"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="12"></td>
                                         </tr>
                                       </tbody>
 
                                       <tbody>
                                         <tr class="text-center">
                                           <td>pm</td>
-                                          <td><input type="checkbox" name="vehicle1" value="1"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="3"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="5"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="7"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="9"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="11"></td>
-                                          <td><input type="checkbox" name="vehicle1" value="13"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="1"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="3"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="5"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="7"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="9"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="11"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="13"></td>
                                         </tr>
                                       </tbody>
                                     </table>
