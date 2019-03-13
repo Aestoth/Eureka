@@ -33,6 +33,10 @@ class Connexion {
     return $this->connexion;
   }
 
+  public function getLastId(){
+    return $this->connexion->lastInsertId();
+  }
+
 
   ///Function InsertEntreprise/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -75,10 +79,10 @@ class Connexion {
 
   //Function InsertEtudiant//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles){
+  public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion){
 
       $requete_prepare = $this->connexion->prepare("
-       INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles)");
+       INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles, derniereConnexion) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles, :derniereConnexion)");
       $requete_prepare->execute(
         array(
               'nom'=> $nom,
@@ -88,7 +92,8 @@ class Connexion {
               'email' => $email,
               'telephone' => $telephone,
               'avatar' => $avatar,
-              'jourDisponibles'=> $jourDisponibles
+              'jourDisponibles'=> $jourDisponibles,
+              'derniereConnexion'=>$derniereConnexion
             )
         );
 
