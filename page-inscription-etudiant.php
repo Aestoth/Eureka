@@ -703,7 +703,7 @@
                                       <tbody>
                                         <tr class="text-center">
                                           <td>am</td>
-                                          <td><input type="checkbox" name="jourDisponibles" value= "0"></td>
+                                          <td><input type="checkbox" name="jourDisponibles" value="0"></td>
                                           <td><input type="checkbox" name="jourDisponibles" value="2"></td>
                                           <td><input type="checkbox" name="jourDisponibles" value="4"></td>
                                           <td><input type="checkbox" name="jourDisponibles" value="6"></td>

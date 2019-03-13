@@ -808,7 +808,7 @@
     </section>
     <!-- end page title section -->
     <section class="wow fadeIn cover-background background-position-top top-space"
-        style="background-image:url('http://placehold.it/1920x450');">
+        style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fponcier.org%2Fblog%2Fwp-content%2F2012%2F11%2Fdigial.jpg&f=1');">
         <div class="opacity-medium bg-extra-dark-gray"></div>
         <div class="container">
             <div class="row">
@@ -842,7 +842,8 @@
         </div>
         <div class="container">
             <div class="row">
-                <form class="col-md-6" id="project-contact-form" action="javascript:void(0)" method="post">
+              <div class="col-md-6">
+                <form  id="project-contact-form" action="validation_entreprise.php" method="post">
                     <h5 class="title text-center">Information Société</h5>
 
                     <div class="col-md-12">
@@ -855,10 +856,30 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <input type="url" name="urlSite" id="url" placeholder="Lien site *" class="big-input">
+                        <input type="text" name="urlSite" id="url" placeholder="Lien site *" class="big-input">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="facebook" id="facebook" placeholder="Lien facebook *" class="big-input">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurAtivite *" class="big-input">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="instagram" id="instagram" placeholder="Lien instagram *" class="big-input">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="linkdin" id="linkdin" placeholder="Lien linkdin *" class="big-input">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="nombCollaborateurs *" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <textarea name="adresse" id="description" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
+                        <textarea name="adresse" id="adresse" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
                             rows="6" class="big-textarea"></textarea>
                     </div>
                     <div class="col-md-12">
@@ -877,50 +898,52 @@
                             </select>
                         </div>
                     </div>
-                </form>
 
-                <form class="col-md-6" id="project-contact-form" action="javascript:void(0)" method="post">
+              </div>
+                <div class="col-md-6" >
                     <h5 class="title text-center">Contacts 1</h5>
                     <div class="row">
                         <div class="col-md-12">
                             <div id="register-enterprise" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom1" id="nom" placeholder="Nom*" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                            <input type="text" name="contactEmail1" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 2</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom2" id="nom" placeholder="Nom*" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                            <input type="text" name="contactPrenom2" id="prenom" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                            <input type="text" name="contactEmail2" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 3</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom3" id="nom" placeholder="Nom*" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
+                            <input type="text" name="contactPrenom3" id="prenom" placeholder="Prénom" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
+                            <input type="text" name="contactEmail3" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                     </div>
-                </form>
+                  </div>
+
             </div>
             <div class="col-md-12 text-center">
                 <button id="project-contact-us-button" type="submit"
                     class="btn btn-transparent-dark-gray btn-large margin-20px-top ">Valider</button>
             </div>
+          </form>
         </div>
 
 
