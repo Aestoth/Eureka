@@ -65,5 +65,20 @@ if($appliBD != null){
 var_dump($listeMotCles); */
 
 
+//$appliBD->insertMotCles_projet(1, 2);
+
+//var_dump($listeProjetEtudiant);
+
+
+//$motClesProjet = $appliBD->insertMotCles_projet(1, 2);
+//var_dump($motClesProjet);
+
+
+//$listeProjetEtudiant = $appliBD->insertRelationEtudiantProjet(1, 1);
+//var_dump($listeProjetEtudiant);
+
+//$listeProjetEntreprise = $appliBD->insertRelationEntrepriseProjet(1, 2);
+
+
 
  ?>

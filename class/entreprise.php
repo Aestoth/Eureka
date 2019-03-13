@@ -9,7 +9,7 @@ class Entreprise {
   protected $facebook;
   protected $linkdin;
   protected $instagram;
-  protected $secteurActivite;
+  protected $secteurAtivite;
   protected $logo;
   protected $nombCollaborateurs;
   protected $contactNom1;
@@ -55,8 +55,8 @@ class Entreprise {
         return $this->instagram;
   }
 
-  public function getSecteurActivite(){
-        return $this->secteurActivite;
+  public function getSecteurAtivite(){
+        return $this->secteurAtivite;
   }
 
   public function getLogo(){

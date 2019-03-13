@@ -261,6 +261,7 @@ class Connexion {
                'idMotCles' => $idMotCles
              )
         );
+          print_r($requete_prepare->errorInfo());
             return true;
     }
 
@@ -276,6 +277,28 @@ class Connexion {
        $requete_prepare->execute(
         array(
                'idEtudiant' => $idEtudiant,
+               'idProjet' => $idProjet
+             )
+        );
+          print_r($requete_prepare->errorInfo());
+            return true;
+    }
+
+
+
+
+
+//Function insert Relation Entreprise projet////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function insertRelationEntrepriseProjet ($idEntreprise, $idProjet) {
+
+      $requete_prepare = $this->connexion->prepare(
+        "INSERT INTO Relation_Entreprise_Projet (idEntreprise, idProjet)
+                 values (:idEntreprise, :idProjet)");
+
+       $requete_prepare->execute(
+        array(
+               'idEntreprise' => $idEntreprise,
                'idProjet' => $idProjet
              )
         );
@@ -809,8 +832,26 @@ function getListeProjetEtudiant($idEtudiant) {
     $requete_prepare=$this->connexion->prepare(
         "SELECT * FROM Projet p
         INNER JOIN Relation_Etudiant_projet
-        ON idProjet = p.Id
-        WHERE idEtudiant = :Id");
+        ON idProjet = p.id
+        WHERE idEtudiant = :id");
+
+    $requete_prepare->execute(
+        array("Id"=> $idEtudiant));
+
+    $listeProjetEtudiant = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $listeProjetEtudiant;
+
+}
+
+
+function getListeProjetEtudiant($idEntreprise) {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Projet p
+        INNER JOIN Relation_Etudiant_projet
+        ON idProjet = p.id
+        WHERE idEtudiant = :id");
 
     $requete_prepare->execute(
         array("Id"=> $idEtudiant));
