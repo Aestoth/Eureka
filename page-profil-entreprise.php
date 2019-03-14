@@ -50,6 +50,7 @@
         require_once ('connexion.php');
         $appliBD = new connexion();
         $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
+        $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         ?>
         <style>
         .line-height{
@@ -150,7 +151,7 @@
             </div>
         </section>
         <!-- end page title section -->
-        <!-- start team section heading -->https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1
+        <!-- start team section heading -->
         <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
             <div class="container">
                 <div class="row">
@@ -313,7 +314,11 @@
                             <div class="swiper-wrapper">
                                 <!--  start project item -->
                                 <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
-                                    <figure>
+
+                                  <?php foreach ($listeProjetEntreprise as $value) {
+
+
+                                echo' <figure>
                                         <div class="team-image xs-width-100">
                                             <img src="http://placehold.it/700x892" alt="">
                                             <div class="overlay-content text-center">
@@ -330,11 +335,12 @@
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
-                                            </div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'.</div>
+                                                <div class="text-extra-small text-uppercase text-medium-gray">'.$value->getDescription().'.</div>
+                                          </div>
                                         </figcaption>
-                                    </figure>
+                                    </figure>';
+                                    } ?>
                                 </div>
                                 <!-- end project item -->
                                 <!--  start project item -->
@@ -382,7 +388,7 @@
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply/div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
                                                 <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
                                             </div>
                                         </figcaption>

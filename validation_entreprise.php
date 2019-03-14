@@ -31,4 +31,8 @@ $nombCollaborateurs, $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2
 header("Location: page-profil-entreprise.php?id=$idEntreprise");
 
 
+
+
+
+
  ?>
