@@ -105,34 +105,34 @@ class Connexion {
   }
 
 
+      //Function InsertProjet//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Function InsertProjet//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise){
 
-  public function insertProjet($titre, $photo, $description, $date1, $date2, $date3, $typeEvenement, $etatProjet, $idEntreprise){
+        $requete_prepare = $this->connexion->prepare("
+         INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2 date3, periode3, typeEvenement, etatProjet, idEntreprise)
+          values (:titre, :photo, :description, :date1, :periode1, :date2, :periode2, :date3, :periode3, :typeEvenement, :etatProjet, :idEntreprise)");
+        $requete_prepare->execute(
+          array(
+                'titre'=> $titre,
+                'photo'=> $photo,
+                'description' => $description,
+                'date1' => $date1,
+                'periode1' => $periode1,
+                'date2' => $date2,
+                'periode2' => $periode2,
+                'date3'=> $date3,
+                'periode3' => $periode3,
+                'typeEvenement'=> $typeEvenement,
+                'etatProjet'=> $etatProjet,
+                'idEntreprise'=> $idEntreprise
+              )
+          );
 
-      $requete_prepare = $this->connexion->prepare("
-       INSERT INTO Projet (titre, photo, description, date1, date2, date3, typeEvenement, etatProjet, idEntreprise)
-        values (:titre, :photo, :description, :date1, :date2, :date3, :typeEvenement, :etatProjet, :idEntreprise)");
-      $requete_prepare->execute(
-        array(
-              'titre'=> $titre,
-              'photo'=> $photo,
-              'description' => $description,
-              'date1' => $date1,
-              'date2' => $date2,
-              'date3'=> $date3,
-              'typeEvenement'=> $typeEvenement,
-              'etatProjet'=> $etatProjet,
-              'idEntreprise'=> $idEntreprise
-            )
-        );
-
-        print_r($requete_prepare->errorInfo());
-        $idProjet = $this->connexion->lastInsertId();
-        return $idProjet;
-  }
-
-
+          print_r($requete_prepare->errorInfo());
+          $idProjet = $this->connexion->lastInsertId();
+          return $idProjet;
+    }
 
 ///Funstion insertFournisseur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -263,6 +263,46 @@ class Connexion {
         );
             return true;
     }
+
+
+
+////////Function insert relation Etudiant Projet/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      public function insertRelationEtudiantProjet ($idEtudiant, $idProjet) {
+
+          $requete_prepare = $this->connexion->prepare(
+            "INSERT INTO `Relation_Etudiant_Projet`(`idEtudiant`, `idProjet`) VALUES (:idEtudiant, :idProjet)");
+
+           $requete_prepare->execute(
+            array(
+                   'idEtudiant' => $idEtudiant,
+                   'idProjet' => $idProjet
+                 )
+            );
+              print_r($requete_prepare->errorInfo());
+                return true;
+        }
+
+
+
+
+//Function insert Relation Entreprise projet////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+          public function insertRelationEntrepriseProjet ($idEntreprise, $idProjet) {
+
+              $requete_prepare = $this->connexion->prepare(
+                "INSERT INTO Relation_Entreprise_Projet (idEntreprise, idProjet)
+                         values (:idEntreprise, :idProjet)");
+
+               $requete_prepare->execute(
+                array(
+                       'idEntreprise' => $idEntreprise,
+                       'idProjet' => $idProjet
+                     )
+                );
+                    return true;
+            }
+
 
 
 //////Function Liste Entreprise///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -765,6 +805,65 @@ public function getProjetByMotCles($idMotCles){
      return $resultat;
 
 }
+
+
+//Function Liste des Mot Cles//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getListeMotCles() {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM MotCles");
+
+    $requete_prepare->execute();
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $resultat;
+
+}
+
+
+
+
+
+//Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getListeProjetEtudiant($idEtudiant) {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Projet p
+        INNER JOIN Relation_Etudiant_Projet
+        ON idProjet = p.id
+        WHERE idEtudiant = :id");
+
+    $requete_prepare->execute(
+        array("Id"=> $idEtudiant));
+
+    $listeProjetEtudiant = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $listeProjetEtudiant;
+
+}
+
+//Function Liste de Projets Entreprise///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getListeProjetEntreprise($idEntreprise) {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Projet p
+        INNER JOIN Relation_Entreprise_Projet
+        ON idProjet = p.id
+        WHERE idEntreprise = :id");
+
+    $requete_prepare->execute(
+        array("Id"=> $idEntreprise));
+
+    $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $listeProjetEntreprise;
+
+}
+
+
 
 
 
