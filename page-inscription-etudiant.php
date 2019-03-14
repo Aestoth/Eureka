@@ -703,26 +703,26 @@
                                       <tbody>
                                         <tr class="text-center">
                                           <td>am</td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="0"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="2"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="4"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="6"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="8"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="10"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="12"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="0"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="2"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="4"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="6"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="8"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="10"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="12"></td>
                                         </tr>
                                       </tbody>
 
                                       <tbody>
                                         <tr class="text-center">
                                           <td>pm</td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="1"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="3"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="5"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="7"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="9"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="11"></td>
-                                          <td><input type="checkbox" name="jourDisponibles" value="13"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="1"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="3"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="5"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="7"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="9"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="11"></td>
+                                          <td><input type="checkbox" name="jourDisponibles[]" value="13"></td>
                                         </tr>
                                       </tbody>
                                     </table>
