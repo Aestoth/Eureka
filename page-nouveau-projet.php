@@ -647,32 +647,32 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
-                <form id="project-contact-form" action="javascript:void(0)" method="post">
+                <form id="project-contact-form" action="validation_projet.php" method="post">
                     <div class="row">
                          <div class="col-md-12">
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="name" id="name" placeholder="Titre *" class="big-input">
+                            <input type="text" name="titre" id="titre" placeholder="Titre *" class="big-input">
                         </div>
                         <div class="col-md-6">
-                            <input type="file" name="phone" id="phone" placeholder="Photo" class="big-input">
+                            <input type="file" name="photo" id="photo" placeholder="Photo" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                                <select name="typeEvenement" id="typeEvenement" class="bg-transparent no-margin-bottom">
                                      <option value="">Type de Projet</option>
-                                    <option value="internet">Workshop</option>
-                                    <option value="Technologie">Bootcamp</optio>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="Bootcamp">Bootcamp</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Centre d'Interet</option>
+                                <select name="MotClesprojet" id="MotClesprojet" placeholder="Centre d'Interet" class="bg-transparent no-margin-bottom">
+                                    <option value="">Centre d'Intérêt</option>
                                     <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
+                                    <option value="Technologie">Technologie</option>
                                     <option value="Commerce">Commerce</option>
                                     <option value="Economie">Economie</option>
                                     <option value="Finance">Finance</option>
@@ -681,52 +681,67 @@
                         </div>
 
                         <div class="col-md-12">
-                            <textarea name="comment" id="comment" placeholder="Description du Projet" rows="6" class="big-textarea"></textarea>
+                            <textarea name="description" id="description" placeholder="Description du Projet" rows="6" class="big-textarea"></textarea>
                         </div>
 
                         <div class="col-md-6">
-                            <input type="date" name="date1" id="name" placeholder="" class="big-input">
+                            <input type="date" name="date1" id="date1" class="big-input">
                         </div>
 
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="periode1" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Période</option>
-                                    <option value="internet">AM</option>
-                                    <option value="Technologie">PM</option>
+                                <select name="periode1" id="periode1"  class="bg-transparent no-margin-bottom">
+                                    <option value="">Période</option>
+                                    <option value="AM">matin</option>
+                                    <option value="PM">après-midi</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <input type="date" name="date2" id="phone" placeholder="" class="big-input">
+                            <input type="date" name="date2" id="date2" placeholder="" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="periode2" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Période</option>
-                                    <option value="internet">AM</option>
-                                    <option value="Technologie">PM</option>
+                                <select name="periode2" id="periode2" class="bg-transparent no-margin-bottom">
+                                    <option value="">Période</option>
+                                    <option value="AM">matin</option>
+                                    <option value="PM">après-midi</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <input type="date" name="date3" id="phone" placeholder="" class="big-input">
+                            <input type="date" name="date3" id="date3" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="periode3" id="budget" class="bg-transparent no-margin-bottom">
-                                     <option value="">Période</option>
-                                    <option value="internet">AM</option>
-                                    <option value="Technologie">PM</option>
+                                <select name="periode3" id="periode3" class="bg-transparent no-margin-bottom">
+                                    <option value="">Période</option>
+                                    <option value="AM">matin</option>
+                                    <option value="PM">après-midi</option>
                                 </select>
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="select-style big-select">
+                                <select name="etatProjet" id="etatProjet" class="bg-transparent no-margin-bottom">
+                                    <option value="">Etat du Projet</option>
+                                    <option value="fermer">Fermer</option>
+                                    <option value="ouvert">Ouvert</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="select-style big-select">
+                                <select name="idEntreprise" id="idEntreprise" class="bg-transparent no-margin-bottom">
+                                    <option value="">Entreprise</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
                    </div>
-
                         <div class="col-md-12 text-center">
-                            <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Valider</button>
+                            <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top" name="creation">Valider</button>
                         </div>
                     </div>
                 </form>
