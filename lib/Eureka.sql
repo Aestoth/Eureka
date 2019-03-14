@@ -124,16 +124,16 @@ CREATE TABLE RelationCategories (
 );
 
 
-CREATE TABLE Relation_Etudiant_projet (
-  idEtudiant int(100),
-  idProjet int(100),
+CREATE TABLE Relation_Etudiant_Projet (
+  idEtudiant int,
+  idProjet int,
   PRIMARY KEY (idEtudiant, idProjet),
   FOREIGN KEY (idProjet) REFERENCES Projet(id),
   FOREIGN KEY (idEtudiant) REFERENCES Etudiant(id)
 );
 
 CREATE TABLE Avatar (
-  id int(100) AUTO_INCREMENT,
+  id int AUTO_INCREMENT,
   imageAvatar VARCHAR(255),
   PRIMARY KEY (id)
 );

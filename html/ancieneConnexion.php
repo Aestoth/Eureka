@@ -268,12 +268,11 @@ class Connexion {
 
 
 //Function insert relation Etudiant Projet/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  public function insertRelationEtudiantProjet ($idEtudiant, $idProjet) {
+// insertRelationEtudiantProjet
+  public function foo ($idEtudiant, $idProjet) {
 
       $requete_prepare = $this->connexion->prepare(
-        "INSERT INTO Relation_Etudiant_Projet (idEtudiant, idProjet)
-                 values (:idEtudiant, :idProjet)");
+        "INSERT INTO `Relation_Etudiant_Projet`(`idEtudiant`, `idProjet`) VALUES (:idEtudiant, :idProjet)");
 
        $requete_prepare->execute(
         array(
