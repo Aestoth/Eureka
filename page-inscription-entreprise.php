@@ -862,7 +862,7 @@
                         <input type="text" name="facebook" id="facebook" placeholder="Lien facebook *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurAtivite *" class="big-input">
+                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurActivite *" class="big-input">
                     </div>
 
                     <div class="col-md-6">

@@ -67,6 +67,7 @@ class Connexion {
               'contactEmail3' => $contactEmail3
             )
         );
+
         $idEntreprise= $this->connexion->lastInsertId();
         return $idEntreprise;
     }
@@ -271,7 +272,7 @@ class Connexion {
   public function insertRelationEtudiantProjet ($idEtudiant, $idProjet) {
 
       $requete_prepare = $this->connexion->prepare(
-        "INSERT INTO Relation_Etudiant_projet (idEtudiant, idProjet)
+        "INSERT INTO Relation_Etudiant_Projet (idEtudiant, idProjet)
                  values (:idEtudiant, :idProjet)");
 
        $requete_prepare->execute(

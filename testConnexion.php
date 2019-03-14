@@ -19,9 +19,8 @@ if($appliBD != null){
 
 //echo $projet;
 
-//$entreprise = $appliBD->insertEntreprise("realise", "1234", "realise.ch", "blablabla", "facebook.com", "linkdin.com", "instagram.com", "Formation", "logo", 80,
+//$entreprise = $appliBD->insertEntreprise("Hass", "1234", "realise.ch", "blablabla", "facebook.com", "linkdin.com", "instagram.com", "Formation", "", "80",
 //"veronique", "dubois", "dubois@gmail.com", "cecile", "dupont", "dupont@gmail.com", "sandra", "dupres", "dupres@gmail.com" )
-
 
 //$fournisseur = $appliBD->insertFournisseur("social-sa", "100,00", "nettoyage", "blablabla", "robert", "marley", "marley@gmail.com", "0791234567", "jamaique 123");
 

@@ -150,8 +150,8 @@
             </div>
         </section>
         <!-- end page title section -->
-        <!-- start team section heading -->
-        <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">
+        <!-- start team section heading -->https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1
+        <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col text-center last-paragraph-no-margin">
@@ -223,7 +223,7 @@
             </section>
             <!-- end team section -->
         <!-- start counter section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">
+        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2015%2F05%2F150511_car_sizeoffice.jpg%3Fquality%3D85&f=1');">
             <div class="opacity-full-dark bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">

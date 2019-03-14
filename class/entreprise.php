@@ -127,8 +127,8 @@ class Entreprise {
         $this->description = $description;
   }
 
-  public function setSecteurActivite($secteurActivite){
-        $this->secteurActivite = $secteurActivite;
+  public function setSecteurAtivite($secteurAtivite){
+        $this->secteurAtivite = $secteurAtivite;
   }
 
   public function setLogo($logo){
