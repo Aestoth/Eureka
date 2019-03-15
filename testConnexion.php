@@ -73,12 +73,13 @@ var_dump($listeMotCles); */
 //var_dump($motClesProjet);
 
 
-//$listeProjetEtudiant = $appliBD->insertRelationEntrepriseProjet(1, 1);
-//var_dump($listeProjetEtudiant);
+$listeProjetEtudiant = $appliBD->getListeProjetEtudiant(1);
+var_dump($listeProjetEtudiant);
 
 //$listeProjetEntreprise = $appliBD->insertRelationEntrepriseProjet(1, 2);
 
-$lit = $appliBD->getListeProjetEntreprise(1);
-var_dump($lit);
+// $lit = $appliBD->getListeProjetEntreprise(1);
+// var_dump($lit);
+
 
  ?>

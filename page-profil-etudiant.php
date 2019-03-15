@@ -1,3 +1,10 @@
+<?php
+require_once ('connexion.php');
+$appliBD = new connexion();
+$etudiant = $appliBD->getEtudiantById(($_GET["id"]));
+$projets = $appliBD->getListeProjetEtudiant(($_GET["id"]));
+$motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
+?>
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -606,7 +613,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
                         <div class="display-table-cell vertical-align-middle text-center">
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Gutembergue Mascarenhas</h1>
+                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom"><?php echo $etudiant->getNom()." ".$etudiant->getPrenom();?></h1>
                             <span class="text-white opacity6 alt-font">Lorem Ipsum is simply dummy text printing</span>
                             <!-- end page title -->
                         </div>
@@ -630,11 +637,11 @@
                                               <tbody>
                                                   <tr>
                                                       <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
-                                                      <td>Mascarenhas</td>
+                                                      <td><?php echo $etudiant->getNom();?></td>
                                                   </tr>
                                                   <tr>
                                                       <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
-                                                      <td>Gutembergue</td>
+                                                      <td><?php echo $etudiant->getPrenom();?></td>
                                                   </tr>
                                               </tbody>
                                           </table>
@@ -644,11 +651,11 @@
                                               <tbody>
                                                 <tr>
                                                     <th scope="row"><i class="fas fa-envelope"></i> Email</th>
-                                                    <td>gmascarenhas3001@gmail.com</td>
+                                                    <td><?php echo $etudiant->getEmail();?></td>
                                                 </tr>
                                                   <tr>
-                                                      <th scope="row"><i class="fas fa-phone-volume"></i>Téléphone</th>
-                                                      <td>078 675 1234</td>
+                                                      <th scope="row"><i class="fas fa-phone-volume"></i> Téléphone</th>
+                                                      <td><?php echo $etudiant->getTelephone();?></td>
                                                   </tr>
                                               </tbody>
                                           </table>
@@ -657,23 +664,27 @@
                             </div>
                           </div>
                           <h4 class="text-center text-extra-dark-gray alt-font" style="margin-bottom: 50px;"> Mes Projets</h4>
+                          <?php
+                            foreach ($projets as $projet) {
+                            echo'
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
                             <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
                                 <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-standard-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.NAhNdwK3pHrdgIyzT9gT4wHaE8%26pid%3D15.1&f=1" alt=""></a>
+                                    <a href="#"><img src="http://placehold.it/1200x840" alt=""></a>
                                 </div>
                             </div>
                             <div class="blog-text col-md-6 display-table no-padding">
                                 <div class="display-table-cell vertical-align-middle">
                                     <div class="content margin-20px-bottom sm-no-padding-left ">
-                                        <a href="blog-standard-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">Mes Projets terminé</a>
+                                        <a href="blog-standard-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">'.$projet->getTitre().'</a>
                                         <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>By <a href="blog-grid.html" class="text-medium-gray">Emily Wright</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>17 july 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-grid.html" class="text-medium-gray">Design</a></div>
-                                        <p class="no-margin width-95">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <p class="no-margin width-95">'.$projet->getDescription().'.</p>
                                     </div>
                                     <a class="btn btn-very-small btn-dark-gray text-uppercase" href="blog-standard-post.html">Continue Reading</a>
                                 </div>
                             </div>
                         </div>
+                        ';}?>
                         <!-- end post item -->
                         <!-- start post item -->
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
@@ -781,7 +792,7 @@
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
                             <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase text-small font-weight-600 aside-title"><span>About Me</span></div>
                             <a href="about-me.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fchittagongit.com%2Fimages%2Favatar-icon-images%2Favatar-icon-images-4.jpg&f=1" alt="" class="margin-25px-bottom"/></a>
-                            <p class="margin-20px-bottom text-small">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.</p>
+                            <p class="margin-20px-bottom text-small"><?php echo $etudiant->getDescription();?>.</p>
                             <a class="btn btn-very-small btn-dark-gray text-uppercase" href="about-me.html">Modifier Description</a>
                         </div>
                         <div class="margin-50px-bottom">
@@ -800,17 +811,11 @@
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
                             <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>tags cloud</span></div>
                             <div class="tag-cloud">
-                                <a href="blog-grid.html">ADVERTISEMENT</a>
-                                <a href="blog-grid.html">ARTISTRY</a>
-                                <a href="blog-grid.html">BLOG</a>
-                                <a href="blog-grid.html">CONCEPTUAL</a>
-                                <a href="blog-grid.html">DESIGN</a>
-                                <a href="blog-grid.html">FASHION</a>
-                                <a href="blog-grid.html">INSPIRATION</a>
-                                <a href="blog-grid.html">SMART</a>
-                                <a href="blog-grid.html">QUOTES</a>
-                                <a href="blog-grid.html">UNIQUE</a>
-                                <a href="blog-grid.html">CONCEPTS</a>
+                            <?php
+                            foreach ($motsClesetudiant as $tagsetudiant)
+                            echo'
+                                <a href="#">'.$tagsetudiant->nom.'</a>
+                            ';?>   
                             </div>
                         </div>
 
