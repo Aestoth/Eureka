@@ -823,7 +823,7 @@ function getListeMotCles() {
 
 
 
-//Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
+ //Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function getListeProjetEtudiant($idEtudiant) {
 
@@ -848,26 +848,19 @@ function getListeProjetEntreprise($idEntreprise) {
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT * FROM Projet p
-        INNER JOIN Relation_Entreprise_Projet
-        ON idProjet = p.id
-        WHERE idEntreprise = :id");
+        INNER JOIN Relation_Entreprise_Projet r
+        ON r.idProjet = p.id
+        WHERE r.idEntreprise = :id");
 
     $requete_prepare->execute(
         array("id"=> $idEntreprise));
 
 
     $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Projet");
-
+      print_r($requete_prepare->errorInfo());
     return $listeProjetEntreprise;
 
 }
-
-
-
-
-
-
-
 
 }//Fin de la class Connexion
  ?>

@@ -50,7 +50,7 @@
         require_once ('connexion.php');
         $appliBD = new connexion();
         $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
-        //$listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
+        $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         ?>
         <style>
         .line-height{
@@ -308,18 +308,26 @@
                         <p class="width-90 margin-lr-auto xs-width-100 xs-no-margin-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="position-relative">
+
+
+
+
+
+               <div class="row">
+                     <div class="position-relative">
                         <div class="swiper-container black-move blog-slider swiper-four-slides swiper-pagination-bottom">
-                            <div class="swiper-wrapper">
-                                <!--  start project item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
 
 
+                              <div class="swiper-wrapper">
+
+                              <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
+
+                                <?php
+                                  foreach ($listeProjetEntreprise as $value) {
 
 
-                                   <figure>
-                                        <div class="team-image xs-width-100">
+                            echo'<figure>
+                                         <div class="team-image xs-width-100">
                                             <img src="http://placehold.it/700x892" alt="">
                                             <div class="overlay-content text-center">
                                                 <div class="display-table height-100 width-100">
@@ -335,118 +343,13 @@
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Titre Projet</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">description Projet</div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'</div>
+                                                <div class="text-extra-small text-uppercase text-medium-gray">'.$value->getDescription().'</div>
                                           </div>
                                         </figcaption>
-                                    </figure>
-
+                                    </figure>';
+                                      }?>
                                 </div>
-                                <!-- end project item -->
-                                <!--  start project item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.2s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end project item -->
-                                <!--  start project item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.4s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end project item -->
-                                <!--  start project item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.6s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end project item -->
-                                <!--  start project item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Lorem Ipsum is simply</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Lorem Ipsum is simply</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end project item -->
                             </div>
                             <div class="swiper-pagination swiper-pagination-four-slides"></div>
                         </div>
