@@ -862,5 +862,25 @@ function getListeProjetEntreprise($idEntreprise) {
 
 }
 
+
+///function entreprise par email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function getEntrepriseByContactEmail1($contactEmail1){
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM Entreprise WHERE contactEmail1 = :contactEmail1");
+     $requete_prepare->execute(array("contactEmail1"=>$contactEmail1));
+
+     $resultat = $requete_prepare->fetchObject("Entreprise");
+     return $resultat;
+
+}
+
+
+
+
+
+
+
 }//Fin de la class Connexion
  ?>

@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+
+require_once ('connexion.php');
+$appliBD = new connexion();
+$entreprise = $appliBD->getEntrepriseById(($_GET['id']));
+$listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
+?>
+
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -46,12 +61,7 @@
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
-        <?php
-        require_once ('connexion.php');
-        $appliBD = new connexion();
-        $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
-        $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
-        ?>
+
         <style>
         .line-height{
           font-size: 25px;

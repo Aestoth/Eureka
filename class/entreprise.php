@@ -35,6 +35,11 @@ class Entreprise {
         return $this->nom;
   }
 
+
+  public function getPassword(){
+        return $this->password;
+  }
+
   public function getUrlSite(){
         return $this->urlSite;
   }
@@ -76,31 +81,31 @@ class Entreprise {
   }
 
   public function getContactEmail1(){
-        return $this->contactPrenom1;
+        return $this->contactEmail1;
   }
 
   public function getContactNom2(){
-        return $this->contactNom1;
+        return $this->contactNom2;
   }
 
   public function getContactPrenom2(){
-        return $this->contactPrenom1;
+        return $this->contactPrenom2;
   }
 
   public function getContactEmail2(){
-        return $this->contactPrenom1;
+        return $this->contactEmail2;
   }
 
   public function getContactNom3(){
-        return $this->contactNom1;
+        return $this->contactNom3;
   }
 
   public function getContactPrenom3(){
-        return $this->contactPrenom1;
+        return $this->contactPrenom3;
   }
 
   public function getContactEmail3(){
-        return $this->contactPrenom1;
+        return $this->contactEmail3;
   }
 
   public function getListeProjets(){

@@ -888,7 +888,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="select-style big-select">
-                            <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
+                            <select name="budget" id="budget" class="bg-transparent no-margin-bottom" >
                                 <option value="">Centre d'Interet</option>
                                 <option value="internet">Internet</option>
                                 <option value="Technologie">Technologia</option>
@@ -898,7 +898,7 @@
                             </select>
                         </div>
                     </div>
-
+                  
               </div>
                 <div class="col-md-6" >
                     <h5 class="title text-center">Contacts 1</h5>
