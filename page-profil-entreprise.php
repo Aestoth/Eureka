@@ -325,7 +325,6 @@
                                 <?php
                                   foreach ($listeProjetEntreprise as $value) {
 
-
                             echo'<figure>
                                          <div class="team-image xs-width-100">
                                             <img src="http://placehold.it/700x892" alt="">
