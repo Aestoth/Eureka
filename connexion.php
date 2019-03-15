@@ -700,11 +700,11 @@ function getEtrepriseMotCles($idEtreprise) {
     $requete_prepare=$this->connexion->prepare(
         "SELECT nom FROM MotCles m
         INNER JOIN MotCles_entreprise
-        ON idMotCles = m.Id
-        WHERE idEntreprise = :Id");
+        ON idMotCles = m.id
+        WHERE idEntreprise = :id");
 
     $requete_prepare->execute(
-        array("Id"=> $idEtreprise));
+        array("id"=> $idEtreprise));
 
     $motClesEntreprise = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
 
@@ -719,11 +719,11 @@ function getEtudiantListeMotCles($idEtudiant) {
     $requete_prepare=$this->connexion->prepare(
         "SELECT * FROM MotCles m
         INNER JOIN MotCles_etudiant
-        ON idMotCles = m.Id
-        WHERE idEtudiant = :Id");
+        ON idMotCles = m.id
+        WHERE idEtudiant = :id");
 
     $requete_prepare->execute(
-        array("Id"=> $idEtudiant));
+        array("id"=> $idEtudiant));
 
     $motClesEtudiant = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
 
@@ -740,11 +740,11 @@ function getProjetMotCles($idProjet) {
     $requete_prepare=$this->connexion->prepare(
         "SELECT nom FROM MotCles m
         INNER JOIN MotCles_projet
-        ON idMotCles = m.Id
-        WHERE idProjet = :Id");
+        ON idMotCles = m.id
+        WHERE idProjet = :id");
 
     $requete_prepare->execute(
-        array("Id"=> $idProjet));
+        array("id"=> $idProjet));
 
     $motClesProjet = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
 
@@ -823,22 +823,20 @@ function getListeMotCles() {
 
 
 
-
-
 //Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function getListeProjetEtudiant($idEtudiant) {
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT * FROM Projet p
-        INNER JOIN Relation_Etudiant_Projet r
-        ON r.idProjet = p.id
-        WHERE r.idEtudiant = :id");
+        INNER JOIN Relation_Etudiant_Projet
+        ON idProjet = p.id
+        WHERE idEtudiant = :id");
 
     $requete_prepare->execute(
         array("id"=> $idEtudiant));
 
-    $listeProjetEtudiant = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Projet');
+    $listeProjetEtudiant = $requete_prepare->fetchAll((PDO::FETCH_CLASS, "Projet");
     return $listeProjetEtudiant;
 
 }
@@ -846,28 +844,24 @@ function getListeProjetEtudiant($idEtudiant) {
 //Function Liste de Projets Entreprise///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-public function getListeProjetEntreprise($idEntreprise){
-  $requete_prepare =$this->connexion->prepare(
-    "SELECT * FROM Projet WHERE idEntreprise = :id");
+function getListeProjetEntreprise($idEntreprise) {
 
-    $requete_prepare->execute(array("id"=>$idEntreprise));
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Projet p
+        INNER JOIN Relation_Entreprise_Projet
+        ON idProjet = p.id
+        WHERE idEntreprise = :id");
 
-    $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Projet');
+    $requete_prepare->execute(
+        array("id"=> $idEntreprise));
 
+    $listeProjetEntreprise = $requete_prepare->fetchAll((PDO::FETCH_CLASS, "Projet");
     return $listeProjetEntreprise;
+
 }
 
 
-/*public function getListeChien($utilisateurId){
-  $requete_prepare =$this->connexion->prepare(
-    "SELECT * FROM Chien WHERE utilisateurId = :id");
 
-    $requete_prepare->execute(array("id"=>$utilisateurId));
-
-    $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
-
-    return $listeChien;
-}*/
 
 
 
