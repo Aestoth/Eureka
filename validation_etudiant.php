@@ -17,7 +17,17 @@
 
     $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion);
 
-    header("Location: page-profil-etudiant.php?id=$idEtudiant");
+
+    foreach ($_POST["Motsclesetudiant"] as $value) {
+        $appliBD->insertMotCles_etudiant($idEtudiant, $idMotCles);
+    }
+
+
+
+        header("Location: page-profil-etudiant.php?id=$idEtudiant");
+    
+
+
 
 
 

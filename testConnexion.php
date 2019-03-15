@@ -85,7 +85,8 @@ var_dump($listeMotCles); */
 //$email = $appliBD->getEntrepriseByEmail("josue@gmail.com");
 //echo $email->getPassword();
 
-
+//$listeMotCles = $appliBD->getListeMotCles();
+//var_dump($listeMotCles);
 
 
 
