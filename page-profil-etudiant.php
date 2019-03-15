@@ -812,10 +812,10 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>tags cloud</span></div>
                             <div class="tag-cloud">
                             <?php
-                            foreach ($motsClesetudiant as $tagsetudiant)
+                            foreach ($motsClesetudiant as $tagsetudiant) {
                             echo'
                                 <a href="#">'.$tagsetudiant->nom.'</a>
-                            ';?>   
+                            ';}?>   
                             </div>
                         </div>
 

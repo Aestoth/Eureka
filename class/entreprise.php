@@ -7,7 +7,7 @@ class Entreprise {
   protected $urlSite;
   protected $description;
   protected $facebook;
-  protected $linkdin;
+  protected $linkedin;
   protected $instagram;
   protected $secteurAtivite;
   protected $logo;
@@ -52,8 +52,8 @@ class Entreprise {
         return $this->facebook;
   }
 
-  public function getLinkdin(){
-        return $this->linkdin;
+  public function getLinkedin(){
+        return $this->linkedin;
   }
 
   public function getInstagram(){

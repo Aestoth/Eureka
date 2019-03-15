@@ -16,7 +16,7 @@ $periode3 = $_POST['periode3'];
 $typeEvenement = $_POST['typeEvenement'];
 $etatProjet = $_POST['etatProjet'];
 $idEntreprise = $_POST['idEntreprise'];
-$MotsClesprojet = $_POST['MotClesprojet'];
+$MotClesprojet = $_POST['MotClesprojet'];
 
 $appliBD->insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise);
 
