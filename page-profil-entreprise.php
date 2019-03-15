@@ -50,7 +50,7 @@
         require_once ('connexion.php');
         $appliBD = new connexion();
         $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
-        $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
+        //$listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         ?>
         <style>
         .line-height{
@@ -315,10 +315,10 @@
                                 <!--  start project item -->
                                 <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
 
-                                  <?php foreach ($listeProjetEntreprise as $value) {
 
 
-                                echo' <figure>
+
+                                   <figure>
                                         <div class="team-image xs-width-100">
                                             <img src="http://placehold.it/700x892" alt="">
                                             <div class="overlay-content text-center">
@@ -335,12 +335,12 @@
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'.</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">'.$value->getDescription().'.</div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Titre Projet</div>
+                                                <div class="text-extra-small text-uppercase text-medium-gray">description Projet</div>
                                           </div>
                                         </figcaption>
-                                    </figure>';
-                                    } ?>
+                                    </figure>
+
                                 </div>
                                 <!-- end project item -->
                                 <!--  start project item -->

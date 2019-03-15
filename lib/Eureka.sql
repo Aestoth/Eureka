@@ -51,11 +51,13 @@ CREATE TABLE Etudiant (
     id INT(100) AUTO_INCREMENT,
     nom VARCHAR(255),
     prenom VARCHAR(255),
+    password VARCHAR(255),
     description VARCHAR(300),
     email VARCHAR(255),
     telephone VARCHAR(20)
     avatar VARCHAR(255),
     jourDisponibles int(100),
+    derniereConnexion VARCHAR(255),
     PRIMARY KEY (id)
 );
 
@@ -75,6 +77,7 @@ CREATE TABLE Fournisseur (
 
 CREATE TABLE Administrateur (
   id INT(100) AUTO_INCREMENT,
+  login VARCHAR(255),
   password VARCHAR(255),
   PRIMARY KEY (id)
 );
