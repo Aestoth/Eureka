@@ -1,3 +1,11 @@
+
+<?php
+require_once ('connexion.php');
+$appliBD = new connexion();
+$listeMotCles = $appliBD->getListeMotCles();
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -643,7 +651,7 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
-                <form id="project-contact-form" action="validation_user.php" method="post">
+                <form id="project-contact-form" action="validation_etudiant.php" method="post">
                     <div class="row">
                          <div class="col-md-12">
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
@@ -669,14 +677,17 @@
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select">
-                                <select name="Motsclesetudiant" id="Motsclesetudiant" class="bg-transparent no-margin-bottom">
+
+
+
+                                <select name="Motsclesetudiant[]" id="Motsclesetudiant" class="bg-transparent no-margin-bottom">
                                      <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
-                                </select>
+
+                               <?php foreach ($listeMotCles as $value){
+                                  echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                   }?>
+                               </select>
+
                             </div>
                         </div>
                         <div class="col-md-12">

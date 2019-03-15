@@ -40,13 +40,13 @@ class Connexion {
 
   ///Function InsertEntreprise/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertEntreprise($nom,$password,$urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
+  public function insertEntreprise($nom,$password,$urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
     $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3 ){
 
       $requete_prepare = $this->connexion->prepare("
-      INSERT INTO Entreprise (nom, password, urlSite, description, facebook, linkdin, instagram, secteurAtivite, logo, nombCollaborateurs,
+      INSERT INTO Entreprise (nom, password, urlSite, description, facebook, linkedin, instagram, secteurAtivite, logo, nombCollaborateurs,
       contactNom1, contactPrenom1, contactEmail1, contactNom2, contactPrenom2, contactEmail2, contactNom3, contactPrenom3, contactEmail3 )
-      values (:nom, :password, :urlSite, :description, :facebook, :linkdin, :instagram, :secteurAtivite, :logo, :nombCollaborateurs,
+      values (:nom, :password, :urlSite, :description, :facebook, :linkedin, :instagram, :secteurAtivite, :logo, :nombCollaborateurs,
       :contactNom1, :contactPrenom1, :contactEmail1, :contactNom2, :contactPrenom2, :contactEmail2, :contactNom3, :contactPrenom3, :contactEmail3)");
       $requete_prepare->execute(
         array(
@@ -55,7 +55,7 @@ class Connexion {
               'urlSite' => $urlSite,
               'description' => $description,
               'facebook' => $facebook,
-              'linkdin' => $linkdin,
+              'linkedin' => $linkedin,
               'instagram' => $instagram,
               'secteurAtivite' => $secteurAtivite,
               'logo' => $logo,
@@ -692,6 +692,8 @@ class Connexion {
    $nombEtatProjet = $requete_prepare->fetch();
     return $nombEtatProjet;
 }
+
+
 
 //Function Get Entreprise liste de Mot Cles////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

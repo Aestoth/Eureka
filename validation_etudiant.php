@@ -15,6 +15,7 @@ $jourDisponibles = to_bitfield($_POST['jourDisponibles']);
 $derniereConnexion =  date('Y-m-d');
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
+<<<<<<< HEAD:validation_user.php
 $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion);
     
     
@@ -23,3 +24,22 @@ $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $te
 print_r($_POST);
 
 ?>
+=======
+    $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion);
+
+
+    foreach ($_POST["Motsclesetudiant"] as $value) {
+        $appliBD->insertMotCles_etudiant($idEtudiant, $value);
+    }
+
+
+
+        header("Location: page-profil-etudiant.php?id=$idEtudiant");
+
+
+
+
+
+
+?>
+>>>>>>> master:validation_etudiant.php
