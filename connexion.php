@@ -835,10 +835,14 @@ function getListeProjetEtudiant($idEtudiant) {
 
     $requete_prepare->execute(
         array("id"=> $idEtudiant));
+<<<<<<< HEAD
+
+    $listeProjetEtudiant = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Projet");
+=======
+>>>>>>> 8abb99851ca82dbb9d272148b8a997cb50d80c51
 
     $listeProjetEtudiant = $requete_prepare->fetchAll((PDO::FETCH_CLASS, "Projet");
     return $listeProjetEtudiant;
-
 }
 
 //Function Liste de Projets Entreprise///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -854,6 +858,11 @@ function getListeProjetEntreprise($idEntreprise) {
 
     $requete_prepare->execute(
         array("id"=> $idEntreprise));
+<<<<<<< HEAD
+
+    $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Projet");
+=======
+>>>>>>> 8abb99851ca82dbb9d272148b8a997cb50d80c51
 
     $listeProjetEntreprise = $requete_prepare->fetchAll((PDO::FETCH_CLASS, "Projet");
     return $listeProjetEntreprise;
