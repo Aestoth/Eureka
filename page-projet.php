@@ -4,6 +4,7 @@ $appliBD = new connexion();
 $projets = $appliBD->getProjetById(($_GET["id"]));
 $entreprise = $appliBD->getEntrepriseById(($_GET["id"]));
 $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
+$etudiants = $appliBD->getListeEtudiant();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -627,25 +628,6 @@ $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
                         <div class="col-md-12 col-sm-12 col-xs-12 margin-seven-bottom margin-eight-top">
                             <div class="divider-full bg-medium-light-gray"></div>
                         </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 sm-text-center">
-                            <div class="tag-cloud margin-20px-bottom">
-                                <a href="blog-grid.html">Advertisement</a>
-                                <a href="blog-grid.html">Artistry</a>
-                                <a href="blog-grid.html">Blog</a>
-                                <a href="blog-grid.html">Conceptual</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 text-right sm-text-center">
-                            <div class="social-icon-style-6">
-                                <ul class="extra-small-icon">
-                                    <li><a class="likes-count" href="#" target="_blank"><i class="fas fa-heart text-deep-pink"></i><span class="text-small">300</span></a></li>
-                                    <li><a class="facebook" href="http://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a class="twitter" href="http://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a class="google" href="http://google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a class="pinterest" href="http://dribbble.com" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 margin-30px-top">
                             <div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
                                 <div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
@@ -657,79 +639,6 @@ $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
                                     <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 blog-details-comments">
-                            <div class="width-100 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
-                                <div class="position-relative overflow-hidden width-100">
-                                    <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">COMMENTAIRES</span>
-                                </div>
-                            </div>
-                            <ul class="blog-comment">
-                                <li>
-                                    <div class="display-table width-100">
-                                        <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-                                            <img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-                                        </div>
-                                        <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-                                            <a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Herman Miller</a>
-                                            <a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-                                            <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                        </div>
-                                    </div>
-                                    <ul class="child-comment">
-                                        <li>
-                                            <div class="display-table width-100">
-                                                <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-                                                    <img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-                                                </div>
-                                                <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-                                                    <a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Alexander Harvard</a>
-                                                    <a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-                                                    <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="display-table width-100">
-                                        <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-                                            <img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-                                        </div>
-                                        <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-                                            <a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Jennifer Freeman</a>
-                                            <a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-                                            <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 margin-eight-top" id="comments">
-                            <div class="divider-full bg-medium-light-gray"></div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
-                            <div class="position-relative overflow-hidden width-100">
-                                <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">Write A Comments</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <input type="text" placeholder="Name *" class="medium-input">
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <input type="text" placeholder="E-mail *" class="medium-input">
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <input type="url" placeholder="Website" class="medium-input">
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <textarea placeholder="Enter your comment here.." rows="8" class="medium-textarea"></textarea>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                            <button class="btn btn-dark-gray btn-small margin-15px-top" type="submit">Send message</button>
                         </div>
                     </main>
                     <aside class="col-md-3 col-sm-12 col-xs-12 pull-right">
@@ -760,33 +669,17 @@ $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
                             </ul>   
                         </div>
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
-                            <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Popular post</span></div>
+                            <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Liste Participants</span></div>
+                            <?php
+                                foreach ($etudiants as $etudiant) {
+                                    echo'
                             <ul class="latest-post position-relative">
                                 <li>
-                                    <figure>
-                                        <a href="blog-masonry.html"><img src="http://placehold.it/480x358" alt=""></a>
-                                    </figure>
-                                    <div class="display-table-cell vertical-align-top text-small"><a href="blog-masonry.html" class="text-extra-dark-gray"><span class="display-inline-block margin-5px-bottom">Traveling abroad will change you forever</span></a> <span class="clearfix text-medium-gray text-small">April 30, 2016</span></div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <a href="blog-masonry.html"><img src="http://placehold.it/480x358" alt=""></a>
-                                    </figure>
-                                    <div class="display-table-cell vertical-align-top text-small"><a href="blog-masonry.html" class="text-extra-dark-gray"><span class="display-inline-block margin-5px-bottom">Having a new perspec-tive on new york city</span></a> <span class="clearfix text-medium-gray text-small">March 10, 2016</span></div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <a href="blog-masonry.html"><img src="http://placehold.it/480x358" alt=""></a>
-                                    </figure>
-                                    <div class="display-table-cell vertical-align-top text-small"><a href="blog-masonry.html" class="text-extra-dark-gray"><span class="display-inline-block margin-5px-bottom">The incredible talents of street performers</span></a> <span class="clearfix text-medium-gray text-small">March 05, 2016</span></div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <a href="blog-masonry.html"><img src="http://placehold.it/480x358" alt=""></a>
-                                    </figure>
-                                    <div class="display-table-cell vertical-align-top text-small"><a href="blog-masonry.html" class="text-extra-dark-gray"><span class="display-inline-block margin-5px-bottom">Praesent placerat risus quis eros</span></a> <span class="clearfix text-medium-gray text-small">March  01, 2016</span></div>
+                                    <img src="'.$etudiant->getAvatar().'" alt="" class="img-circle"></a>
+                                    <div class="display-table-cell vertical-align-top text-small"><span class="display-inline-block margin-5px-bottom">'.$etudiant->getNom()." ".$etudiant->getPrenom().'</span></a> <span class="clearfix text-medium-gray text-small">'.$etudiant->getEmail().'</span> <span class="clearfix text-medium-gray text-small">'.$etudiant->getTelephone().'</span></div>
                                 </li>
                             </ul>
+                            ';}?>
                         </div>
                     </aside>
                 </div>
