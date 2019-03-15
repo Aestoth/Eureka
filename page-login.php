@@ -123,11 +123,14 @@
     }
 
 }
-
+body {
+    background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.jimcdn.com%2Fapp%2Fcms%2Fimage%2Ftransf%2Fnone%2Fpath%2Fsaac8cb9ff3b062be%2Fbackgroundarea%2Fi770692930d533142%2Fversion%2F1488974054%2Fimage.jpg&f=1");
+}
     </style>
 
 </head>
 <body>
+
     <div id="logreg-forms">
         <form class="form-signin" action="validation-login.php" method="post">
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
