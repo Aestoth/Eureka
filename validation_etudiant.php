@@ -15,11 +15,10 @@
     $derniereConnexion =  date('Y-m-d');
     $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
-    $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion);
-    
-    
-                   
-     
-    print_r($_POST);
+    $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion);
+
+    header("Location: page-profil-etudiant.php?id=$idEtudiant");
+
+
 
 ?>
