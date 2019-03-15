@@ -684,7 +684,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                                      <option value="">Centre d'Interet</option>
 
                                <?php foreach ($listeMotCles as $value){
-                                  echo' <option value="'.$value->id.'">'.$value->nom.'</option>';
+                                  echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                    }?>
                                </select>
 

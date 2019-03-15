@@ -19,13 +19,13 @@
 
 
     foreach ($_POST["Motsclesetudiant"] as $value) {
-        $appliBD->insertMotCles_etudiant($idEtudiant, $idMotCles);
+        $appliBD->insertMotCles_etudiant($idEtudiant, $value);
     }
 
 
 
         header("Location: page-profil-etudiant.php?id=$idEtudiant");
-    
+
 
 
 
