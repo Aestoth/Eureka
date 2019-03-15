@@ -288,20 +288,20 @@ class Connexion {
 
 //Function insert Relation Entreprise projet////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-          public function insertRelationEntrepriseProjet ($idEntreprise, $idProjet) {
+  public function insertRelationEntrepriseProjet ($idEntreprise, $idProjet) {
 
-              $requete_prepare = $this->connexion->prepare(
-                "INSERT INTO Relation_Entreprise_Projet (idEntreprise, idProjet)
-                         values (:idEntreprise, :idProjet)");
+      $requete_prepare = $this->connexion->prepare(
+        "INSERT INTO Relation_Entreprise_Projet (idEntreprise, idProjet)
+               values (:idEntreprise, :idProjet)");
 
-               $requete_prepare->execute(
-                array(
-                       'idEntreprise' => $idEntreprise,
-                       'idProjet' => $idProjet
-                     )
-                );
-                    return true;
-            }
+         $requete_prepare->execute(
+          array(
+                 'idEntreprise' => $idEntreprise,
+                 'idProjet' => $idProjet
+               )
+          );
+          return true;
+  }
 
 
 
@@ -825,7 +825,7 @@ function getListeMotCles() {
 
 //Function Liste de Projets du Etudiant//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function getListeProjetEtudiant($idEtudiant) {
+/*function getListeProjetEtudiant($idEtudiant) {
 
     $requete_prepare=$this->connexion->prepare(
         "SELECT * FROM Projet p
@@ -858,7 +858,7 @@ function getListeProjetEntreprise($idEntreprise) {
     $listeProjetEntreprise = $requete_prepare->fetchAll((PDO::FETCH_CLASS, "Projet");
     return $listeProjetEntreprise;
 
-}
+}*/
 
 
 
