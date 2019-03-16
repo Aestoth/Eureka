@@ -260,10 +260,10 @@
                     <div class="col-md-12">
                       <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
                       <div id="demo" class="collapse">
-                        <form method="post" action="validation_entreprise.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
+
                           <div class="col-md-6">
                             <div class="select-style">
-                                <select name="budget" id="budget" class="transparent no-margin-bott">
+                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -275,7 +275,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="select-style">
-                                <select name="budget" id="budget" class="transparent no-margin-bott">
+                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -287,7 +287,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="select-style">
-                                <select name="budget" id="budget" class="transparent no-margin-bott">
+                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -299,7 +299,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="select-style">
-                                <select name="budget" id="budget" class="transparent no-margin-bott">
+                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -311,7 +311,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="select-style">
-                                <select name="budget" id="budget" class="transparent no-margin-bott">
+                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
                                     <option value="internet">Internet</option>
                                     <option value="Technologie">Technologia</option>
@@ -321,11 +321,8 @@
                                 </select>
                             </div>
                           </div>
-                          <div class="col-md-12 text-center">
-                              <button id="project-contact-us-button" type="submit"
-                                  class="btn btn-transparent-dark-gray btn-large margin-20px-top ">Confirmer Tags</button>
-                          </div>
-                        </form>
+
+
                       </div>
                     </div>
               </div>

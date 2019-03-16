@@ -28,7 +28,13 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 $idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo,
 $nombCollaborateurs, $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3);
 
-header("Location: page-profil-entreprise.php?id=$idEntreprise");
+foreach ($_POST["motClesEntreprise"] as $value) {
+    $appliBD->insertMotCles_entreprise($idEntreprise, $value);
+}
+
+    header("Location: page-profil-entreprise.php?id=$idEntreprise");
+
+
 
 
 

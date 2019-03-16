@@ -633,7 +633,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We are located in downtown New York</span>
                             <!-- end sub title -->
                             <!-- start page title -->
-                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">PHOTO</h1>
+                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Bienvenu</h1>
                             <!-- end page title -->
                         </div>
                     </div>
