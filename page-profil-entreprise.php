@@ -327,7 +327,6 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                      <div class="position-relative">
                         <div class="swiper-container black-move blog-slider swiper-four-slides swiper-pagination-bottom">
 
-
                               <div class="swiper-wrapper">
 
                               <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">

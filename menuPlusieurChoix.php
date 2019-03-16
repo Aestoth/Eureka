@@ -196,6 +196,19 @@
 			</p>
 
 		</form>
+		<div class="col-md-12">
+				<div class="select-style big-select">
+						<select name="budget" id="budget" class="transparent no-margin-bott">
+								<option value="">Centre d'Interet</option>
+								<option value="internet">Internet</option>
+								<option value="Technologie">Technologia</option>
+								<option value="Commerce">Commerce</option>
+								<option value="Economie">Economie</option>
+								<option value="Finance">Finance</option>
+						</select>
+				</div>
+		</div>
+
 
 	</body>
 </html>

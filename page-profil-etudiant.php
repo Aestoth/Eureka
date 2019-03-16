@@ -52,6 +52,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
         <style>
 
@@ -815,7 +816,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             foreach ($motsClesetudiant as $tagsetudiant) {
                             echo'
                                 <a href="#">'.$tagsetudiant->nom.'</a>
-                            ';}?>   
+                            ';}?>
                             </div>
                         </div>
 
@@ -828,12 +829,14 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
 
 
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
-                            <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Newsletter</span></div>
+                            <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Dernière Connexion</span></div>
                             <div class="display-inline-block width-100">
                                 <form>
                                     <div class="position-relative">
-                                        <input type="email" class="bg-transparent text-small no-margin border-color-extra-light-gray medium-input pull-left" placeholder="Enter your email...">
-                                        <button type="submit" class="bg-transparent text-large btn position-absolute right-0 top-3"><i class="far fa-envelope no-margin-left"></i></button>
+                                      <tr>
+                                          <th scope="row"><i class="far fa-clock"></i></th>
+                                          <td><?php echo $etudiant->getDerniereConnexion();?></td>
+                                      </tr>
                                     </div>
                                 </form>
                             </div>
