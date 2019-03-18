@@ -194,7 +194,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             echo'
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
                             <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
-                                <div class="display-table-cell vertical-align-middle">
+                                <div class="display-block">
                                     <a href="#"><img src="http://placehold.it/1200x840" alt=""></a>
                                 </div>
                             </div>
