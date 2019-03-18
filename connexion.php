@@ -957,6 +957,22 @@ public function getEntrepriseByContactEmail1($contactEmail1){
 
 
 
+public function getUtilisateurByEmail($email){
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM Utilisateur WHERE email = :email");
+     $requete_prepare->execute(array("email"=>$email));
+
+     $resultat = $requete_prepare->fetchObject("Utilisateur");
+     return $resultat;
+
+}
+
+
+
+
+
+
 
 }//Fin de la class Connexion
  ?>

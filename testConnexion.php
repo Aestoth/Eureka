@@ -88,6 +88,7 @@ var_dump($listeMotCles); */
 //$listeMotCles = $appliBD->getListeMotCles();
 //var_dump($listeMotCles);
 
+$nom = $appliBD->getEtudiantById(6);
 
-
+echo $nom->getNom();
  ?>

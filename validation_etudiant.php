@@ -10,23 +10,18 @@ $password = $_POST['password'];
 $description = $_POST['description'];
 $email = $_POST['email'];
 $telephone = $_POST['telephone'];
-$avatar = $_FILES["avatar"]["name"];
+$avatar = $_POST['avatar'];
 $jourDisponibles = to_bitfield($_POST['jourDisponibles']);
-$derniereConnexion =  date('Y-m-d');
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
-$suffixe = date("YmdHis");
-$uploadedFileName = $_FILES["avatar"]["name"];
-$uploadedFile = new SplFileInfo($uploadedFileName);
-$fileExtension = $uploadedFile->getExtension();
-$destinationFolder = $_SERVER['DOCUMENT_ROOT']."/Projets/Eureka/images";
-$destinationName = "/avatar/img-".$suffixe.".".$fileExtension;
-$imageMoved = move_uploaded_file($_FILES["avatar"]["tmp_name"], $destinationFolder.$destinationName);
 
 
-$idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $destinationName, $jourDisponibles, $derniereConnexion);
 
-    
+$role = "Etudiant";
+$idUtilisateur = $appliBD->insertUtilisateur($contactEmail1, $passwordHash, $role);
+$idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur);
+
+
 
 foreach ($_POST["motClesEtudiant"] as $value) {
     $appliBD->insertMotCles_etudiant($idEtudiant, $value);

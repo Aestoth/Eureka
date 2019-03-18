@@ -7,25 +7,32 @@ $appliBD = new Connexion();
 
 
 
-
-
-$contactEmail1 = $_POST['contactEmail1'];
+$email = $_POST['email'];
 $password = $_POST['password'];
 
-  $entrepriseByEmail = $appliBD->getEntrepriseByContactEmail1($contactEmail1);
+  $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
 
-  $hash = $entrepriseByEmail->getPassword();
+  $hash = $utilisateurByEmail->getPassword();
 
-  $idEntreprise = $entrepriseByEmail->getId();
+  $idUtilisateur = $utilisateurByEmail->getId();
+
+  $role = $utilisateurByEmail->getRole();
 
 
   if(password_verify($password, $hash)) {
       session_start();
-      $_SESSION['id'] = $idEntreprise;
+      $_SESSION['id'] = $idUtilisateur;
+      $_SESSION['email'] = $email;
+      $_SESSION['role'] = $role;
 
-      header('Location: page-profil-entreprise.php?id='.$idEntreprise);
+   if($role == "Entreprise"){
+    header('Location: page-profil-entreprise.php?id='.$idUtilisateur);
 
-}
+      }if($role = "Etudiant"){
+        header('Location: page-profil-etudiant.php?id='.$idUtilisateur);
 
-
+      }else{
+        header('Location: page-profil-administrateur.php?id='.$idUtilisateur);
+      }
+  }
 ?>
