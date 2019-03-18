@@ -1,3 +1,16 @@
+
+
+<?php
+require_once ('connexion.php');
+$appliBD = new connexion();
+$listeMotCles = $appliBD->getListeMotCles();
+
+?>
+
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -265,11 +278,10 @@
                             <div class="select-style">
                                 <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                    <?php foreach ($listeMotCles as $value){
+                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                        }?>
+
                                 </select>
                             </div>
                           </div>
@@ -277,11 +289,10 @@
                             <div class="select-style">
                                 <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                    <?php foreach ($listeMotCles as $value){
+                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                        }?>
+
                                 </select>
                             </div>
                           </div>
@@ -289,11 +300,10 @@
                             <div class="select-style">
                                 <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                    <?php foreach ($listeMotCles as $value){
+                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                        }?>
+
                                 </select>
                             </div>
                           </div>
@@ -301,11 +311,10 @@
                             <div class="select-style">
                                 <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                    <?php foreach ($listeMotCles as $value){
+                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                        }?>
+
                                 </select>
                             </div>
                           </div>
@@ -313,11 +322,10 @@
                             <div class="select-style">
                                 <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
                                     <option value="">Centre d'Interet</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologia</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
+                                    <?php foreach ($listeMotCles as $value){
+                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                        }?>
+                                  
                                 </select>
                             </div>
                           </div>
