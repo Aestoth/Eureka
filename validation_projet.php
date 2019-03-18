@@ -14,14 +14,13 @@ $periode2 = $_POST['periode2'];
 $date3 = $_POST['date3'];
 $periode3 = $_POST['periode3'];
 $typeEvenement = $_POST['typeEvenement'];
-$MotClesprojet = $_POST['motClesProjet'];
 $etatProjet = "En cours";
 
 $idProjet = $appliBD->insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise);
 
 
-foreach ($MotClesprojet as $value) {
+foreach ($_POST['motClesProjet'] as $value) {
     $appliBD->insertMotCles_projet($idProjet, $value);
 }
 
-    header("Location: page-profil-etudiant.php?id=$idProjet");
+    header("Location: page-projet.php?id=$idProjet");

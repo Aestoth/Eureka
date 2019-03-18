@@ -2,7 +2,6 @@
 require_once ('connexion.php');
 $appliBD = new connexion();
 $projets = $appliBD->getProjetById(($_GET["id"]));
-$entreprise = $appliBD->getEntrepriseById(($_GET["id"]));
 $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
 $etudiants = $appliBD->getListeEtudiant();
 ?>
@@ -28,7 +27,7 @@ $etudiants = $appliBD->getListeEtudiant();
         <link rel="stylesheet" href="css/animate.css" />
         <!-- bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <!-- et line icon --> 
+        <!-- et line icon -->
         <link rel="stylesheet" href="css/et-line-icons.css" />
         <!-- font-awesome icon -->
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -139,7 +138,7 @@ $etudiants = $appliBD->getListeEtudiant();
                     </div>
                 </div>
             </nav>
-            <!-- end navigation --> 
+            <!-- end navigation -->
         </header>
         <!-- end header -->
         <!-- start page title section -->
@@ -161,7 +160,7 @@ $etudiants = $appliBD->getListeEtudiant();
             </div>
         </section>
         <!-- end page title section -->
-        <!-- start post content section --> 
+        <!-- start post content section -->
         <section>
             <div class="container">
                 <div class="row">
@@ -211,7 +210,7 @@ $etudiants = $appliBD->getListeEtudiant();
                                 echo'
                                     <a href="#">'.$tagsprojet->nom.'</a>
                                 ';}?>
-                            </ul>   
+                            </ul>
                         </div>
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
                             <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Liste Participants</span></div>
@@ -230,8 +229,8 @@ $etudiants = $appliBD->getListeEtudiant();
                 </div>
             </div>
         </section>
-        <!-- end blog content section -->  
-        <!-- start footer --> 
+        <!-- end blog content section -->
+        <!-- start footer -->
         <footer class="footer-classic-dark bg-extra-dark-gray padding-five-bottom xs-padding-30px-bottom">
             <div class="bg-dark-footer padding-50px-tb xs-padding-30px-tb">
                 <div class="container">
@@ -311,7 +310,7 @@ $etudiants = $appliBD->getListeEtudiant();
                                     <div id="success-subscribe-newsletter" class="no-margin-lr"></div>
                                     <input type="text" id="email" name="email" class="bg-transparent text-small no-margin border-color-medium-dark-gray" placeholder="Enter your email...">
                                     <button id="button-subscribe-newsletter" type="submit" class="btn btn-arrow-small position-absolute border-color-medium-dark-gray"><i class="fas fa-caret-right no-margin-left"></i></button>
-                                </div>   
+                                </div>
                             </form>
                         </div>
                         <!-- end newsletter -->
@@ -378,7 +377,7 @@ $etudiants = $appliBD->getListeEtudiant();
         <!-- equalize -->
         <script type="text/javascript" src="js/equalize.min.js"></script>
         <!-- skill bars  -->
-        <script type="text/javascript" src="js/skill.bars.jquery.js"></script> 
+        <script type="text/javascript" src="js/skill.bars.jquery.js"></script>
         <!-- justified gallery  -->
         <script type="text/javascript" src="js/justified-gallery.min.js"></script>
         <!--pie chart-->
