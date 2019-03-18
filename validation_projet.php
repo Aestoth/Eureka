@@ -5,7 +5,7 @@ $appliBD = new Connexion();
 
 
 $titre = $_POST['titre'];
-$photo = $_POST['photo'];
+$photo = $_FILES["photo"]["name"];
 $description = $_POST['description'];
 $date1 = $_POST['date1'];
 $periode1 = $_POST['periode1'];
@@ -16,11 +16,18 @@ $periode3 = $_POST['periode3'];
 $typeEvenement = $_POST['typeEvenement'];
 $etatProjet = "En cours";
 
-$idProjet = $appliBD->insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise);
+$suffixe = date("YmdHis");
+$uploadedFileName = $_FILES["photo"]["name"];
+$uploadedFile = new SplFileInfo($uploadedFileName);
+$fileExtension = $uploadedFile->getExtension();
+$destinationFolder = $_SERVER['DOCUMENT_ROOT']."/Projets/Eureka/images";
+$destinationName = "/photo_projets/img-".$suffixe.".".$fileExtension;
+$imageMoved = move_uploaded_file($_FILES["photo"]["tmp_name"], $destinationFolder.$destinationName);
 
+$idProjet = $appliBD->insertProjet($titre, $destinationName, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise);
 
 foreach ($_POST['motClesProjet'] as $value) {
     $appliBD->insertMotCles_projet($idProjet, $value);
 }
 
-    header("Location: page-projet.php?id=$idProjet");
+header("Location: page-projet.php?id=$idProjet");

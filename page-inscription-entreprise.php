@@ -225,7 +225,7 @@ $listeMotCles = $appliBD->getListeMotCles();
         <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <form  id="project-contact-form" action="validation_entreprise.php" method="post">
+                <form  id="project-contact-form" action="validation_entreprise.php" method="post" enctype="multipart/form-data">
                     <h5 class="title text-center">Information Société</h5>
 
                     <div class="col-md-12">

@@ -651,7 +651,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
-                <form id="project-contact-form" action="validation_etudiant.php" method="post">
+                <form id="project-contact-form" action="validation_etudiant.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                          <div class="col-md-12">
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
@@ -681,7 +681,7 @@ $listeMotCles = $appliBD->getListeMotCles();
 
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -692,7 +692,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -703,7 +703,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -714,7 +714,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -725,7 +725,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';

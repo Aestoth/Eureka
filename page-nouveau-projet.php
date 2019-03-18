@@ -186,7 +186,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text.</p>
                     </div>
                 </div>
-                <form id="project-contact-form" action="validation_projet.php" method="post">
+                <form id="project-contact-form" action="validation_projet.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                          <div class="col-md-12">
                             <div id="success-project-contact-form" class="no-margin-lr"></div>
