@@ -1,3 +1,13 @@
+
+<?php
+require_once ('connexion.php');
+$appliBD = new connexion();
+$listeMotCles = $appliBD->getListeMotCles();
+
+?>
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -668,16 +678,67 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="MotClesprojet" id="MotClesprojet" placeholder="Centre d'Interet" class="bg-transparent no-margin-bottom">
-                                    <option value="">Centre d'Intérêt</option>
-                                    <option value="internet">Internet</option>
-                                    <option value="Technologie">Technologie</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Economie">Economie</option>
-                                    <option value="Finance">Finance</option>
-                                </select>
-                            </div>
+                          <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
+                          <div id="demo" class="collapse">
+
+                              <div class="col-md-6">
+                                <div class="select-style">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                        <option value="">Centre d'Interet</option>
+                                        <?php foreach ($listeMotCles as $value){
+                                           echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                            }?>
+
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="select-style">
+                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                        <option value="">Centre d'Interet</option>
+                                        <?php foreach ($listeMotCles as $value){
+                                           echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                            }?>
+
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="select-style">
+                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                        <option value="">Centre d'Interet</option>
+                                        <?php foreach ($listeMotCles as $value){
+                                           echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                            }?>
+
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="select-style">
+                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                        <option value="">Centre d'Interet</option>
+                                        <?php foreach ($listeMotCles as $value){
+                                           echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                            }?>
+
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="select-style">
+                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                        <option value="">Centre d'Interet</option>
+                                        <?php foreach ($listeMotCles as $value){
+                                           echo' <option value='.$value->id.'>'.$value->nom.'</option>';
+                                            }?>
+
+                                    </select>
+                                </div>
+                              </div>
+
+
+                          </div>
                         </div>
 
                         <div class="col-md-12">
@@ -719,23 +780,6 @@
                                     <option value="">Période</option>
                                     <option value="AM">matin</option>
                                     <option value="PM">après-midi</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="etatProjet" id="etatProjet" class="bg-transparent no-margin-bottom">
-                                    <option value="">Etat du Projet</option>
-                                    <option value="fermer">Fermer</option>
-                                    <option value="ouvert">Ouvert</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="select-style big-select">
-                                <select name="idEntreprise" id="idEntreprise" class="bg-transparent no-margin-bottom">
-                                    <option value="">Entreprise</option>
-                                    <option value="1">1</option>
                                 </select>
                             </div>
                         </div>
