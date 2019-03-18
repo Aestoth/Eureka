@@ -110,7 +110,7 @@ class Connexion {
     public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise){
 
         $requete_prepare = $this->connexion->prepare("
-         INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2 date3, periode3, typeEvenement, etatProjet, idEntreprise)
+         INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2, date3, periode3, typeEvenement, etatProjet, idEntreprise)
           values (:titre, :photo, :description, :date1, :periode1, :date2, :periode2, :date3, :periode3, :typeEvenement, :etatProjet, :idEntreprise)");
         $requete_prepare->execute(
           array(

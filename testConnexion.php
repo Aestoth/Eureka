@@ -15,7 +15,7 @@ if($appliBD != null){
 
 //var_dump($etudiant);
 
-//$projet = $appliBD->insertProjet("projetT", "photo", "blablabla", "11111", "22222", "33333", "workshop", "termine", 1 );
+$projet = $appliBD->insertProjet("Bootcamp", "photo", "rrrrrrrrrr", "11111","000", "22222", "00", "33333","0", "workshop", "termine", 1 );
 
 //echo $projet;
 
