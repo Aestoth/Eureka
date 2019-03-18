@@ -3,7 +3,7 @@ require_once ('connexion.php');
 $appliBD = new connexion();
 $projets = $appliBD->getProjetById(($_GET["id"]));
 $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
-$etudiants = $appliBD->getListeEtudiant();
+$ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -196,9 +196,9 @@ $etudiants = $appliBD->getListeEtudiant();
                             <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Follow Us</span></div>
                             <div class="social-icon-style-1 text-center">
                                 <ul class="extra-small-icon">
-                                    <li><a class="facebook" href="<?php echo $entreprise->getFacebook();?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a class="linkedin" href="<?php echo $entreprise->getLinkedin();?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a class="instagram" href="<?php echo $entreprise->getInstagram();?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="facebook" href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="linkedin" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a class="instagram" href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -215,7 +215,7 @@ $etudiants = $appliBD->getListeEtudiant();
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
                             <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Liste Participants</span></div>
                             <?php
-                                foreach ($etudiants as $etudiant) {
+                                foreach ($ListeEtudiantByProjet as $etudiant) {
                                     echo'
                             <ul class="latest-post position-relative">
                                 <li>

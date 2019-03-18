@@ -865,6 +865,25 @@ function getListeProjetEntreprise($idEntreprise) {
 }
 
 
+//Function Liste de Etudiant by Projet//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getListeEtudiantByProjet($idProjet) {
+
+   $requete_prepare=$this->connexion->prepare(
+       "SELECT * FROM Etudiant e
+       INNER JOIN Relation_Etudiant_Projet
+       ON idEtudiant = e.id
+       WHERE idProjet = :id");
+
+   $requete_prepare->execute(
+       array("id"=> $idProjet));
+
+   $listeEtudiantByProjet = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Etudiant");
+
+   return $listeEtudiantByProjet;
+}
+
+
 ///function entreprise par email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public function getEntrepriseByContactEmail1($contactEmail1){
