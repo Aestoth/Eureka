@@ -5,6 +5,16 @@ CREATE USER 'eurekaAdmin'@'localhost' IDENTIFIED BY 'Eurek@';
  GRANT ALL PRIVILEGES ON Eureka.* TO 'eurekaAdmin'@'localhost';
 
 
+ CREATE TABLE Utilisateur (
+   id int(100) AUTO_INCREMENT,
+   email VARCHAR(255),
+   password VARCHAR(255),
+   role VARCHAR(255),
+   derniereConnexion VARCHAR(255),
+   PRIMARY KEY (id)
+ );
+
+
  CREATE TABLE Entreprise (
     id INT(100) AUTO_INCREMENT,
     nom VARCHAR(255),
@@ -25,7 +35,9 @@ CREATE USER 'eurekaAdmin'@'localhost' IDENTIFIED BY 'Eurek@';
     contactNom3 VARCHAR(255),
     contactPrenom3 VARCHAR(255),
     contactEmail3 VARCHAR(255),
-    PRIMARY KEY (id)
+    idUtilisateur INT(100),
+    PRIMARY KEY (id),
+    FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur(id)
 );
 
 CREATE TABLE Projet (
@@ -47,6 +59,13 @@ CREATE TABLE Projet (
 );
 
 
+CREATE TABLE Avatar (
+    id int AUTO_INCREMENT,
+    imageAvatar VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+
 CREATE TABLE Etudiant (
     id INT(100) AUTO_INCREMENT,
     nom VARCHAR(255),
@@ -57,8 +76,10 @@ CREATE TABLE Etudiant (
     telephone VARCHAR(20)
     avatar VARCHAR(255),
     jourDisponibles int(100),
-    derniereConnexion VARCHAR(255),
-    PRIMARY KEY (id)
+    idUtilisateur INT (100),
+    PRIMARY KEY (id),
+    FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur(id),
+    FOREIGN KEY (avatar) REFERENCES Avatar(id)
 );
 
 CREATE TABLE Fournisseur (
@@ -77,9 +98,11 @@ CREATE TABLE Fournisseur (
 
 CREATE TABLE Administrateur (
   id INT(100) AUTO_INCREMENT,
-  login VARCHAR(255),
+  email VARCHAR(255),
   password VARCHAR(255),
-  PRIMARY KEY (id)
+  idUtilisateur INT(100),
+  PRIMARY KEY (id),
+  FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur(id)
 );
 
 CREATE TABLE MotCles (
@@ -88,13 +111,6 @@ CREATE TABLE MotCles (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE MotCles_entreprise (
-  idEntreprise int(100),
-  idMotCles int(100),
-  PRIMARY KEY (idEntreprise, idMotCles),
-  FOREIGN KEY (idMotCles) REFERENCES MotCles(id),
-  FOREIGN KEY (idEntreprise) REFERENCES Entreprise(id)
-);
 
 CREATE TABLE MotCles_etudiant (
   idEtudiant int(100),
@@ -133,20 +149,6 @@ CREATE TABLE Relation_Etudiant_Projet (
   PRIMARY KEY (idEtudiant, idProjet),
   FOREIGN KEY (idProjet) REFERENCES Projet(id),
   FOREIGN KEY (idEtudiant) REFERENCES Etudiant(id)
-);
-
-CREATE TABLE Avatar (
-  id int AUTO_INCREMENT,
-  imageAvatar VARCHAR(255),
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE User (
-  id int(100) AUTO_INCREMENT,
-  email VARCHAR(255),
-  password VARCHAR(255),
-  role int(100),
-  PRIMARY KEY (id)
 );
 
 

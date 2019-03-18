@@ -202,7 +202,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                             are located in downtown New York</span>
                         <!-- end sub title -->
                         <!-- start page title -->
-                        <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Bienvenu</h1>
+                        <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Bienvenue</h1>
                         <!-- end page title -->
                     </div>
                 </div>
@@ -270,69 +270,6 @@ $listeMotCles = $appliBD->getListeMotCles();
                     </div>
 
 
-                    <div class="col-md-12">
-                      <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
-                      <div id="demo" class="collapse">
-
-                          <div class="col-md-6">
-                            <div class="select-style">
-                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
-                                    <option value="">Centre d'Interet</option>
-                                    <?php foreach ($listeMotCles as $value){
-                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                        }?>
-
-                                </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="select-style">
-                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
-                                    <option value="">Centre d'Interet</option>
-                                    <?php foreach ($listeMotCles as $value){
-                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                        }?>
-
-                                </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="select-style">
-                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
-                                    <option value="">Centre d'Interet</option>
-                                    <?php foreach ($listeMotCles as $value){
-                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                        }?>
-
-                                </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="select-style">
-                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
-                                    <option value="">Centre d'Interet</option>
-                                    <?php foreach ($listeMotCles as $value){
-                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                        }?>
-
-                                </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="select-style">
-                                <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
-                                    <option value="">Centre d'Interet</option>
-                                    <?php foreach ($listeMotCles as $value){
-                                       echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                        }?>
-                                  
-                                </select>
-                            </div>
-                          </div>
-
-
-                      </div>
-                    </div>
               </div>
                 <div class="col-md-6" >
                     <h5 class="title text-center">Contacts 1</h5>

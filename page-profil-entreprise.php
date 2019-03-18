@@ -143,24 +143,31 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
             </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn cover-background background-position-top top-space">
-            <div class="opacity-medium bg-extra-dark-gray"></div>
+        <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
-                        <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
-                            <!-- start logo -->
-                            <a href="index.html" title="Pofo" class="logo"><img src="images/logo-full-white.png" data-rjs="images/logo-full-white@2x.png" alt="Pofo" class="logo-light default" style="margin-bottom: 50px"></a>
-                            <!-- end logo -->
+                <div class="row equalize xs-equalize-auto">
+                    <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
+                        <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                             <!-- start page title -->
-                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom"><?php echo $entreprise->getNom();?></h1>
+                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase"><?php echo $entreprise->getNom();?></h1>
                             <!-- end page title -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
+                        <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
+                            <!-- breadcrumb -->
+                            <ul class="xs-text-center">
+                                <li><a href="#" class="text-dark-gray">Pages</a></li>
+                                <li><a href="#" class="text-dark-gray">Contact</a></li>
+                                <li class="text-dark-gray">Contact us classic</li>
+                            </ul>
+                            <!-- end breadcrumb -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+      
         <!-- end page title section -->
         <!-- start team section heading -->
         <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
@@ -174,66 +181,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
             </div>
         </section>
         <!-- end team section heading -->
-        <!-- start team section -->
-        <section class="wow fadeIn overlap-section no-padding-top z-index-5">
-                <div class="container-fluid padding-thirteen-lr md-padding-six-lr">
-                    <div class="row">
-                        <!-- start team item -->
-                        <div class="col-md-3 col-sm-6 col-xs-12 team-block text-left team-style-1 sm-margin-30px-bottom xs-margin-30px-bottom wow fadeInUp">
-                            <figure>
-                                <div class="team-image xs-width-100">
-                                    <img src="http://placehold.it/905x950" alt="">
-                                    <div class="overlay-content text-center">
-                                        <div class="display-table height-100 width-100">
-                                            <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-overlay bg-deep-pink opacity8"></div>
-                                </div>
-                                <figcaption>
-                                    <div class="team-member-position margin-20px-top text-center">
-                                        <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Hugh Macleod</div>
-                                        <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <!-- end team item -->
-                        <!-- start team item -->
-                        <div class="col-md-3 col-sm-6 col-xs-12 team-block text-left team-style-1 sm-margin-30px-bottom xs-margin-30px-bottom wow fadeInUp" data-wow-delay="0.2s">
-                            <figure>
-                                <div class="team-image xs-width-100">
-                                    <img src="http://placehold.it/905x950" alt="">
-                                    <div class="overlay-content text-center">
-                                        <div class="display-table height-100 width-100">
-                                            <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-overlay bg-deep-pink opacity8"></div>
-                                </div>
-                                <figcaption>
-                                    <div class="team-member-position margin-20px-top text-center">
-                                        <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Jeremy Dupont</div>
-                                        <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <!-- end team item -->
-                    </div>
-                </div>
-            </section>
-            <!-- end team section -->
+
         <!-- start counter section -->
         <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2015%2F05%2F150511_car_sizeoffice.jpg%3Fquality%3D85&f=1');">
             <div class="opacity-full-dark bg-extra-dark-gray"></div>

@@ -5,6 +5,7 @@ include 'class/etudiant.php';
 include 'class/projet.php';
 include 'class/fournisseur.php';
 include 'class/administrateur.php';
+include 'class/utilisateur.php';
 
 class Connexion {
     private $connexion;
@@ -12,8 +13,8 @@ class Connexion {
     public function __construct() {
         $PARAM_hote= 'localhost';
         $PARAM_port='3306';
-        $PARAM_nom_bd='Eureka';
-        $PARAM_utilisateur='eurekaAdmin';
+        $PARAM_nom_bd='ProjetEureka';
+        $PARAM_utilisateur='projetEurekaAdmin';
         $PARAM_mot_passe='Eurek@';
 
         try{
@@ -41,13 +42,13 @@ class Connexion {
   ///Function InsertEntreprise/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function insertEntreprise($nom,$password,$urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
-    $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3 ){
+    $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur ){
 
       $requete_prepare = $this->connexion->prepare("
       INSERT INTO Entreprise (nom, password, urlSite, description, facebook, linkedin, instagram, secteurAtivite, logo, nombCollaborateurs,
-      contactNom1, contactPrenom1, contactEmail1, contactNom2, contactPrenom2, contactEmail2, contactNom3, contactPrenom3, contactEmail3 )
+      contactNom1, contactPrenom1, contactEmail1, contactNom2, contactPrenom2, contactEmail2, contactNom3, contactPrenom3, contactEmail3, idUtilisateur )
       values (:nom, :password, :urlSite, :description, :facebook, :linkedin, :instagram, :secteurAtivite, :logo, :nombCollaborateurs,
-      :contactNom1, :contactPrenom1, :contactEmail1, :contactNom2, :contactPrenom2, :contactEmail2, :contactNom3, :contactPrenom3, :contactEmail3)");
+      :contactNom1, :contactPrenom1, :contactEmail1, :contactNom2, :contactPrenom2, :contactEmail2, :contactNom3, :contactPrenom3, :contactEmail3, :idUtilisateur)");
       $requete_prepare->execute(
         array(
               'nom'=> $nom,
@@ -68,7 +69,8 @@ class Connexion {
               'contactEmail2' => $contactEmail2,
               'contactNom3' => $contactNom3,
               'contactPrenom3' => $contactPrenom3,
-              'contactEmail3' => $contactEmail3
+              'contactEmail3' => $contactEmail3,
+              'idUtilisateur' => $idUtilisateur
             )
         );
         $idEntreprise= $this->connexion->lastInsertId();
@@ -79,10 +81,10 @@ class Connexion {
 
   //Function InsertEtudiant//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles, $derniereConnexion){
+  public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur){
 
       $requete_prepare = $this->connexion->prepare("
-       INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles, derniereConnexion) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles, :derniereConnexion)");
+       INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles, idUtilisateur) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles, :idUtilisateur)");
       $requete_prepare->execute(
         array(
               'nom'=> $nom,
@@ -93,7 +95,7 @@ class Connexion {
               'telephone' => $telephone,
               'avatar' => $avatar,
               'jourDisponibles'=> $jourDisponibles,
-              'derniereConnexion'=>$derniereConnexion
+              'idUtilisateur'=> $idUtilisateur
             )
         );
 
@@ -158,6 +160,45 @@ class Connexion {
         return $idFournisseur;
   }
 
+
+
+///Funstion insert Utilisateur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function insertUtilisateur($email, $password, $role){
+
+      $requete_prepare = $this->connexion->prepare("
+        INSERT INTO Utilisateur (email, password, role)
+        values (:email, :password, :role)");
+      $requete_prepare->execute(
+        array(
+              'email'=> $email,
+              'password'=> $password,
+              'role' => $role
+            )
+        );
+        $idUtilisateur = $this->connexion->lastInsertId();
+        return $idUtilisateur;
+  }
+
+
+
+  ///Funstion insert Administrateur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function insertAdministrateur($login, $password, $idUtilisateur){
+
+      $requete_prepare = $this->connexion->prepare("
+        INSERT INTO Administrateur (login, password, idUtilisateur)
+        values (:login, :password, :idUtilisateur)");
+      $requete_prepare->execute(
+        array(
+              'email'=> $email,
+              'password'=> $password,
+              'idUtilisateur' => $idUtilisateur
+            )
+        );
+        $idAdministrateur = $this->connexion->lastInsertId();
+        return $idAdministrateur;
+  }
 
 
 //Functiont insert Categorie///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -303,6 +344,20 @@ class Connexion {
           return true;
   }
 
+
+//////Function Utilisateur by Id///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function getUtilisateurById($id){
+    $requete_prepare = $this->connexion->prepare(
+      "SELECT *
+      FROM Utilisateur
+      WHERE id = :id"
+    );
+    $requete_prepare->execute(array("id"=>$id));
+
+    $utilisateur = $requete_prepare->fetchObject("Utilisateur");
+    return $utilisateur;
+  }
 
 
 //////Function Liste Entreprise///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -33,12 +33,12 @@ $destinationFolder = $_SERVER['DOCUMENT_ROOT']."/Projets/Eureka/images";
 $destinationName = "/logo_entreprise/img-".$suffixe.".".$fileExtension;
 $imageMoved = move_uploaded_file($_FILES["logo"]["tmp_name"], $destinationFolder.$destinationName);
 
+$role = "Entreprise";
+$idUtilisateur = $appliBD->insertUtilisateur($contactEmail1, $passwordHash, $role);
 $idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo,
-$nombCollaborateurs, $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3);
+$nombCollaborateurs, $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur);
 
-foreach ($_POST["motClesEntreprise"] as $value) {
-    $appliBD->insertMotCles_entreprise($idEntreprise, $value);
-}
+
 
 header("Location: page-profil-entreprise.php?id=$idEntreprise");
 
