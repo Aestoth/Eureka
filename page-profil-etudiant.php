@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once ('connexion.php');
 $appliBD = new connexion();
 $etudiant = $appliBD->getEtudiantById(($_GET["id"]));

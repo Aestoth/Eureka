@@ -9,6 +9,7 @@ $appliBD = new Connexion();
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+$derniereConnexion = date("Y-m-d");
 
   $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
 

@@ -18,7 +18,7 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
 
 $role = "Etudiant";
-$idUtilisateur = $appliBD->insertUtilisateur($contactEmail1, $passwordHash, $role);
+$idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role);
 $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur);
 
 
