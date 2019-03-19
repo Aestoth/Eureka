@@ -15,13 +15,13 @@ $idEntreprise = $idEntrepriseByEmail->getId();
 <html class="no-js" lang="en">
     <head>
         <!-- title -->
-        <title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
+        <title>Eureka – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
         <meta name="author" content="ThemeZaa">
         <!-- description -->
-        <meta name="description" content="POFO is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.">
+        <meta name="description" content="Eureka is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.">
         <!-- keywords -->
         <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq">
         <!-- favicon -->
@@ -72,9 +72,9 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                 <div class="row">
                     <!-- start logo -->
                     <div class="col-md-2 col-xs-5">
-                        <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png"
-                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img
-                                src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo"
+                        <a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
+                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Eureka"><img
+                                src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt="Eureka"
                                 class="logo-light"></a>
                     </div>
                     <!-- end logo -->
@@ -324,7 +324,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                     <div class="row equalize xs-equalize-auto">
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray sm-no-border-right sm-margin-30px-bottom xs-text-center">
                             <!-- start logo -->
-                            <a href="index.html" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt=""></a>
+                            <a href="#" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt=""></a>
                             <!-- end logo -->
                             <p class="text-small width-95 xs-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <!-- start social media -->
@@ -342,7 +342,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray padding-45px-left sm-padding-15px-left sm-no-border-right sm-margin-30px-bottom xs-text-center">
                             <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Additional Links</div>
                             <ul class="list-unstyled">
-                                <li><a class="text-small" href="index.html">Home Classic Corporate</a></li>
+                                <li><a class="text-small" href="#">Home Classic Corporate</a></li>
                                 <li><a class="text-small" href="home-creative-business.html">Home Creative Business</a></li>
                                 <li><a class="text-small" href="home-creative-designer.html">Home Creative Designer</a></li>
                                 <li><a class="text-small" href="home-portfolio-minimal.html">Home Portfolio Minimal</a></li>
@@ -354,7 +354,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                         <!-- start contact information -->
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray padding-45px-left sm-padding-15px-left sm-clear-both sm-no-border-right  xs-margin-30px-bottom xs-text-center">
                             <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Contact Info</div>
-                            <p class="text-small display-block margin-15px-bottom width-80 xs-center-col">POFO Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p>
+                            <p class="text-small display-block margin-15px-bottom width-80 xs-center-col">Eureka Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p>
                             <div class="text-small">Email: <a href="mailto:sales@domain.com">sales@domain.com</a></div>
                             <div class="text-small">Phone: +44 (0) 123 456 7890</div>
                             <a href="contact-us-modern.html" class="text-small text-uppercase text-decoration-underline">View Direction</a>
@@ -375,7 +375,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                 <div class="container">
                     <div class="row">
                         <!-- start copyright -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">&copy; 2017 POFO is Proudly Powered by <a href="http://www.themezaa.com" target="_blank" class="text-dark-gray">ThemeZaa</a></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">&copy; 2017 Eureka is Proudly Powered by <a href="http://www.themezaa.com" target="_blank" class="text-dark-gray">ThemeZaa</a></div>
                         <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center">
                             <a href="javascript:void(0);" class="text-dark-gray">Term and Condition</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" class="text-dark-gray">Privacy Policy</a>
                         </div>

@@ -38,9 +38,9 @@ $idUtilisateur = $appliBD->insertUtilisateur($contactEmail1, $passwordHash, $rol
 $idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo,
 $nombCollaborateurs, $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur);
 
+var_dump($_POST);
 
-
-header("Location: page-profil-entreprise.php?id=$idEntreprise");
+/* header("Location: page-profil-entreprise.php?id=$idEntreprise"); */
 
 
 

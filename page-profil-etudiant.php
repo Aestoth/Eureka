@@ -10,13 +10,13 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
 <html class="no-js" lang="en">
     <head>
         <!-- title -->
-        <title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
+        <title>Eureka – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
         <meta name="author" content="ThemeZaa">
         <!-- description -->
-        <meta name="description" content="POFO is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.">
+        <meta name="description" content="Eureka is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.">
         <!-- keywords -->
         <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq">
         <!-- favicon -->
@@ -73,9 +73,9 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                 <div class="row">
                     <!-- start logo -->
                     <div class="col-md-2 col-xs-5">
-                        <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png"
-                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img
-                                src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo"
+                        <a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
+                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Eureka"><img
+                                src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Eureka"
                                 class="logo-light"></a>
                     </div>
                     <!-- end logo -->
@@ -355,7 +355,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                         <!-- start logo -->
                         <div class="col-md-4 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <a href="index.html"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo"></a>
+                                <a href="#"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Eureka"></a>
                             </div>
                         </div>
                         <!-- end logo -->
@@ -439,8 +439,8 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                 <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
                     <div class="row">
                         <!-- start copyright -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">POFO - Portfolio Concept Theme</div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center">&COPY; 2017 POFO is Proudly Powered by <a href="http://www.themezaa.com" target="_blank" title="ThemeZaa">ThemeZaa</a></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">Eureka - Portfolio Concept Theme</div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center">&COPY; 2017 Eureka is Proudly Powered by <a href="http://www.themezaa.com" target="_blank" title="ThemeZaa">ThemeZaa</a></div>
                         <!-- end copyright -->
                     </div>
                 </div>
