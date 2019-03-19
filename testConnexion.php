@@ -78,7 +78,7 @@ var_dump($listeMotCles); */
 
 //$listeProjetEntreprise = $appliBD->insertRelationEntrepriseProjet(1, 2);
 
-//$lit = $appliBD->getListeProjetEntreprise(1);
+// $lit = $appliBD->getListeProjetEntreprise(1);
 // var_dump($lit);
 
 
@@ -88,7 +88,8 @@ var_dump($listeMotCles); */
 //$listeMotCles = $appliBD->getListeMotCles();
 //var_dump($listeMotCles);
 
-$nom = $appliBD->getEtudiantById(6);
+// $nom = $appliBD->getEtudiantById(6);
 
-echo $nom->getNom();
+// echo $nom->getNom();
+
  ?>

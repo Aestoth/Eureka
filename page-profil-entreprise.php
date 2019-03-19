@@ -2,17 +2,11 @@
 
 session_start();
 
-
 require_once ('connexion.php');
 $appliBD = new connexion();
 $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
 $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
 ?>
-
-
-
-
-
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -35,7 +29,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <link rel="stylesheet" href="css/animate.css" />
         <!-- bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <!-- et line icon -->
+        <!-- et line icon --> 
         <link rel="stylesheet" href="css/et-line-icons.css" />
         <!-- font-awesome icon -->
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -57,131 +51,78 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <link rel="stylesheet" href="css/style.css" />
         <!-- responsive css -->
         <link rel="stylesheet" href="css/responsive.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
-
-        <style>
-        .line-height{
-          font-size: 25px;
-        }
-
-        .pb-4, .py-4 {
-          padding-bottom: 6.5rem !important;
-        }
-
-
-        </style>
     </head>
     <body>
         <!-- start header -->
         <header>
-                <!-- start navigation -->
-                <nav class="navbar navbar-default bootsnav bg-white navbar-top nav-box-width header-light">
-                    <div class="container-fluid nav-header-container">
-                        <div class="row">
-                            <!-- start logo -->
-                            <div class="col-md-2 col-xs-5">
-                                <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png" data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
-                            </div>
-                            <!-- end logo -->
-                            <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
-                                <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
-                                    <span class="sr-only">toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
-                                    <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
-                                        <!-- start menu item -->
-                                        <li class="dropdown megamenu-fw">
-                                            <a href="javascript:void(0);">Home</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                        </li>
-
-                                        <li class="dropdown simple-dropdown"><a href="javascript:void(0);">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                            <ul class="dropdown-menu" role="menu">
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown megamenu-fw">
-                                            <a href="javascript:void(0);">Portfolio</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="dropdown simple-dropdown"><a href="javascript:void(0);" title="Blog">Blog</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
-                                        </li>
-                                        <li class="dropdown megamenu-fw">
-                                            <a href="javascript:void(0);">Elements</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="dropdown megamenu-fw">
-                                            <a href="javascript:void(0);">Features</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-xs-5 width-auto">
-                                <div class="header-searchbar">
-                                    <a href="#search-header" class="header-search-form text-white"><i class="fas fa-search search-button"></i></a>
-                                    <!-- search input-->
-                                    <form id="search-header" method="post" action="search-result.html" name="search-header" class="mfp-hide search-form-result">
-                                        <div class="search-form position-relative">
-                                            <button type="submit" class="fas fa-search close-search search-button"></button>
-                                            <input type="text" name="search" class="search-input" placeholder="Enter your keywords..." autocomplete="off">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="header-social-icon xs-display-none">
-                                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                                    <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://dribbble.com/" title="Dribbble" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <!-- end navigation -->
-            </header>
+            <!-- start navigation -->
+            <!-- end navigation --> 
+        </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
-            <div class="container">
-                <div class="row equalize xs-equalize-auto">
-                    <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
-                        <div class="display-table-cell vertical-align-middle text-left xs-text-center">
-                            <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase"><?php echo $entreprise->getNom();?></h1>
-                            <!-- end page title -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
-                        <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                            <!-- breadcrumb -->
-                            <ul class="xs-text-center">
-                                <li><a href="#" class="text-dark-gray">Pages</a></li>
-                                <li><a href="#" class="text-dark-gray">Contact</a></li>
-                                <li class="text-dark-gray">Contact us classic</li>
-                            </ul>
-                            <!-- end breadcrumb -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-      
-        <!-- end page title section -->
-        <!-- start team section heading -->
-        <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
+        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
+            <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Nos contacts</h5>
-                        <p class="width-90 margin-lr-auto xs-width-100 xs-no-margin-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
+                        <div class="display-table-cell vertical-align-middle text-center">
+                            <!-- start page title -->
+                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Team member</h1>
+                            <!-- end page title -->
+                            <!-- start sub title -->
+                            <span class="text-white opacity6 alt-font">Unlimited power and customization possibilities</span>
+                            <!-- end sub title -->
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end team section heading -->
-
+        <!-- end page title section -->
+        <!-- start section -->
+        <section class="no-padding bg-light-gray wow fadeIn">
+            <div class="container">
+                <div class="row equalize sm-equalize-auto">
+                    <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Générales</h5>
+                <div class="card-body" style="margin-bottom: 15px; padding-left: 50px; padding-right: 50px;">
+                    <div class="row line-height">
+                        <div class="col-md-12 col-lg-6">
+                            <table class="table table-hover text-left">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><i class="far fa-building"></i>  Société</th>
+                                        <td><?php echo $entreprise->getNom(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><i class="far fa-user-circle"></i> Contact</th>
+                                        <td><?php echo $entreprise->getContactNom1();?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <table class="table table-hover text-left">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><i class="fas fa-dharmachakra"></i> Secteur d'Activité</th>
+                                            <td><?php echo $entreprise->getSecteurAtivite();?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><i class="fas fa-envelope"></i>Email</th>
+                                            <td><?php echo $entreprise->getContactEmail1();?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
         <!-- start counter section -->
         <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2015%2F05%2F150511_car_sizeoffice.jpg%3Fquality%3D85&f=1');">
             <div class="opacity-full-dark bg-extra-dark-gray"></div>
@@ -216,66 +157,26 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                     </div>
                     <!-- end counter item -->
                 </div>
-            </div>
+            </div>            
         </section>
         <!-- end counter section -->
-        <section>
-        <div class="container-fluid">
-        <div class="card" style="margin-bottom: 15px;">
-          <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Générales</h5>
-          <div class="card-body" style="margin-bottom: 15px; padding-left: 50px; padding-right: 50px;">
-            <div class="row line-height">
-                      <div class="col-md-12 col-lg-6">
-                          <table class="table table-hover text-left">
-                              <tbody>
-                                  <tr>
-                                      <th scope="row"><i class="far fa-building"></i>  Société</th>
-                                      <td><?php echo $entreprise->getNom(); ?></td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row"><i class="far fa-user-circle"></i> Contact</th>
-                                      <td><?php echo $entreprise->getContactNom1();?></td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                      <div class="col-md-12 col-lg-6">
-                          <table class="table table-hover text-left">
-                              <tbody>
-                                <tr>
-                                    <th scope="row"><i class="fas fa-dharmachakra"></i> Secteur d'Activité</th>
-                                    <td><?php echo $entreprise->getSecteurAtivite();?></td>
-                                </tr>
-                                  <tr>
-                                      <th scope="row"><i class="fas fa-envelope"></i>Email</th>
-                                      <td><?php echo $entreprise->getContactEmail1();?></td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        </section>
-        <!-- start project slider section -->
+        <!-- start team slider section -->
         <section class="wow fadeIn">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Nos projets</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Creative People</h5>
                         <p class="width-90 margin-lr-auto xs-width-100 xs-no-margin-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                    </div>
+                    </div>  
                 </div>
-
-
-
-
                 <div class="row">
                     <div class="position-relative">
                         <div class="swiper-container black-move blog-slider swiper-four-slides swiper-pagination-bottom">
+                            <!--  start team item -->                       
                             <div class="swiper-wrapper">
-                                <!--  start team item -->
+                            <?php
+                                foreach ($listeProjetEntreprise as $value) {
+                                echo'
                                 <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
                                     <figure>
                                         <div class="team-image xs-width-100">
@@ -294,173 +195,63 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                              <?php
-                                                foreach ($listeProjetEntreprise as $value) {
-
-                                                echo'<div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>';
-                                              }?>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end team item -->
-                                <!--  start team item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.2s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Jeremy Dupont</div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'</div>
                                                 <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
-                                            </div>
+                                            </div>   
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <!-- end team item -->
-                                <!--  start team item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.4s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Sara Smith</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Creative Studio Head</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end team item -->
-                                <!--  start team item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp" data-wow-delay="0.6s">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Bill Gardner</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Co-Founder / Design</div>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end team item -->
-                                <!--  start team item -->
-                                <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
-                                    <figure>
-                                        <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
-                                            <div class="overlay-content text-center">
-                                                <div class="display-table height-100 width-100">
-                                                    <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="team-overlay bg-deep-pink opacity8"></div>
-                                        </div>
-                                        <figcaption>
-                                            <div class="team-member-position margin-20px-top text-center">
-
-
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">Hugh Macleod</div>
-                                                <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
-
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- end team item -->
-                            </div>
+                                ';}?>
+                                <!-- end team item -->                                
+                            </div>                 
                             <div class="swiper-pagination swiper-pagination-four-slides"></div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- end team slider section --> 
+        <!-- start section -->
+        <section class="no-padding bg-light-gray wow fadeIn">
+            <div class="container">
+                <div class="row equalize sm-equalize-auto">
+                    <div class="col-md-6 col-sm-12 text-center">
+                        <div class="width-100 display-table">
+                            <div class="display-table-cell vertical-align-bottom">
+                                <img src="http://placehold.it/600x741" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-10 sm-text-center col-md-offset-1 sm-center-col md-padding-50px-tb sm-clear-both">
+                        <div class="width-100 height-100 display-table">
+                            <div class="display-table-cell vertical-align-middle">
+                                <i class="fas fa-quote-left text-deep-pink icon-medium margin-15px-bottom"></i>
+                                <h5 class="text-extra-dark-gray alt-font text-uppercase font-weight-700">Design is not just what it looks like and feels like. Design is how it works.</h5>
+                                <p class="width-90 sm-width-100">Pofo philosophy that great design can only be delivered by people with a deep social and cultural understanding of the communities they designing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...</p>
+                                <img src="images/signature-dark.png" alt="" class="margin-15px-top sm-no-margin-top">
+                                <span class="text-extra-dark-gray text-large display-block margin-30px-top alt-font font-weight-600 xs-margin-20px-top">Colin Smith</span>
+                                <span class="display-block">From the chairman's desk</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end project slider section -->
-        <!-- start section -->
-        <section class="no-padding bg-light-gray wow fadeIn">
-                <div class="container">
-                    <div class="row equalize sm-equalize-auto">
-                        <div class="col-md-6 col-sm-12 text-center">
-                            <div class="width-100 display-table">
-                                <div class="display-table-cell vertical-align-bottom">
-                                    <img src="http://placehold.it/600x741" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-sm-10 sm-text-center col-md-offset-1 sm-center-col md-padding-50px-tb sm-clear-both">
-                            <div class="width-100 height-100 display-table">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <i class="fas fa-quote-left text-deep-pink icon-medium margin-15px-bottom"></i>
-                                    <h5 class="text-extra-dark-gray alt-font text-uppercase font-weight-700">Design is not just what it looks like and feels like. Design is how it works.</h5>
-                                    <p class="width-90 sm-width-100">Pofo philosophy that great design can only be delivered by people with a deep social and cultural understanding of the communities they designing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...</p>
-                                    <img src="images/signature-dark.png" alt="" class="margin-15px-top sm-no-margin-top">
-                                    <span class="text-extra-dark-gray text-large display-block margin-30px-top alt-font font-weight-600 xs-margin-20px-top">Colin Smith</span>
-                                    <span class="display-block">From the chairman's desk</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end section -->
+        <!-- end section -->
         <!-- start call to action section -->
         <section id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h5 class="font-weight-700 text-uppercase alt-font text-extra-dark-gray center-col width-50 margin-5px-bottom xs-width-100">Vous avez un nouveau projet?</h5>
+                        <h5 class="font-weight-700 text-uppercase alt-font text-extra-dark-gray center-col width-50 margin-5px-bottom xs-width-100">Have a new project?</h5>
                         <span class="text-medium alt-font display-block">We'd love to hear about your project.</span>
-                        <a href="#" class="btn btn-large btn-transparent-deep-pink btn-rounded margin-35px-top no-margin-right">Créer un  nouveau Projet</a>
+                        <a href="contact-us-simple.html" class="btn btn-large btn-transparent-deep-pink btn-rounded margin-35px-top no-margin-right">Start New Projects</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- end call to action section -->
-        <!-- start footer -->
+        <!-- start footer --> 
         <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb xs-padding-30px-tb">
             <div class="footer-widget-area padding-40px-bottom xs-padding-30px-bottom">
                 <div class="container">
@@ -489,7 +280,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                                         <li class="display-inline-block margin-10px-right"><a href="http://twitter.com" target="_blank" title="Twitter">Twitter</a></li>
                                         <li class="display-inline-block margin-10px-right"><a href="http://facebook.com" target="_blank" title="Facebook">Facebook</a></li>
                                         <li class="display-inline-block margin-10px-right"><a href="http://instagram.com" target="_blank" title="Instagram">Instagram</a></li>
-                                        <li class="display-inline-block"><a href="http://dribbble.com" target="_blank" title="Dribbble">Dribbble</a></li>
+                                        <li class="display-inline-block"><a href="http://dribbble.com" target="_blank" title="Dribbble">Dribbble</a></li>                                                              
                                     </ul>
                                 </div>
                             </div>
@@ -550,7 +341,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <!-- equalize -->
         <script type="text/javascript" src="js/equalize.min.js"></script>
         <!-- skill bars  -->
-        <script type="text/javascript" src="js/skill.bars.jquery.js"></script>
+        <script type="text/javascript" src="js/skill.bars.jquery.js"></script> 
         <!-- justified gallery  -->
         <script type="text/javascript" src="js/justified-gallery.min.js"></script>
         <!--pie chart-->
