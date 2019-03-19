@@ -104,7 +104,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                                     </li>
                                     <li class="dropdown megamenu-fw">
                                         <a href="javascript:void(0);">Features</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                        
+
                                     </li>
                                 </ul>
                             </div>
@@ -256,7 +256,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';

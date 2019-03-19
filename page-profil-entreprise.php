@@ -242,7 +242,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                     <div class="col-md-12 text-center">
                         <h5 class="font-weight-700 text-uppercase alt-font text-extra-dark-gray center-col width-50 margin-5px-bottom xs-width-100">Have a new project?</h5>
                         <span class="text-medium alt-font display-block">We'd love to hear about your project.</span>
-                        <a href="contact-us-simple.html" class="btn btn-large btn-transparent-deep-pink btn-rounded margin-35px-top no-margin-right">Start New Projects</a>
+                        <a href="page-nouveau-projet.php" class="btn btn-large btn-transparent-deep-pink btn-rounded margin-35px-top no-margin-right">Nouveau Projet</a>
                     </div>
                 </div>
             </div>
