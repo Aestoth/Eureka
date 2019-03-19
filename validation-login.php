@@ -12,13 +12,9 @@ $password = $_POST['password'];
 $derniereConnexion = date("Y-m-d");
 
   $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
-
   $hash = $utilisateurByEmail->getPassword();
-
   $idUtilisateur = $utilisateurByEmail->getId();
-
   $role = $utilisateurByEmail->getRole();
-
 
 
   if(password_verify($password, $hash)) {
@@ -26,7 +22,6 @@ $derniereConnexion = date("Y-m-d");
       $_SESSION['id'] = $idUtilisateur;
       $_SESSION['email'] = $email;
       $_SESSION['role'] = $role;
-
 
 
    if($role == 1){
