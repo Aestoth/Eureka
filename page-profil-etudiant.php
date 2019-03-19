@@ -132,7 +132,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                         <!-- start post item -->
                         <div class="card">
                           <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Personnel</h5>
-                          <div class="card-body" style="margin-bottom: 50px;">
+                          <div class="card-body" style="margin-bottom: 50px; font-size:large;">
                             <div class="row">
                                       <div class="col-md-12 col-lg-6">
                                           <table class="table table-hover text-left">

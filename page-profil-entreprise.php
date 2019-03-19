@@ -1,9 +1,10 @@
 <?php
 
-session_start();
-
 require_once ('connexion.php');
 $appliBD = new connexion();
+
+session_start();
+
 $entreprise = $appliBD->getEntrepriseById(($_GET['id']));
 $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
 ?>
@@ -98,7 +99,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                 </div>
             </div>
             </nav>
-            <!-- end navigation --> 
+            <!-- end navigation -->
         </header>
         <!-- end header -->
         <!-- start page title section -->
@@ -125,7 +126,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
             <div class="container">
                 <div class="row equalize sm-equalize-auto">
                     <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Générales</h5>
-                <div class="card-body" style="margin-bottom: 15px; padding-left: 50px; padding-right: 50px;">
+                <div class="card-body" style="margin-bottom: 15px; padding-left: 50px; padding-right: 50px; font-size:large;">
                     <div class="row line-height">
                         <div class="col-md-12 col-lg-6">
                             <table class="table table-hover text-left">
@@ -204,7 +205,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom text-center last-paragraph-no-margin">
-                        <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Creative People</h5>
+                        <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Nos Projets</h5>
                         <p class="width-90 margin-lr-auto xs-width-100 xs-no-margin-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     </div>
                 </div>
