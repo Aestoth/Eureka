@@ -78,7 +78,7 @@ var_dump($listeMotCles); */
 
 //$listeProjetEntreprise = $appliBD->insertRelationEntrepriseProjet(1, 2);
 
-//$lit = $appliBD->getListeProjetEntreprise(1);
+// $lit = $appliBD->getListeProjetEntreprise(1);
 // var_dump($lit);
 
 
