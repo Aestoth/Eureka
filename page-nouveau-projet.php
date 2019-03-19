@@ -1,9 +1,12 @@
 
 <?php
+session_start();
 require_once ('connexion.php');
 $appliBD = new connexion();
 $listeMotCles = $appliBD->getListeMotCles();
 
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$idEntreprise = $idEntrepriseByEmail->getId();
 ?>
 
 
@@ -197,7 +200,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -208,7 +211,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -219,7 +222,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';

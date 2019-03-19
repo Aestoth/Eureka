@@ -3,6 +3,11 @@
 require_once 'connexion.php';
 $appliBD = new Connexion();
 
+session_start();
+$email = $_SESSION['email'];
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
+$idEntreprise = $idEntrepriseByEmail->getId();
+
 
 $titre = $_POST['titre'];
 $photo = $_FILES["photo"]["name"];
@@ -29,5 +34,10 @@ $idProjet = $appliBD->insertProjet($titre, $destinationName, $description, $date
 foreach ($_POST['motClesProjet'] as $value) {
     $appliBD->insertMotCles_projet($idProjet, $value);
 }
+
+
+$appliBD->insertRelationEntrepriseProjet($idEntreprise, $idProjet);
+
+
 
 header("Location: page-projet.php?id=$idProjet");
