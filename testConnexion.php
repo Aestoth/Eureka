@@ -88,7 +88,35 @@ var_dump($listeMotCles); */
 //$listeMotCles = $appliBD->getListeMotCles();
 //var_dump($listeMotCles);
 
-$nom = $appliBD->getEntrepriseByEmail("gmascarenhas3001@gmail.com");
+//$nom = $appliBD->insertAdministrateur("infologo.ch", );
 
-echo $nom->getId();
+//echo $nom->getId();
+
+
+
+
+
+/*$email = "infologo";
+$password = "infologo";
+$passwordHash = password_hash($password, PASSWORD_BCRYPT);
+
+
+$role = 3;
+$idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role);
+$idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUtilisateur);*/
+
+
+
+$listAdmin = $appliBD->getAdministrateurByEmail("infologo");
+echo $listAdmin->getId();
+
+
+
+
+
+
+
+
+
+
  ?>

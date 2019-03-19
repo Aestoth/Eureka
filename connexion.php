@@ -184,11 +184,11 @@ class Connexion {
 
   ///Funstion insert Administrateur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertAdministrateur($login, $password, $idUtilisateur){
+  public function insertAdministrateur($email, $password, $idUtilisateur){
 
       $requete_prepare = $this->connexion->prepare("
-        INSERT INTO Administrateur (login, password, idUtilisateur)
-        values (:login, :password, :idUtilisateur)");
+        INSERT INTO Administrateur (email, password, idUtilisateur)
+        values (:email, :password, :idUtilisateur)");
       $requete_prepare->execute(
         array(
               'email'=> $email,
@@ -914,7 +914,7 @@ function getListeProjetEntreprise($idEntreprise) {
 
 
     $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Projet");
-      print_r($requete_prepare->errorInfo());
+
     return $listeProjetEntreprise;
 
 }
@@ -941,32 +941,63 @@ function getListeEtudiantByProjet($idProjet) {
 
 ///function entreprise par email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function getEntrepriseByEmail($email){
-   $requete_prepare = $this->connexion->prepare(
-   "SELECT *
-    FROM Entreprise WHERE contactEmail1 = :contactEmail1");
-     $requete_prepare->execute(array("contactEmail1"=>$email));
+  public function getEntrepriseByEmail($email){
+     $requete_prepare = $this->connexion->prepare(
+     "SELECT *
+      FROM Entreprise WHERE contactEmail1 = :contactEmail1");
+       $requete_prepare->execute(array("contactEmail1"=>$email));
 
-     $resultat = $requete_prepare->fetchObject("Entreprise");
-     return $resultat;
+       $resultat = $requete_prepare->fetchObject("Entreprise");
+       return $resultat;
 
-}
-
-
+  }
 
 
 
 
-public function getUtilisateurByEmail($email){
-   $requete_prepare = $this->connexion->prepare(
-   "SELECT *
-    FROM Utilisateur WHERE email = :email");
-     $requete_prepare->execute(array("email"=>$email));
+//Functio Utilisateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
-     $resultat = $requete_prepare->fetchObject("Utilisateur");
-     return $resultat;
 
-}
+  public function getUtilisateurByEmail($email){
+     $requete_prepare = $this->connexion->prepare(
+     "SELECT *
+      FROM Utilisateur WHERE email = :email");
+       $requete_prepare->execute(array("email"=>$email));
+
+       $resultat = $requete_prepare->fetchObject("Utilisateur");
+       return $resultat;
+
+  }
+
+
+
+  //Functio Utilisateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+  public function getEtudiantByEmail($email){
+     $requete_prepare = $this->connexion->prepare(
+     "SELECT *
+      FROM Etudiant WHERE email = :email");
+       $requete_prepare->execute(array("email"=>$email));
+
+       $resultat = $requete_prepare->fetchObject("Etudiant");
+       return $resultat;
+
+  }
+
+
+//Functio Administrateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+  public function getAdministrateurByEmail($email){
+     $requete_prepare = $this->connexion->prepare(
+     "SELECT *
+      FROM Administrateur WHERE email = :email");
+       $requete_prepare->execute(array("email"=>$email));
+
+       $resultat = $requete_prepare->fetchObject("Administrateur");
+       return $resultat;
+
+  }
+
 
 
 

@@ -29,7 +29,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <link rel="stylesheet" href="css/animate.css" />
         <!-- bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <!-- et line icon --> 
+        <!-- et line icon -->
         <link rel="stylesheet" href="css/et-line-icons.css" />
         <!-- font-awesome icon -->
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -57,10 +57,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
     </head>
     <body>
         <!-- start header -->
-        <header>
-            <!-- start navigation -->
-            <!-- end navigation --> 
-        </header>
+
         <!-- end header -->
         <!-- start page title section -->
         <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
@@ -70,7 +67,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                     <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
                         <div class="display-table-cell vertical-align-middle text-center">
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Team member</h1>
+                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom"><?php echo $entreprise->getNom();?></h1>
                             <!-- end page title -->
                             <!-- start sub title -->
                             <span class="text-white opacity6 alt-font">Unlimited power and customization possibilities</span>
@@ -157,7 +154,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                     </div>
                     <!-- end counter item -->
                 </div>
-            </div>            
+            </div>
         </section>
         <!-- end counter section -->
         <!-- start team slider section -->
@@ -167,12 +164,12 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col margin-eight-bottom sm-margin-40px-bottom text-center last-paragraph-no-margin">
                         <h5 class="alt-font font-weight-700 text-extra-dark-gray margin-15px-bottom text-uppercase">Creative People</h5>
                         <p class="width-90 margin-lr-auto xs-width-100 xs-no-margin-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                    </div>  
+                    </div>
                 </div>
                 <div class="row">
                     <div class="position-relative">
                         <div class="swiper-container black-move blog-slider swiper-four-slides swiper-pagination-bottom">
-                            <!--  start team item -->                       
+                            <!--  start team item -->
                             <div class="swiper-wrapper">
                             <?php
                                 foreach ($listeProjetEntreprise as $value) {
@@ -197,20 +194,20 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                                             <div class="team-member-position margin-20px-top text-center">
                                                 <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'</div>
                                                 <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
-                                            </div>   
+                                            </div>
                                         </figcaption>
                                     </figure>
                                 </div>
                                 ';}?>
-                                <!-- end team item -->                                
-                            </div>                 
+                                <!-- end team item -->
+                            </div>
                             <div class="swiper-pagination swiper-pagination-four-slides"></div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </section>
-        <!-- end team slider section --> 
+        <!-- end team slider section -->
         <!-- start section -->
         <section class="no-padding bg-light-gray wow fadeIn">
             <div class="container">
@@ -251,7 +248,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
             </div>
         </section>
         <!-- end call to action section -->
-        <!-- start footer --> 
+        <!-- start footer -->
         <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb xs-padding-30px-tb">
             <div class="footer-widget-area padding-40px-bottom xs-padding-30px-bottom">
                 <div class="container">
@@ -280,7 +277,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
                                         <li class="display-inline-block margin-10px-right"><a href="http://twitter.com" target="_blank" title="Twitter">Twitter</a></li>
                                         <li class="display-inline-block margin-10px-right"><a href="http://facebook.com" target="_blank" title="Facebook">Facebook</a></li>
                                         <li class="display-inline-block margin-10px-right"><a href="http://instagram.com" target="_blank" title="Instagram">Instagram</a></li>
-                                        <li class="display-inline-block"><a href="http://dribbble.com" target="_blank" title="Dribbble">Dribbble</a></li>                                                              
+                                        <li class="display-inline-block"><a href="http://dribbble.com" target="_blank" title="Dribbble">Dribbble</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -341,7 +338,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <!-- equalize -->
         <script type="text/javascript" src="js/equalize.min.js"></script>
         <!-- skill bars  -->
-        <script type="text/javascript" src="js/skill.bars.jquery.js"></script> 
+        <script type="text/javascript" src="js/skill.bars.jquery.js"></script>
         <!-- justified gallery  -->
         <script type="text/javascript" src="js/justified-gallery.min.js"></script>
         <!--pie chart-->
