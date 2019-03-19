@@ -19,6 +19,9 @@ $derniereConnexion = date("Y-m-d");
 
   $role = $utilisateurByEmail->getRole();
 
+  $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
+
+  $idEntreprise = $idEntrepriseByEmail->getId();
 
   if(password_verify($password, $hash)) {
       session_start();
@@ -26,14 +29,16 @@ $derniereConnexion = date("Y-m-d");
       $_SESSION['email'] = $email;
       $_SESSION['role'] = $role;
 
-   if($role == "Entreprise"){
-    header('Location: page-profil-entreprise.php?id='.$idUtilisateur);
-
-      }if($role = "Etudiant"){
-        header('Location: page-profil-etudiant.php?id='.$idUtilisateur);
-
-      }else{
-        header('Location: page-profil-administrateur.php?id='.$idUtilisateur);
       }
-  }
+
+   if($role === 1){
+    header('Location: page-profil-entreprise.php?id='.$idEntreprise);
+
+    }if($role === 2){
+        header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+
+       }else{
+        header('Location: page-profil-administrateur.php?id='.$idAdministrateur);
+      }
+
 ?>

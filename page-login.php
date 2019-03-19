@@ -139,7 +139,7 @@ body {
                 <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
             </div>
             <p style="text-align:center"> OR  </p>
-            <input type="email" name="contactEmail1" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
             <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>

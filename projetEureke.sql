@@ -9,7 +9,7 @@ CREATE USER 'projetEurekaAdmin'@'localhost' IDENTIFIED BY 'Eurek@';
    id int(100) AUTO_INCREMENT,
    email VARCHAR(255),
    password VARCHAR(255),
-   role VARCHAR(255),
+   role INT(100),
    derniereConnexion VARCHAR(255),
    PRIMARY KEY (id)
  );

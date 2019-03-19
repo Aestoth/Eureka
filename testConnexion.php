@@ -88,7 +88,7 @@ var_dump($listeMotCles); */
 //$listeMotCles = $appliBD->getListeMotCles();
 //var_dump($listeMotCles);
 
-$nom = $appliBD->getEtudiantById(6);
+$nom = $appliBD->getEntrepriseByEmail("gmascarenhas3001@gmail.com");
 
-echo $nom->getNom();
+echo $nom->getId();
  ?>
