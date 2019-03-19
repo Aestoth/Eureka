@@ -1,15 +1,8 @@
-
-
 <?php
 require_once ('connexion.php');
 $appliBD = new connexion();
 $listeMotCles = $appliBD->getListeMotCles();
-
 ?>
-
-
-
-
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -61,17 +54,10 @@ $listeMotCles = $appliBD->getListeMotCles();
     <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
-
     <style>
-
     input, textarea, select {
-
     padding: 1px 15px;
-
     }
-
-
-
     </style>
 </head>
 
@@ -103,62 +89,18 @@ $listeMotCles = $appliBD->getListeMotCles();
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="javascript:void(0);">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
-                                <li class="dropdown simple-dropdown"><a href="javascript:void(0);">Pages</a><i
-                                        class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
-                                        aria-hidden="true"></i>
-                                </li>
-                                <li class="dropdown megamenu-fw">
-                                    <a href="javascript:void(0);">Portfolio</a><i
-                                        class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
-                                        aria-hidden="true"></i>
-
-                                </li>
-                                <li class="dropdown simple-dropdown"><a href="javascript:void(0);"
-                                        title="Blog">Blog</a><i class="fas fa-angle-down dropdown-toggle"
-                                        data-toggle="dropdown" aria-hidden="true"></i>
-                                </li>
-                                <li class="dropdown megamenu-fw">
-                                    <a href="javascript:void(0);">Elements</a><i
-                                        class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
-                                        aria-hidden="true"></i>
-                                </li>
-                                <li class="dropdown megamenu-fw">
-                                    <a href="javascript:void(0);">Features</a><i
-                                        class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
-                                        aria-hidden="true"></i>
+                                <li class="dropdown simple-dropdown"><a href="page-login.php">Connexion</a><i
+                                        class="fas fa-sign-in"></i>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-5 width-auto">
-                        <div class="header-searchbar">
-                            <a href="#search-header" class="header-search-form text-white"><i
-                                    class="fas fa-search search-button"></i></a>
-                            <!-- search input-->
-                            <form id="search-header" method="post" action="search-result.html" name="search-header"
-                                class="mfp-hide search-form-result">
-                                <div class="search-form position-relative">
-                                    <button type="submit" class="fas fa-search close-search search-button"></button>
-                                    <input type="text" name="search" class="search-input"
-                                        placeholder="Enter your keywords..." autocomplete="off">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="header-social-icon xs-display-none">
-                            <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
-                                    class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                            <a href="https://twitter.com/" title="Twitter" target="_blank"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a href="https://dribbble.com/" title="Dribbble" target="_blank"><i
-                                    class="fab fa-dribbble"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </nav>
+            </nav>
         <!-- end navigation -->
     </header>
     <!-- end header -->
