@@ -59,6 +59,48 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
         <!-- start header -->
         <header>
             <!-- start navigation -->
+            <nav class="navbar navbar-default bootsnav bg-white header-light nav-box-width navbar-top">
+            <div class="container-fluid nav-header-container">
+                <div class="row">
+                    <!-- start logo -->
+                    <div class="col-md-2 col-xs-5">
+                        <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png"
+                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img
+                                src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo"
+                                class="logo-light"></a>
+                    </div>
+                    <!-- end logo -->
+                    <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
+                        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse"
+                            data-target="#navbar-collapse-toggle-1">
+                            <span class="sr-only">toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
+                            <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal"
+                                data-in="fadeIn" data-out="fadeOut">
+                                <!-- start menu item -->
+                                <li class="dropdown megamenu-fw">
+                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                        data-toggle="dropdown" aria-hidden="true"></i>
+                                </li>
+                                <li class="dropdown simple-dropdown"><a href="page-login.php">Connexion</a><i
+                                    class="fas fa-sign-in-alt"></i>
+                                </li>
+                                <li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php">Ajouter un Projet</a><i
+                                    class="fas fa-sign-up-alt"></i>
+                                </li>
+                                <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
+                                    class="fas fa-sign-up-alt"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </nav>
             <!-- end navigation --> 
         </header>
         <!-- end header -->
