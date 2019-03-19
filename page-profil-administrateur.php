@@ -1,3 +1,15 @@
+
+<?php
+
+require_once ('connexion.php');
+$appliBD = new connexion();
+
+session_start();
+
+$listeEntreprise = $appliBD->getListeEntreprise();
+$listeEtudiant = $appliBD->getListeEtudiant();
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -254,10 +266,13 @@
           <input class="form-control" id="myInput" type="text" placeholder="Search..">
           <br>
         <ul class="list-group" id="myList">
-          <li class="list-group-item">First item</li>
-          <li class="list-group-item">Second item</li>
-          <li class="list-group-item">Third item</li>
-          <li class="list-group-item">Fourth</li>
+          <?php
+            foreach ($listeEtudiant as $value) {
+
+          echo'<li class="list-group-item">'.$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> effacer profil</button></li>';
+
+        }?>
+          
         </ul>
           </div>
           <div class="col-md-6">
@@ -266,7 +281,7 @@
             <input class="form-control" id="myInput2" type="text" placeholder="Search..">
             <br>
           <ul class="list-group" id="myList2">
-            <li class="list-group-item">First item</li>
+            <li class="list-group-item">First item<button type="button" class="btn btn-link"><i class="far fa-edit"></i> effacer profil</button></li>
             <li class="list-group-item">Second item</li>
             <li class="list-group-item">Third item</li>
             <li class="list-group-item">Fourth</li>

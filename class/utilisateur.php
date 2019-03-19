@@ -5,6 +5,7 @@ class Utilisateur {
   protected $email;
   protected $password;
   protected $role;
+  protected $derniereConnexion;
 
   public function __set($name, $value){
   }
@@ -26,6 +27,10 @@ class Utilisateur {
         return $this->role;
   }
 
+
+  public function getDerniereConnexion(){
+        return $this->derniereConnexion;
+    }
 
 
 

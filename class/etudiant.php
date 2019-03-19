@@ -9,7 +9,6 @@ class Etudiant {
   protected $telephone;
   protected $email;
   protected $jourDisponibles;
-  protected $derniereConnexion;
   protected $listeMotCles;
   protected $password;
   protected $listeProjets;
@@ -50,10 +49,6 @@ class Etudiant {
 
   public function getJourDisponibles(){
           return $this->jourDisponibles;
-  }
-
-  public function getDerniereConnexion(){
-          return $this->derniereConnexion;
   }
 
 

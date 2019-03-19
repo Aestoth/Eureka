@@ -4,6 +4,7 @@ class Administrateur {
   protected $id;
   protected $email;
   protected $password;
+  protected $listeEtudiant;
 
 
   public function __set($name, $value){
@@ -22,6 +23,9 @@ class Administrateur {
         return $this->password;
   }
 
+  public function getListeEtudiant(){
+        return $this->listeEtudiant;
+  }
 
 
 

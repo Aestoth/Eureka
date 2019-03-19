@@ -107,12 +107,12 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
 
 
 
-$listAdmin = $appliBD->getAdministrateurByEmail("infologo");
-echo $listAdmin->getId();
+//$listAdmin = $appliBD->getAdministrateurByEmail("infologo");
+//echo $listAdmin->getId();
 
+$listeEtudiant = $appliBD->getListeEtudiant();
 
-
-
+var_dump($listeEtudiant);
 
 
 
