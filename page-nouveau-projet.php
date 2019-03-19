@@ -1,9 +1,12 @@
 
 <?php
+session_start();
 require_once ('connexion.php');
 $appliBD = new connexion();
 $listeMotCles = $appliBD->getListeMotCles();
 
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$idEntreprise = $idEntrepriseByEmail->getId();
 ?>
 
 
@@ -169,6 +172,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <input type="text" name="titre" id="titre" placeholder="Titre *" class="big-input">
                         </div>
                         <div class="col-md-6">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                             <input type="file" name="photo" id="photo" placeholder="Photo" class="big-input">
                         </div>
                         <div class="col-md-6">
@@ -197,7 +201,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -208,7 +212,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -219,7 +223,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -230,7 +234,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesEntreprise[]" id="motClesEntreprise" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
