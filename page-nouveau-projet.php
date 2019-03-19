@@ -172,6 +172,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                             <input type="text" name="titre" id="titre" placeholder="Titre *" class="big-input">
                         </div>
                         <div class="col-md-6">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                             <input type="file" name="photo" id="photo" placeholder="Photo" class="big-input">
                         </div>
                         <div class="col-md-6">
