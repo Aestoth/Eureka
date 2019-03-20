@@ -61,6 +61,10 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
           padding:40px;
         }
 
+        .panel-body1{
+            padding: 6px;
+        }
+
 
         </style>
     </head>
@@ -135,14 +139,14 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             <div class="container">
                               <div class="row" style="font-size: 20px;">
                               <div class="panel-group col-md-8">
-                                <div class="panel panel-default">
+                                <div class="panel panel-default" style="height: 45%">
                                   <div class="panel-heading"><i class="fas fa-user-graduate" style="margin-right: 15px;"></i>Nom</div>
-                                  <div class="panel-body" style="margin-left: 80px;"><?php echo $etudiant->getNom(); ?></div>
+                                  <div class="panel-body1" style="margin-left: 80px;"><?php echo $etudiant->getNom(); ?></div>
                                 </div>
 
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-user-circle" style="margin-right: 15px;"></i>Prénom</div>
-                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getPrenom();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getPrenom();?></div>
                                 </div>
                               </div>
                               </div>
@@ -150,14 +154,14 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
 
                               <div class="row" style="font-size: 20px;">
                               <div class="panel-group col-md-8">
-                                <div class="panel panel-default" style="max-height: 10;">
+                                <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-phone-square" style="margin-right: 15px;"></i>Téléphone</div>
-                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getTelephone();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getTelephone();?></div>
                                 </div>
 
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-envelope" style="margin-right: 15px;"></i>Email</div>
-                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getEmail();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getEmail();?></div>
                                 </div>
                               </div>
                             </div>

@@ -737,10 +737,10 @@ class Connexion {
 
 //Function Set Date Connexion//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public function setDateConnexion($id, $dateConnexion) {
+    public function setDateConnexion($id, $derniereConnexion) {
       $requete_prepare = $this->connexion->prepare(
        "UPDATE Utilisateur
-       SET dateConnexion = '$dateConnexion'
+       SET derniereConnexion = '$derniereConnexion'
        WHERE id = :id"
      );
      $requete_prepare->execute(array("id"=>$id));

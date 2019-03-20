@@ -33,6 +33,7 @@ $derniereConnexion = date("Y-m-d");
     }elseif($role == 2){
       $listEtudiant = $appliBD->getEtudiantByEmail($email);
       $idEtudiant = $listEtudiant->getId();
+
       $actuelConnexion = $appliBD->setDateConnexion($idEtudiant, $derniereConnexion);
 
         header('Location: page-profil-etudiant.php?id='.$idEtudiant);

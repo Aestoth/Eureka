@@ -158,6 +158,12 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                     </div>
                 </div>
               </div>
+
+              <div class="text-center">
+                
+              <button type="button" class="btn btn-danger">Changer mes Infos</button>
+            </div>
+
         </section>
         <!-- end section -->
         <!-- start counter section -->

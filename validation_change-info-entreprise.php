@@ -1,7 +1,12 @@
 <?php
 
+
 require_once 'connexion.php';
 $appliBD = new Connexion();
+
+session_start();
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$idEntreprise = $idEntrepriseByEmail->getId();
 
 
 $nom = $_POST['nom'];
@@ -24,7 +29,6 @@ $contactNom3 = $_POST['contactNom3'];
 $contactPrenom3 = $_POST['contactPrenom3'];
 $contactEmail3 = $_POST['contactEmail3'];
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
-$derniereConnexion = date("Y-m-d");
 
 $suffixe = date("YmdHis");
 $uploadedFileName = $_FILES["logo"]["name"];
@@ -34,34 +38,13 @@ $destinationFolder = $_SERVER['DOCUMENT_ROOT']."/Projets/Eureka/images";
 $destinationName = "/logo_entreprise/img-".$suffixe.".".$fileExtension;
 $imageMoved = move_uploaded_file($_FILES["logo"]["tmp_name"], $destinationFolder.$destinationName);
 
-$role = 1;
-$idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role, $derniereConnexion);
-$idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo,
-$nombCollaborateurs, $contactNom1, $contactPrenom1, $email, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur);
+
+$appliBD->setEntreprise($idEntreprise, $nom, $passwordHash, $urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo,
+$nombCollaborateurs, $contactNom1, $contactPrenom1, $email, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3);
 
 
 
-
-$utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
-$hash = $utilisateurByEmail->getPassword();
-$idUtilisateur = $utilisateurByEmail->getId();
-$role = $utilisateurByEmail->getRole();
-
-session_start();
-$_SESSION['id'] = $idUtilisateur;
-$_SESSION['email'] = $email;
-$_SESSION['role'] = $role;
-
-
-$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
-$idEntreprise = $idEntrepriseByEmail->getId();
 header('Location: page-profil-entreprise.php?id='.$idEntreprise);
-
-
-
-
-
-
 
 
 
