@@ -15,6 +15,6 @@ $idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role);
 $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUtilisateur);
 
 
-
+header("Location: page-profil-administrateur.php?id=$idAdministrateur");
 
  ?>
