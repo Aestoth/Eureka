@@ -234,10 +234,12 @@ $listeEtudiant = $appliBD->getListeEtudiant();
             <input class="form-control" id="myInput2" type="text" placeholder="Search..">
             <br>
           <ul class="list-group" id="myList2">
+            <form id="project-contact-form" action="delete-entreprise.php" method="post">
             <?php
               foreach ($listeEntreprise as $value) {
-            echo'<li class="list-group-item" >'.$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
+            echo'<li class="list-group-item" >'.$value->getNom().'<button type="submit" name="'.$value->getId().'" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
             }?>
+          </form>
           </ul>
             </div>
         </div>

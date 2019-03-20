@@ -1,6 +1,11 @@
 <?php
 require_once ('connexion.php');
 $appliBD = new connexion();
+session_start();
+
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$idEntreprise = $idEntrepriseByEmail->getId();
+
 $projets = $appliBD->getProjetById(($_GET["id"]));
 $motsClesprojet = $appliBD->getProjetMotCles(($_GET["id"]));
 $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
@@ -84,8 +89,10 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                                     <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
-                                <li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php">Profil entreprise</a><i
-                                    class="fas fa-sign-up-alt"></i>
+                                <?php
+                                echo'<li class="dropdown simple-dropdown"><a href= "page-profil-entreprise.php?id='.$idEntreprise.'">Profil entreprise</a><i
+                                    class="fas fa-sign-up-alt"></i>';
+                                    ?>
                                 </li>
                                 <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
                                     class="fas fa-sign-up-alt"></i>

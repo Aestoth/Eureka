@@ -4,9 +4,11 @@ require_once ('connexion.php');
 $appliBD = new connexion();
 
 session_start();
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$idEntreprise = $idEntrepriseByEmail->getId();
 
-$entreprise = $appliBD->getEntrepriseById(($_GET['id']));
-$listeProjetEntreprise = $appliBD->getListeProjetEntreprise(($_GET['id']));
+$entreprise = $appliBD->getEntrepriseById($idEntreprise);
+$listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
