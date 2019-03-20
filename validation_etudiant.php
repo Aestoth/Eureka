@@ -11,6 +11,7 @@ $description = $_POST['description'];
 $email = $_POST['email'];
 $telephone = $_POST['telephone'];
 $avatar = $_POST['avatar'];
+$derniereConnexion = date("Y-m-d");
 $jourDisponibles = to_bitfield($_POST['jourDisponibles']);
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
@@ -18,7 +19,7 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
 
 $role = 2;
-$idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role);
+$idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role, $derniereConnexion);
 $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur);
 
 

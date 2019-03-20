@@ -222,7 +222,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                 <div class="swiper-slide padding-15px-lr team-block text-left team-style-1 md-margin-40px-bottom wow fadeInUp">
                                     <figure>
                                         <div class="team-image xs-width-100">
-                                            <img src="http://placehold.it/700x892" alt="">
+                                            <img src="'.$value->getPhoto().'" alt="">
                                             <div class="overlay-content text-center">
                                                 <div class="display-table height-100 width-100">
                                                     <div class="vertical-align-middle display-table-cell icon-social-small">

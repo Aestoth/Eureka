@@ -329,7 +329,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                                     <div class="position-relative">
                                       <tr>
                                           <th scope="row"><i class="far fa-clock"></i></th>
-                                          <td><?php echo $etudiant->getDerniereConnexion();?></td>
+                                          <td>18/09/2019</td>
                                       </tr>
                                     </div>
                                 </form>
@@ -355,7 +355,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                         <!-- start logo -->
                         <div class="col-md-4 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <a href="#"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Eureka"></a>
+                                <a href="#"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt="Eureka"></a>
                             </div>
                         </div>
                         <!-- end logo -->

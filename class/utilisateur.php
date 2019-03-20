@@ -30,7 +30,13 @@ class Utilisateur {
 
   public function getDerniereConnexion(){
         return $this->derniereConnexion;
-    }
+  }
+
+
+  public function setDerniereConnexion($derniereConnexion){
+      $this->derniereConnexion = $derniereConnexion;
+  }
+
 
 
 

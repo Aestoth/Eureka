@@ -164,16 +164,17 @@ class Connexion {
 
 ///Funstion insert Utilisateur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function insertUtilisateur($email, $password, $role){
+  public function insertUtilisateur($email, $password, $role, $derniereConnexion){
 
       $requete_prepare = $this->connexion->prepare("
-        INSERT INTO Utilisateur (email, password, role)
-        values (:email, :password, :role)");
+        INSERT INTO Utilisateur (email, password, role, derniereConnexion)
+        values (:email, :password, :role, :derniereConnexion)");
       $requete_prepare->execute(
         array(
               'email'=> $email,
               'password'=> $password,
-              'role' => $role
+              'role' => $role,
+              'derniereConnexion' => $derniereConnexion
             )
         );
         $idUtilisateur = $this->connexion->lastInsertId();
@@ -732,6 +733,22 @@ class Connexion {
    return $newPhotoProjet;
 
   }
+
+
+//Function Set Date Connexion//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public function setDateConnexion($id, $dateConnexion) {
+      $requete_prepare = $this->connexion->prepare(
+       "UPDATE Utilisateur
+       SET dateConnexion = '$dateConnexion'
+       WHERE id = :id"
+     );
+     $requete_prepare->execute(array("id"=>$id));
+
+     $newDateConnexion = $requete_prepare->fetchObject("Utilisateur");
+     return $newDateConnexion;
+
+    }
 
 
 //Function Compter l'Etat du Projet////////////////////////////////////////////////////////////////////////////////////////////////////////////
