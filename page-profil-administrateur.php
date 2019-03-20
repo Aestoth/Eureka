@@ -268,11 +268,9 @@ $listeEtudiant = $appliBD->getListeEtudiant();
         <ul class="list-group" id="myList">
           <?php
             foreach ($listeEtudiant as $value) {
+          echo'<li class="list-group-item">'.$value->getPrenom()." ".$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
+          }?>
 
-          echo'<li class="list-group-item">'.$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> effacer profil</button></li>';
-
-        }?>
-          
         </ul>
           </div>
           <div class="col-md-6">
@@ -281,15 +279,28 @@ $listeEtudiant = $appliBD->getListeEtudiant();
             <input class="form-control" id="myInput2" type="text" placeholder="Search..">
             <br>
           <ul class="list-group" id="myList2">
-            <li class="list-group-item">First item<button type="button" class="btn btn-link"><i class="far fa-edit"></i> effacer profil</button></li>
-            <li class="list-group-item">Second item</li>
-            <li class="list-group-item">Third item</li>
-            <li class="list-group-item">Fourth</li>
+            <?php
+              foreach ($listeEntreprise as $value) {
+            echo'<li class="list-group-item" >'.$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
+            }?>
           </ul>
             </div>
         </div>
       </div>
         <!-- end form section -->
+        <section>
+        <div class="container">
+          <form id="project-contact-form" action="validation_insert_motCles.php" method="post">
+          <div class="col-md-6">
+            <input type="text" name="motCles" id="motCles" placeholder=" Inserer Mots Cles" class="big-input">
+          </div>
+          <div class="col-md-12">
+              <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Valider</button>
+          </div>
+        </form>
+        </div>
+        </section>
+
         <section class="wow fadeIn bg-light-gray">
             <div class="container">
                 <div class="row">
@@ -308,6 +319,8 @@ $listeEtudiant = $appliBD->getListeEtudiant();
                 </div>
             </div>
         </section>
+
+
 
         <!-- start footer -->
         <footer class="footer-standard-dark bg-extra-dark-gray">
