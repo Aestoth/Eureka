@@ -126,43 +126,42 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         <!-- start section -->
         <section class="no-padding bg-light-gray wow fadeIn">
             <div class="container">
-                <div class="row equalize sm-equalize-auto">
-                    <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Générales</h5>
-                <div class="card-body" style="margin-bottom: 15px; padding-left: 50px; padding-right: 50px; font-size:large;">
-                    <div class="row line-height">
-                        <div class="col-md-12 col-lg-6">
-                            <table class="table table-hover text-left">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><i class="far fa-building"></i>  Société</th>
-                                        <td><?php echo $entreprise->getNom(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><i class="far fa-user-circle"></i> Contact</th>
-                                        <td><?php echo $entreprise->getContactNom1();?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                            <div class="col-md-12 col-lg-6">
-                                <table class="table table-hover text-left">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row"><i class="fas fa-dharmachakra"></i> Secteur d'Activité</th>
-                                            <td><?php echo $entreprise->getSecteurAtivite();?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><i class="fas fa-envelope"></i>Email</th>
-                                            <td><?php echo $entreprise->getContactEmail1();?></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                <div class="o">
+                    <h4 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font" style="margin-bottom: 60px;">Informations Générales</h4>
+                    <div class="container">
+                      <div class="row" style="font-size: 20px;">
+                      <div class="panel-group col-md-6">
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><i class="fas fa-building" style="margin-right: 15px;"></i>Société</div>
+                          <div class="panel-body"><?php echo $entreprise->getNom(); ?></div>
                         </div>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><i class="fas fa-user-circle" style="margin-right: 15px;"></i>Contact</div>
+                          <div class="panel-body"><?php echo $entreprise->getContactNom1();?></div>
+                        </div>
+                      </div>
+
+                      <div class="panel-group col-md-6">
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><i class="fas fa-vector-square" style="margin-right: 15px;"></i>Secteur d'Activité</div>
+                          <div class="panel-body"><?php echo $entreprise->getSecteurAtivite();?></div>
+                        </div>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><i class="fas fa-envelope" style="margin-right: 15px;"></i>Email</div>
+                          <div class="panel-body"><?php echo $entreprise->getContactEmail1();?></div>
+                        </div>
+                      </div>
+
+                      </div>
                     </div>
+
                 </div>
                 </div>
             </div>
+
+
         </section>
         <!-- end section -->
         <!-- start counter section -->

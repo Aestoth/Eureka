@@ -174,33 +174,33 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <div id="success-project-contact-form" class="no-margin-lr"></div>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="nom" id="name" placeholder="Nom*" class="big-input">
+                        <input type="text" name="nom" id="name" placeholder="Nom *" class="big-input">
                     </div>
                     <div class="col-md-12">
                         <input type="password" name="password" id="password" placeholder="Password" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="urlSite" id="url" placeholder="Lien site *" class="big-input">
+                        <input type="text" name="urlSite" id="url" placeholder="Site Web" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="facebook" id="facebook" placeholder="Lien facebook *" class="big-input">
+                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurActivite *" class="big-input">
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="instagram" id="instagram" placeholder="Lien instagram *" class="big-input">
+                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="linkdin" id="linkdin" placeholder="Lien linkedin *" class="big-input">
+                        <input type="text" name="linkdin" id="linkdin" placeholder="Linkedin *" class="big-input">
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="nombCollaborateurs *" class="big-input">
+                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="Nombre de Collaborateur *" class="big-input">
                     </div>
                     <div class="col-md-12">
                         <textarea name="adresse" id="adresse" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
@@ -220,30 +220,30 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <div id="register-enterprise" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactNom1" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom1" id="nom" placeholder="Nom *" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom*" class="big-input">
+                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom *" class="big-input">
                         </div>
                         <div class="col-md-12">
                             <input type="text" name="contactEmail1" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 2</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="contactNom2" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom2" id="nom" placeholder="Nom *" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom2" id="prenom" placeholder="Prénom*" class="big-input">
+                            <input type="text" name="contactPrenom2" id="prenom" placeholder="Prénom *" class="big-input">
                         </div>
                         <div class="col-md-12">
                             <input type="text" name="contactEmail2" id="email" placeholder="E-mail *" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 3</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="contactNom3" id="nom" placeholder="Nom*" class="big-input">
+                            <input type="text" name="contactNom3" id="nom" placeholder="Nom *" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom3" id="prenom" placeholder="Prénom*" class="big-input">
+                            <input type="text" name="contactPrenom3" id="prenom" placeholder="Prénom *" class="big-input">
                         </div>
                         <div class="col-md-12">
                             <input type="text" name="contactEmail3" id="email" placeholder="E-mail *" class="big-input">
