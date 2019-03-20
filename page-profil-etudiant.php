@@ -130,42 +130,41 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                 <div class="row">
                     <main class="col-md-9 col-sm-12 col-xs-12 right-sidebar sm-margin-60px-bottom xs-margin-40px-bottom sm-padding-15px-lr">
                         <!-- start post item -->
-                        <div class="card">
-                          <h5 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font">Informations Personnel</h5>
-                          <div class="card-body" style="margin-bottom: 50px; font-size:large;">
-                            <div class="row">
-                                      <div class="col-md-12 col-lg-6">
-                                          <table class="table table-hover text-left">
-                                              <tbody>
-                                                  <tr>
-                                                      <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
-                                                      <td><?php echo $etudiant->getNom();?></td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
-                                                      <td><?php echo $etudiant->getPrenom();?></td>
-                                                  </tr>
-                                              </tbody>
-                                          </table>
-                                      </div>
-                                      <div class="col-md-12 col-lg-6">
-                                          <table class="table table-hover text-left">
-                                              <tbody>
-                                                <tr>
-                                                    <th scope="row"><i class="fas fa-envelope"></i> Email</th>
-                                                    <td><?php echo $etudiant->getEmail();?></td>
-                                                </tr>
-                                                  <tr>
-                                                      <th scope="row"><i class="fas fa-phone-volume"></i> Téléphone</th>
-                                                      <td><?php echo $etudiant->getTelephone();?></td>
-                                                  </tr>
-                                              </tbody>
-                                          </table>
-                                      </div>
-                                  </div>
+                        <div class="">
+                            <h4 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font" style="margin-bottom: 60px;">Informations Générales</h4>
+                            <div class="container">
+                              <div class="row" style="font-size: 20px;">
+                              <div class="panel-group col-md-8">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading"><i class="fas fa-user-graduate" style="margin-right: 15px;"></i>Nom</div>
+                                  <div class="panel-body" style="margin-left: 80px;"><?php echo $etudiant->getNom(); ?></div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading"><i class="fas fa-user-circle" style="margin-right: 15px;"></i>Prénom</div>
+                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getPrenom();?></div>
+                                </div>
+                              </div>
+                              </div>
+
+
+                              <div class="row" style="font-size: 20px;">
+                              <div class="panel-group col-md-8">
+                                <div class="panel panel-default" style="max-height: 10;">
+                                  <div class="panel-heading"><i class="fas fa-phone-square" style="margin-right: 15px;"></i>Téléphone</div>
+                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getTelephone();?></div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading"><i class="fas fa-envelope" style="margin-right: 15px;"></i>Email</div>
+                                  <div class="panel-body"  style="margin-left: 80px;"><?php echo $etudiant->getEmail();?></div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <h4 class="text-center text-extra-dark-gray alt-font" style="margin-bottom: 50px;"> Mes Projets</h4>
+
+                            </div>
+                        </div>
+                          <h4 class="text-center text-extra-dark-gray alt-font" style="margin-bottom: 50px; margin-top: 50px;"> Mes Projets</h4>
                           <?php
                             foreach ($projets as $projet) {
                             echo'

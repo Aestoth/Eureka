@@ -126,7 +126,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         <!-- start section -->
         <section class="no-padding bg-light-gray wow fadeIn">
             <div class="container">
-                <div class="o">
+                <div class="">
                     <h4 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font" style="margin-bottom: 60px;">Informations Générales</h4>
                     <div class="container">
                       <div class="row" style="font-size: 20px;">
@@ -156,12 +156,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
 
                       </div>
                     </div>
-
                 </div>
-                </div>
-            </div>
-
-
+              </div>
         </section>
         <!-- end section -->
         <!-- start counter section -->
