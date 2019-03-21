@@ -65,6 +65,10 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
             padding: 6px;
         }
 
+        .section2 {
+          padding: 70px;
+        }
+
 
         </style>
     </head>
@@ -112,7 +116,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.VTKNoYlv1-nbra3AgwVyrwHaE7%26pid%3D15.1&f=1');">
+        <section class="wow fadeIn parallax section2" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn2-europe1.new2.ladmedia.fr%2Fvar%2Feurope1%2Fstorage%2Fimages%2Feurope1%2Fsociete%2Fpartir-etudier-a-letranger-quels-benefices-2948591%2F30664676-1-fre-FR%2FPartir-etudier-a-l-etranger-quels-benefices.gif&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">
