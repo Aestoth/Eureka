@@ -11,6 +11,8 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $derniereConnexion = date("Y-m-d");
 
+
+
   $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
   $hash = $utilisateurByEmail->getPassword();
   $idUtilisateur = $utilisateurByEmail->getId();

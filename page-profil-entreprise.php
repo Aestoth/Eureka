@@ -4,7 +4,8 @@ require_once ('connexion.php');
 $appliBD = new connexion();
 
 session_start();
-$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$contactEmail1 = $_SESSION['email'];
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($contactEmail1);
 $idEntreprise = $idEntrepriseByEmail->getId();
 
 $entreprise = $appliBD->getEntrepriseById($idEntreprise);
@@ -155,14 +156,19 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                       </div>
 
                       </div>
+                      <div class="text-center">
+                        <?php
+
+                         echo'<a title="Titre du lien" href="changer-info-entreprise.php?id='.$entreprise->getId();?>">
+                          <button type="button" class="btn btn-danger" style="margin-bottom: 25px;">Modifier Informations Générales</button>
+                        </a>
+                        </div>
+
                     </div>
                 </div>
               </div>
 
-              <div class="text-center">
-                
-              <button type="button" class="btn btn-danger">Changer mes Infos</button>
-            </div>
+
 
         </section>
         <!-- end section -->

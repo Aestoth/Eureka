@@ -530,17 +530,17 @@ class Connexion {
 
   //Function Set Etreprise////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public function setEntreprise($id, $nom, $password, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
+    public function setEntreprise($id, $password, $urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
      $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3) {
 
       $requete_prepare = $this->connexion->prepare(
        "UPDATE Entreprise
-       SET nom = '$nom',
+       SET
          password = '$password',
          urlSite = '$urlSite',
          description = '$description',
          facebook = '$facebook',
-         linkdin = '$linkdin',
+         linkedin = '$linkedin',
          instagram = '$instagram',
          secteurAtivite = '$secteurAtivite',
          logo = '$logo',
