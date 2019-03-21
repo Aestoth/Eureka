@@ -3,7 +3,10 @@
 require_once 'connexion.php';
 $appliBD = new connexion();
 session_start();
-
+$email = $_SESSION['email'];
+$idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
+$idEtudiant = $idEtudiantByEmail->getId();
+$listeMotCles = $appliBD->getListeMotCles();
 ?>
 
 <!doctype html>

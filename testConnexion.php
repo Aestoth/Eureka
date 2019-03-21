@@ -115,6 +115,19 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
 
  //$actuelConnexion = $appliBD->setDateConnexion(24, "2019-02-22");
 
+//$motCles = $appliBD->setEtudiantMotCles(5, 3);
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 

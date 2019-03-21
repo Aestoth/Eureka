@@ -8,8 +8,8 @@ $appliBD = new Connexion();
 session_start();
 $email = $_SESSION['email'];
 
-$idEtudiantByEmail = $appliBD->getEtudintByEmail($email);
-$idEtudiant = $idEtudiantByEmail->getId();
+$etudiantByEmail = $appliBD->getEtudiantByEmail($email);
+$idEtudiant = $etudiantByEmail->getId();
 
 
 $nom = $_POST['nom'];
@@ -27,7 +27,7 @@ $newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $passwordHash, $des
 
 
 foreach ($_POST["motClesEtudiant"] as $value) {
-    $appliBD->insertMotCles_etudiant($idEtudiant, $value);
+    $appliBD->setEtudiantMotCles($idEtudiant, $value);
 }
 
 header('Location: page-profil-etudiant.php?id='.$idEtudiant);

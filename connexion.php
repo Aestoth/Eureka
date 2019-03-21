@@ -703,6 +703,24 @@ class Connexion {
 
 }
 
+
+//Function Set Etudiant Mot Cles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEtudiantMotCles($idEtudiant, $idMotCles) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE MotCles_etudiant m
+     SET idMotCles = '$idMotCles'
+     INNER JOIN Etudiant e
+     ON e.id = m.idEtudiant
+     WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$idEtudiant));
+
+   $newMotCles = $requete_prepare->fetchObject("Etudiant");
+   return $newMotCles;
+
+}
+
 //Function Set Projet///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function setEtatProjet($id, $etatProjet) {

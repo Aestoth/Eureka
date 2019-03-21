@@ -133,13 +133,10 @@ body {
 
     <div id="logreg-forms">
         <form class="form-signin" action="validation-login.php" method="post">
-            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-            <div class="social-login">
-                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-            </div>
-            <p style="text-align:center"> OR  </p>
-            <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"><i class="fas fa-sign-out-alt"></i> Sign in</h1>
+
+
+            <input type="text" name="email" id="inputEmail" class="form-control" style="margin-top: 30px;" placeholder="Email address" required="" autofocus="">
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
             <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
