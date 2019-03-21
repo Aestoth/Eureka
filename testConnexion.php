@@ -113,7 +113,7 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
 //$listeEtudiant = $appliBD->getListeEtudiant();
 
 
- $appliBD->setEntreprise();
+ //$actuelConnexion = $appliBD->setDateConnexion(24, "2019-02-22");
 
 
 

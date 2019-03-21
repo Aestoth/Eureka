@@ -166,6 +166,15 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                               </div>
                             </div>
 
+
+                            <div class="text-center">
+                              <?php
+
+                               echo'<a title="Titre du lien" href="modifier-info-etudiant.php?id='.$etudiant->getId();?>">
+                                <button type="button" class="btn btn-danger" style="margin-bottom: 25px;">Modifier Informations Générales</button>
+                              </a>
+                              </div>
+
                             </div>
                         </div>
                           <h4 class="text-center text-extra-dark-gray alt-font" style="margin-bottom: 50px; margin-top: 50px;"> Mes Projets</h4>

@@ -37,7 +37,7 @@ $derniereConnexion = date("Y-m-d");
       $idEtudiant = $listEtudiant->getId();
 
       $actuelConnexion = $appliBD->setDateConnexion($idEtudiant, $derniereConnexion);
-
+      
         header('Location: page-profil-etudiant.php?id='.$idEtudiant);
 
        }else{
