@@ -2,9 +2,15 @@
 session_start();
 require_once ('connexion.php');
 $appliBD = new connexion();
-$etudiant = $appliBD->getEtudiantById(($_GET["id"]));
-$projets = $appliBD->getListeProjetEtudiant(($_GET["id"]));
-$motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
+$email = $_SESSION['email'];
+$idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
+$idEtudiant = $idEtudiantByEmail->getId();
+$utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
+$idUtilisateur = $utilisateurByEmail->getId();
+
+$etudiant = $appliBD->getEtudiantById($idEtudiant);
+$projets = $appliBD->getListeProjetEtudiant($idEtudiant);
+$motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -203,79 +209,22 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             </div>
                         </div>
                         ';}?>
-                        <!-- end post item -->
-                        <!-- start post item -->
+
+
                         <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
                             <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
                                 <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-gallery-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fblog.firstreference.com%2Fwp-content%2Fuploads%2F2011%2F03%2Foffice-training.jpg&f=1" alt=""></a>
+                                    <a href="blog-youtube-video-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.omjc-info.fr%2Fwp-content%2Fuploads%2F2013%2F01%2FFotolia_9250049_S.jpg&f=1" alt=""></a>
                                 </div>
                             </div>
                             <div class="blog-text col-md-6 display-table no-padding">
                                 <div class="display-table-cell vertical-align-middle">
                                     <div class="content margin-20px-bottom sm-no-padding-left ">
-                                        <a href="blog-gallery-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">Mes Projets terminé</a>
-                                        <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>By <a href="blog-grid.html" class="text-medium-gray">Jennifer Smith</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>17 july 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-grid.html" class="text-medium-gray">Branding</a></div>
-                                        <p class="no-margin width-95">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <a class="btn btn-very-small btn-dark-gray text-uppercase" href="blog-gallery-post.html">Continue Reading</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end post item -->
-                        <!-- start post item -->
-                        <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
-                            <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-slider-post.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ffrancois.briod.me%2Fblog%2Fwp-content%2Fuploads%2F2014%2F01%2Fbusiness-model-workshop.jpg&f=1" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="blog-text col-md-6 display-table no-padding">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <div class="content margin-20px-bottom sm-no-padding-left ">
-                                        <a href="blog-slider-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">You are what you are seen to be</a>
-                                        <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>By <a href="blog-grid.html" class="text-medium-gray">Willie Clark</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>17 july 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-grid.html" class="text-medium-gray">Branding</a></div>
-                                        <p class="no-margin width-95">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <a class="btn btn-very-small btn-dark-gray text-uppercase" href="blog-slider-post.html">Continue Reading</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end post item -->
-                        <!-- start post item -->
-                        <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
-                            <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-html5-video-post.html"><img src="http://placehold.it/1200x840" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="blog-text col-md-6 display-table no-padding">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <div class="content margin-20px-bottom sm-no-padding-left ">
-                                        <a href="blog-html5-video-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">Design is creativity with strategy</a>
-                                        <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>By <a href="blog-grid.html" class="text-medium-gray">John Doe</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>17 july 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-grid.html" class="text-medium-gray">Quotes</a></div>
-                                        <p class="no-margin width-95">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                    <a class="btn btn-very-small btn-dark-gray text-uppercase" href="blog-html5-video-post.html">Continue Reading</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end post item -->
-                        <!-- start post item -->
-                        <div class="equalize sm-equalize-auto blog-post-content margin-60px-bottom padding-60px-bottom display-inline-block border-bottom border-color-extra-light-gray sm-margin-30px-bottom sm-padding-30px-bottom xs-text-center sm-no-border">
-                            <div class="blog-image col-md-5 no-padding sm-margin-30px-bottom xs-margin-20px-bottom margin-45px-right sm-no-margin-right display-table">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <a href="blog-youtube-video-post.html"><img src="http://placehold.it/1200x840" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="blog-text col-md-6 display-table no-padding">
-                                <div class="display-table-cell vertical-align-middle">
-                                    <div class="content margin-20px-bottom sm-no-padding-left ">
-                                        <a href="blog-youtube-video-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">Simple design, intense content</a>
+                                        <a href="blog-youtube-video-post.html" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 display-inline-block">Vous n'avez pas encore des projets</a>
                                         <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>By <a href="blog-grid.html" class="text-medium-gray">Geoffrey Weaver</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>17 july 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-grid.html" class="text-medium-gray">Branding</a></div>
                                         <p class="no-margin width-95">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry industry’s standard dummy text Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     </div>
-                                    <a class="btn btn-very-small btn-dark-gray text-uppercase" href="blog-youtube-video-post.html">Continue Reading</a>
+
                                 </div>
                             </div>
                         </div>
@@ -307,7 +256,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                             <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase text-small font-weight-600 aside-title"><span>About Me</span></div>
                             <a href="about-me.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fchittagongit.com%2Fimages%2Favatar-icon-images%2Favatar-icon-images-4.jpg&f=1" alt="" class="margin-25px-bottom"/></a>
                             <p class="margin-20px-bottom text-small"><?php echo $etudiant->getDescription();?>.</p>
-                            <a class="btn btn-very-small btn-dark-gray text-uppercase" href="about-me.html">Modifier Description</a>
+                            <a class="btn btn-very-small btn-dark-gray text-uppercase" href="">Modifier Description</a>
                         </div>
                         <div class="margin-50px-bottom">
                             <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Réseaux Sosiaux</span></div>
@@ -345,7 +294,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles(($_GET["id"]));
                                     <div class="position-relative">
                                       <tr>
                                           <th scope="row"><i class="far fa-clock"></i></th>
-                                          <td>18/09/2019</td>
+                                          <td><?php echo $utilisateurByEmail->getDerniereConnexion();?></td>
                                       </tr>
                                     </div>
                                 </form>

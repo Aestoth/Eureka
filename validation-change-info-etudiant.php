@@ -18,12 +18,11 @@ $password = $_POST['password'];
 $description = $_POST['description'];
 $email = $_POST['email'];
 $telephone = $_POST['telephone'];
-$avatar = $_POST['avatar'];
 $jourDisponibles = to_bitfield($_POST['jourDisponibles']);
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
 
-$newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles);
+$newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $passwordHash, $description, $email, $telephone, $jourDisponibles);
 
 
 foreach ($_POST["motClesEtudiant"] as $value) {

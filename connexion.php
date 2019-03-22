@@ -619,7 +619,7 @@ class Connexion {
 
 //Function Set Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function setEtudiant($id, $nom, $prenom, $password,  $description, $email, $telephone, $avatar, $jourDisponibles) {
+  public function setEtudiant($id, $nom, $prenom, $password,  $description, $email, $telephone, $jourDisponibles) {
 
     $requete_prepare = $this->connexion->prepare(
      "UPDATE Etudiant
@@ -629,7 +629,6 @@ class Connexion {
        description = '$description',
        email = '$email',
        telephone = '$telephone',
-       avatar = '$avatar',
        jourDisponibles = '$jourDisponibles'
      WHERE id = :id"
      );
@@ -717,7 +716,7 @@ class Connexion {
    );
    $requete_prepare->execute(array("id"=>$idEtudiant));
 
-   $newMotCles = $requete_prepare->fetchObject("Etudiant");
+   $newMotCles = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
    return $newMotCles;
 
 }

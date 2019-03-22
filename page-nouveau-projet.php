@@ -4,9 +4,12 @@ session_start();
 require_once ('connexion.php');
 $appliBD = new connexion();
 $listeMotCles = $appliBD->getListeMotCles();
-
-$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($_SESSION['email']);
+$contactEmail1 = $_SESSION['email'];
+$idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($contactEmail1);
 $idEntreprise = $idEntrepriseByEmail->getId();
+
+$entreprise = $appliBD->getEntrepriseById($idEntreprise);
+$listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
 ?>
 
 
@@ -94,8 +97,10 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                                     <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
-                                <li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php">Profil Entreprise</a><i
-                                    class="fas fa-sign-up-alt"></i>
+                                <?php
+                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php?id='.$entreprise->getId().'">Profil Entreprise</a><i
+                                    class="fas fa-sign-up-alt"></i>';
+                                ?>
                                 </li>
                                 <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
                                     class="fas fa-sign-up-alt"></i>
@@ -145,7 +150,7 @@ $idEntreprise = $idEntrepriseByEmail->getId();
                             <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We are located in downtown New York</span>
                             <!-- end sub title -->
                             <!-- start page title -->
-                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">PHOTO</h1>
+                            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">text titre</h1>
                             <!-- end page title -->
                         </div>
                     </div>

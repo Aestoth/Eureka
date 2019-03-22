@@ -58,6 +58,14 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
+        <style>
+
+        .section2 {
+          padding: 70px;
+        }
+
+
+        </style>
     </head>
     <body>
         <!-- start header -->
@@ -90,8 +98,10 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                     <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
-                                <li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php">Ajouter un Projet</a><i
-                                    class="fas fa-sign-up-alt"></i>
+                                <?php
+                                echo'<li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php?id='.$entreprise->getId().'">Ajouter un Projet</a><i
+                                    class="fas fa-sign-up-alt"></i>';
+                                  ?>
                                 </li>
                                 <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
                                     class="fas fa-sign-up-alt"></i>
@@ -106,7 +116,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
+        <section class="wow fadeIn parallax section2" data-stellar-background-ratio="0.5" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novartis.com%2Fsites%2Fwww.novartis.com%2Ffiles%2Four-company-history-8-image-2x.jpg&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">

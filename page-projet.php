@@ -107,7 +107,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn cover-background background-position-top" style="background-image:url('http://placehold.it/1920x700');">
+        <section class="wow fadeIn cover-background background-position-top" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pme-web.com%2Fwp-content%2Fuploads%2F2017%2F07%2FOutils-Gestion-de-projet-960x540.png&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">
@@ -117,7 +117,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                             <span class="text-white opacity6 alt-font margin-10px-bottom display-block text-uppercase text-small">25 April 2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by <a href="blog-masonry.html" class="text-white">Jay Benjamin</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-masonry.html" class="text-white">Design</a>, <a href="blog-masonry.html" class="text-white">Branding</a></span>
                             <!-- end sub title -->
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 margin-10px-bottom">Perfection is not attainable</h1>
+                            <h1 class="text-white alt-font font-weight-600 margin-10px-bottom">"Projet bien enregistré"</h1>
                             <!-- end page title -->
                         </div>
                     </div>
