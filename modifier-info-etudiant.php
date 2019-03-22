@@ -184,9 +184,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <div class="col-md-6">
                                 <input type="text" name="telephone" id="telephone" placeholder="Téléphone *" class="big-input">
                             </div>
-                            <div class="col-md-6">
-                                <input type="file" name="avatar" id="avatar" placeholder="Avatar*" class="big-input">
-                            </div>
+                          
                             <div class="col-md-6">
 
                                 <input type="password" name="password" id="password" placeholder="Mot de passe*" class="big-input">
