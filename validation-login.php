@@ -14,6 +14,11 @@ $derniereConnexion = date("Y-m-d");
 
 
   $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
+  if($utilisateurByEmail === false){
+      header('Location: page-login.php');
+      exit();
+  }
+
   $hash = $utilisateurByEmail->getPassword();
   $idUtilisateur = $utilisateurByEmail->getId();
   $role = $utilisateurByEmail->getRole();

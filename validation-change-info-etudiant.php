@@ -24,8 +24,8 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
 $newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $passwordHash, $description, $email, $telephone, $jourDisponibles);
 
-
-foreach ($_POST["motClesEtudiant"] as $value) {
+$motCles = $_POST['motClesEtudiant'];
+foreach ($motCles as $value) {
     $appliBD->setEtudiantMotCles($idEtudiant, $value);
 }
 

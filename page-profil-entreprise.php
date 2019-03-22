@@ -138,7 +138,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         <section class="no-padding bg-light-gray wow fadeIn">
             <div class="container">
                 <div class="">
-                    <h4 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font" style="margin-bottom: 60px;">Informations Générales</h4>
+                    <h4 class="card-header text-center font-weight-bold text-uppercase py-4 text-extra-dark-gray alt-font" style="margin-bottom: 60px; margin-top: 20px;">Informations Générales</h4>
                     <div class="container">
                       <div class="row" style="font-size: 20px;">
                       <div class="panel-group col-md-6">

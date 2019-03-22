@@ -709,8 +709,6 @@ class Connexion {
     $requete_prepare = $this->connexion->prepare(
      "UPDATE MotCles_etudiant m
      SET idMotCles = '$idMotCles'
-     INNER JOIN Etudiant e
-     ON e.id = m.idEtudiant
      WHERE id = :id"
    );
    $requete_prepare->execute(array("id"=>$idEtudiant));
@@ -1009,13 +1007,13 @@ function getListeEtudiantByProjet($idProjet) {
 
   public function getEtudiantByEmail($email){
      $requete_prepare = $this->connexion->prepare(
-     "SELECT *
-      FROM Etudiant WHERE email = :email");
-       $requete_prepare->execute(array("email"=>$email));
+       "SELECT *
+        FROM Etudiant WHERE email = :email"
+     );
+     $requete_prepare->execute(array("email"=>$email));
 
-       $resultat = $requete_prepare->fetchObject("Etudiant");
-       return $resultat;
-
+     $resultat = $requete_prepare->fetchObject("Etudiant");
+     return $resultat;
   }
 
 
@@ -1031,6 +1029,31 @@ function getListeEtudiantByProjet($idProjet) {
        return $resultat;
 
   }
+
+
+//function Remplacer Mot Cles Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function replaceMotClesEtudiant($idEtudiant, $idMotCles) {
+
+    $requete_prepare = $this->connexion->prepare(
+      "DELETE
+       FROM MotCles_etudiant
+       WHERE idEtudiant = :id"
+    );
+    $requete_prepare->execute(array("id"=>$idEtudiant));
+
+    foreach ($idMotCles as $value) {
+        $appliBD->insertMotCles_etudiant($idEtudiant, $value);
+    }
+  }
+
+
+
+
+
+
+
+
 
 
 
