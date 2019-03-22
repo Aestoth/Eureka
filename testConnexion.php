@@ -1,6 +1,7 @@
 
 <?php
 require 'connexion.php';
+
 $appliBD = new Connexion();
 
 if($appliBD != null){
@@ -15,9 +16,10 @@ if($appliBD != null){
 
 //var_dump($etudiant);
 
-//$projet = $appliBD->insertProjet("Bootcamp", "photo", "rrrrrrrrrr", "11111","000", "22222", "00", "33333","0", "workshop", "termine", 1 );
 
-//echo $projet;
+// $projet = $appliBD->insertProjet("Projet4", "img.jpg", "test", "2019-03-25","AM", "2019-03-26", "PM", "2019-03-27","AM", "workshop", "ouvert", 1 );
+
+// echo $projet;
 
 //$entreprise = $appliBD->insertEntreprise("Hass", "1234", "realise.ch", "blablabla", "facebook.com", "linkdin.com", "instagram.com", "Formation", "dd", 80,
 //"veronique", "dubois", "dubois@gmail.com", "cecile", "dupont", "dupont@gmail.com", "sandra", "dupres", "dupres@gmail.com", 1 )
@@ -116,6 +118,9 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
  //$actuelConnexion = $appliBD->setDateConnexion(24, "2019-02-22");
 
 //$motCles = $appliBD->setEtudiantMotCles(5, 3);
+
+$projetmatching = $appliBD->getEtudiantByProjetMatching(1);
+echo $projetmatching->getId();
 
  
 

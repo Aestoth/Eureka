@@ -109,11 +109,11 @@ class Connexion {
 
       //Function InsertProjet//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $idEntreprise){
+    public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet,$datesDisponibles, $idEntreprise){
 
         $requete_prepare = $this->connexion->prepare("
-         INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2, date3, periode3, typeEvenement, etatProjet, idEntreprise)
-          values (:titre, :photo, :description, :date1, :periode1, :date2, :periode2, :date3, :periode3, :typeEvenement, :etatProjet, :idEntreprise)");
+         INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2, date3, periode3, typeEvenement, etatProjet, datesDisponibles, idEntreprise)
+          values (:titre, :photo, :description, :date1, :periode1, :date2, :periode2, :date3, :periode3, :typeEvenement, :etatProjet, :datesDisponibles, :idEntreprise)");
         $requete_prepare->execute(
           array(
                 'titre'=> $titre,
@@ -127,6 +127,7 @@ class Connexion {
                 'periode3' => $periode3,
                 'typeEvenement'=> $typeEvenement,
                 'etatProjet'=> $etatProjet,
+                'datesDisponibles'=> $datesDisponibles,
                 'idEntreprise'=> $idEntreprise
               )
           );
@@ -1027,7 +1028,16 @@ function getListeEtudiantByProjet($idProjet) {
 
        $resultat = $requete_prepare->fetchObject("Administrateur");
        return $resultat;
+  }
 
+  function getEtudiantByProjetMatching($idMatching) {
+   $requete_prepare = $this->connexion->prepare(
+      "SELECT * FROM `Etudiant` WHERE `jourDisponibles` & 
+      (SELECT datesDisponibles FROM `Projet` WHERE id = :id)");
+      $requete_prepare->execute(array("id"=>$idMatching)); 
+    
+    $matching = $requete_prepare->fetchObject("Etudiant");
+    return $matching;
   }
 
 
