@@ -30,7 +30,7 @@ function dates_with_periods_to_bitfield($days) {
       $halfday++;
     }
     $halfdays[] = $halfday;
-  } 
+  }
   return to_bitfield($halfdays);
 }
 

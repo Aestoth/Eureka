@@ -25,9 +25,8 @@ $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 $newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $passwordHash, $description, $email, $telephone, $jourDisponibles);
 
 $motCles = $_POST['motClesEtudiant'];
-foreach ($motCles as $value) {
-    $appliBD->setEtudiantMotCles($idEtudiant, $value);
-}
+    $appliBD->replaceMotClesEtudiant($idEtudiant, $motCles);
+
 
 header('Location: page-profil-etudiant.php?id='.$idEtudiant);
 

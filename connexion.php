@@ -992,14 +992,15 @@ function getListeEtudiantByProjet($idProjet) {
 
 
   public function getUtilisateurByEmail($email){
-     $requete_prepare = $this->connexion->prepare(
+
+   $requete_prepare = $this->connexion->prepare(
      "SELECT *
-      FROM Utilisateur WHERE email = :email");
-       $requete_prepare->execute(array("email"=>$email));
+      FROM Utilisateur WHERE email = :email"
+   );
+   $requete_prepare->execute(array("email"=>$email));
 
-       $resultat = $requete_prepare->fetchObject("Utilisateur");
-       return $resultat;
-
+     $resultat = $requete_prepare->fetchObject("Utilisateur");
+     return $resultat;
   }
 
 
@@ -1007,11 +1008,12 @@ function getListeEtudiantByProjet($idProjet) {
   //Functio Utilisateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
   public function getEtudiantByEmail($email){
-     $requete_prepare = $this->connexion->prepare(
-       "SELECT *
-        FROM Etudiant WHERE email = :email"
+
+   $requete_prepare = $this->connexion->prepare(
+     "SELECT *
+      FROM Etudiant WHERE email = :email"
      );
-     $requete_prepare->execute(array("email"=>$email));
+   $requete_prepare->execute(array("email"=>$email));
 
      $resultat = $requete_prepare->fetchObject("Etudiant");
      return $resultat;
@@ -1021,21 +1023,26 @@ function getListeEtudiantByProjet($idProjet) {
 //Functio Administrateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
   public function getAdministrateurByEmail($email){
-     $requete_prepare = $this->connexion->prepare(
+
+   $requete_prepare = $this->connexion->prepare(
      "SELECT *
       FROM Administrateur WHERE email = :email");
-       $requete_prepare->execute(array("email"=>$email));
+   $requete_prepare->execute(array("email"=>$email));
 
-       $resultat = $requete_prepare->fetchObject("Administrateur");
-       return $resultat;
+     $resultat = $requete_prepare->fetchObject("Administrateur");
+     return $resultat;
   }
 
+
+//Function Matching//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   function getEtudiantByProjetMatching($idMatching) {
+
    $requete_prepare = $this->connexion->prepare(
-      "SELECT * FROM `Etudiant` WHERE `jourDisponibles` & 
+      "SELECT * FROM `Etudiant` WHERE `jourDisponibles` &
       (SELECT datesDisponibles FROM `Projet` WHERE id = :id)");
-      $requete_prepare->execute(array("id"=>$idMatching)); 
-    
+   $requete_prepare->execute(array("id"=>$idMatching));
+
     $matching = $requete_prepare->fetchObject("Etudiant");
     return $matching;
   }
@@ -1053,7 +1060,7 @@ function getListeEtudiantByProjet($idProjet) {
     $requete_prepare->execute(array("id"=>$idEtudiant));
 
     foreach ($idMotCles as $value) {
-        $appliBD->insertMotCles_etudiant($idEtudiant, $value);
+        $this->insertMotCles_etudiant($idEtudiant, $value);
     }
   }
 
