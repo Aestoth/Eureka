@@ -4,8 +4,8 @@ require_once 'connexion.php';
 $appliBD = new connexion();
 session_start();
 $email = $_SESSION['email'];
-$idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
-$idEtudiant = $idEtudiantByEmail->getId();
+$etudiantByEmail = $appliBD->getEtudiantByEmail($email);
+$idEtudiant = $etudiantByEmail->getId();
 $listeMotCles = $appliBD->getListeMotCles();
 ?>
 
@@ -90,10 +90,10 @@ $listeMotCles = $appliBD->getListeMotCles();
                                         <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                             data-toggle="dropdown" aria-hidden="true"></i>
                                     </li>
-                                    <?php
-                                    echo'<li class="dropdown simple-dropdown"><a href= "page-profil-etudiant.php?id='.$idEtudiant.'">Profil etudiant</a><i
-                                        class="fas fa-sign-up-alt"></i>';
-                                        ?>
+
+                                    <li class="dropdown simple-dropdown"><a href= "page-profil-etudiant.php">Profil etudiant</a><i
+                                        class="fas fa-sign-up-alt"></i>
+
                                     </li>
                                     <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
                                         class="fas fa-sign-up-alt"></i>
@@ -161,13 +161,20 @@ $listeMotCles = $appliBD->getListeMotCles();
                                 <div id="success-project-contact-form" class="no-margin-lr"></div>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="nom" id="nom" placeholder="Nom*" class="big-input">
+                              <?php
+                                echo'<input type="text" name="nom" value="'.$etudiantByEmail->getNom().'" id="nom" placeholder="Nom*" class="big-input">';
+                                ?>
+                            </div>
+
+                            <div class="col-md-6">
+                              <?php
+                                echo'<input type="text" name="prenom" value="'.$etudiantByEmail->getPrenom().'" id="prenom" placeholder="Prénom" class="big-input">';
+                              ?>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="telephone" id="telephone" placeholder="Téléphone *" class="big-input">
+                              <?php
+                                echo'<input type="text" name="telephone" value="'.$etudiantByEmail->getTelephone().'" id="telephone" placeholder="Téléphone *" class="big-input">';
+                                ?>
                             </div>
                             <div class="col-md-6">
                               <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
@@ -231,10 +238,14 @@ $listeMotCles = $appliBD->getListeMotCles();
                               </div>
                             </div>
                             <div class="col-md-12">
-                                <textarea name="description" id="description" placeholder="Votre description" rows="6" class="big-textarea"></textarea>
+                              <?php
+                                echo'<textarea name="description" id="description" placeholder="Votre description" rows="6" class="big-textarea">'.$etudiantByEmail->getDescription().'</textarea>';
+                                ?>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="alert-success" name="email" id="email" placeholder="Pour changer votre E-mail !" class="big-input">
+                              <?php
+                                echo'<input type="text" class="alert-success" name="email" value="'.$etudiantByEmail->getEmail().'" id="email" placeholder="Pour changer votre E-mail !" class="big-input">';
+                                ?>
                             </div>
 
                             <div class="col-md-6">
@@ -261,7 +272,16 @@ $listeMotCles = $appliBD->getListeMotCles();
                                           <tbody>
                                             <tr class="text-center">
                                               <td>am</td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="0"></td>
+                                              <?php
+                                              $jours = $etudiantByEmail->getJourDisponibles();
+                                              $halfDays = from_bitfield($jours);
+                                              $fill = array_fill(0, 13, false);
+                                              foreach ($halfDays as $value) {
+                                                $fill[$value] = true;
+
+                                               ?>
+
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="0" checked></td>
                                               <td><input type="checkbox" name="jourDisponibles[]" value="2"></td>
                                               <td><input type="checkbox" name="jourDisponibles[]" value="4"></td>
                                               <td><input type="checkbox" name="jourDisponibles[]" value="6"></td>
@@ -281,6 +301,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                                               <td><input type="checkbox" name="jourDisponibles[]" value="9"></td>
                                               <td><input type="checkbox" name="jourDisponibles[]" value="11"></td>
                                               <td><input type="checkbox" name="jourDisponibles[]" value="13"></td>
+                                            <?php }?>
                                             </tr>
                                           </tbody>
                                         </table>

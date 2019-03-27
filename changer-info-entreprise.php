@@ -98,7 +98,7 @@ $idEntreprise = $entreprise->getId();
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
-                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php?id='.$entreprise->getId().'">Profil Entreprise</a><i
+                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php">Profil Entreprise</a><i
                                     class="fas fa-sign-up-alt"></i>';
                                   ?>
                                 <li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php">Ajouter un Projet</a><i
@@ -167,10 +167,8 @@ $idEntreprise = $entreprise->getId();
                       ?>
                     </div>
 
-                    <div class="col-md-12">
-                      <?php
-                        echo'<input type="password" name="password" id="password" placeholder="Password" class="big-input">';
-                      ?>
+                    <div class="col-md-12">                      
+                      <input type="password" name="password" id="password" placeholder="Password" class="big-input">';
                     </div>
 
                     <div class="col-md-12">

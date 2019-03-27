@@ -44,7 +44,7 @@ $derniereConnexion = date("Y-m-d");
       $idEtudiant = $listEtudiant->getId();
       $appliBD->setDateConnexion($idUtilisateur, $derniereConnexion);
 
-      header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+      header('Location: page-profil-etudiant.php');
 
    }else{
          $listAdmin = $appliBD->getAdministrateurByEmail($email);

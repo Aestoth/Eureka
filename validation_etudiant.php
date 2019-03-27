@@ -33,7 +33,7 @@ $_SESSION['role'] = $role;
 $idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
 $idEtudiant = $idEtudiantByEmail->getId();
 
-header("Location: page-profil-etudiant.php?id=$idEtudiant");
+header("Location: page-profil-etudiant.php");
 
 
 

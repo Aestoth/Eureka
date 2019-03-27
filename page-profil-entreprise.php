@@ -167,10 +167,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                       </div>
 
                       </div>
-                      <div class="text-center">
-                        <?php
-
-                         echo'<a title="Titre du lien" href="changer-info-entreprise.php?id='.$entreprise->getId();?>">
+                      <div class="text-center">                
+                         <a title="Titre du lien" href="changer-info-entreprise.php">
                           <button type="button" class="btn btn-danger" style="margin-bottom: 25px;">Modifier Informations Générales</button>
                         </a>
                         </div>
