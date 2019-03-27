@@ -1347,20 +1347,6 @@ public function getEntrepriseByProjet($idProjet){
   }
 
 
-//Function Matching//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  function getEtudiantByProjetMatching($idMatching) {
-
-   $requete_prepare = $this->connexion->prepare(
-      "SELECT * FROM `Etudiant` WHERE `jourDisponibles` &
-      (SELECT datesDisponibles FROM `Projet` WHERE id = :id)");
-   $requete_prepare->execute(array("id"=>$idMatching));
-
-    $matching = $requete_prepare->fetchObject("Etudiant");
-    return $matching;
-  }
-
-
 //function Remplacer Mot Cles Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////
 
   function replaceMotClesEtudiant($idEtudiant, $idMotCles) {
@@ -1376,6 +1362,66 @@ public function getEntrepriseByProjet($idProjet){
         $this->insertMotCles_etudiant($idEtudiant, $value);
     }
   }
+
+  //Function Matching Projet/Etudiant ////////////////////////////////////////////////
+  public function getEtudiantByProjetMatching($idProjet) {
+    $requete_prepare = $this->connexion->prepare(
+      "SELECT * FROM `Etudiant` WHERE `jourDisponibles` & 
+      (SELECT datesDisponibles FROM `Projet` WHERE id = :id)");
+      
+    $requete_prepare->execute(array("id"=>$idProjet)); 
+      
+    $matching = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Etudiant");
+    if(!$matching){
+      return array();
+    }
+    return $matching;
+  }
+
+//Fonction Afficher entreprise par le projet/////////////////////////////////////////
+  public function getEntrepriseByProjet($idProjet) {
+    $requete_prepare=$this->connexion->prepare(
+    "SELECT * FROM Entreprise en
+        INNER JOIN Relation_Entreprise_Projet
+        ON idEntreprise = en.id
+        WHERE idProjet = :id");
+ 
+    $requete_prepare->execute(array("id"=> $idProjet));
+ 
+    $EntrepriseByProjet = $requete_prepare->fetchObject("Entreprise");
+ 
+    return $EntrepriseByProjet;
+ }
+
+//Fonction Etat du projet///////////////////////////////////////////////////////////
+
+public function getProjetByEtat($etat){
+  $requete_prepare = $this->connexion->prepare(
+  "SELECT * FROM Projet WHERE etatProjet = :etatProjet");
+  $requete_prepare->execute(array("etatProjet"=>$etat));
+    $resultat = $requete_prepare->fetchAll(PDO::FETCH_CLASS,"Projet");
+    return $resultat;
+}
+
+function insertNotifications($idEtudiant,$idProjet){
+  $requete_prepare = $this->connexion->prepare(
+  "INSERT INTO Notifications (idEtudiant, idProjet)
+    values (:idEtudiant, :idProjet)");
+
+  $requete_prepare->execute(
+  array('idEtudiant' => $idEtudiant,'idProjet' => $idProjet));
+}
+
+public function getNotifications($idEtudiant, $idProjet){
+  $requete_prepare = $this->connexion->prepare(
+  "SELECT * FROM Notifications WHERE idEtudiant = :idEtudiant 
+  AND idProjet = :idProjet");
+  
+  $requete_prepare->execute(array("idEtudiant"=>$idEtudiant, "idProjet"=>$idProjet));
+  $resultat = $requete_prepare->fetchAll();
+  return $resultat;
+}
+
 
 
 
