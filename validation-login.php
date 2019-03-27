@@ -35,8 +35,8 @@ $derniereConnexion = date("Y-m-d");
      $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
      $idEntreprise = $idEntrepriseByEmail->getId();
      $appliBD->setDateConnexion($idUtilisateur, $derniereConnexion);
-    
-    header('Location: page-profil-entreprise.php?id='.$idEntreprise);
+     $_SESSION['idEntreprise'] = $idEntreprise;
+    header('Location: page-profil-entreprise.php');
 
 
    }elseif($role == 2){

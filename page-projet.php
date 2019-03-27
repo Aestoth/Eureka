@@ -132,7 +132,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                     <main class="col-md-9 col-sm-12 col-xs-12 right-sidebar sm-margin-60px-bottom xs-margin-40px-bottom no-padding-left sm-no-padding-right">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <img src="<?php echo $projets->getPhoto();?>" alt="" width="800px" style="height: 400px" class="img-responsive center-block margin-45px-bottom">
-                            <p><?php echo $projets->getDescription();?></p>
+                            <p><?php echo nl2br(htmlspecialchars($projets->getDescription()));?></p>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 margin-seven-bottom margin-eight-top">
                             <div class="divider-full bg-medium-light-gray"></div>

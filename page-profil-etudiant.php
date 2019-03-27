@@ -150,12 +150,12 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                               <div class="panel-group col-md-8">
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-user-graduate" style="margin-right: 15px;"></i>Nom</div>
-                                  <div class="panel-body1" style="margin-left: 80px;"><?php echo $etudiant->getNom(); ?></div>
+                                  <div class="panel-body1" style="margin-left: 80px;"><?php echo htmlspecialchars($etudiant->getNom()); ?></div>
                                 </div>
 
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-user-circle" style="margin-right: 15px;"></i>Prénom</div>
-                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getPrenom();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo  htmlspecialchars($etudiant->getPrenom());?></div>
                                 </div>
                               </div>
                               </div>
@@ -165,12 +165,12 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                               <div class="panel-group col-md-8">
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-phone-square" style="margin-right: 15px;"></i>Téléphone</div>
-                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getTelephone();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo  htmlspecialchars($etudiant->getTelephone());?></div>
                                 </div>
 
                                 <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-envelope" style="margin-right: 15px;"></i>Email</div>
-                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo $etudiant->getEmail();?></div>
+                                  <div class="panel-body1"  style="margin-left: 80px;"><?php echo  htmlspecialchars($etudiant->getEmail());?></div>
                                 </div>
                               </div>
                             </div>
@@ -254,7 +254,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                         <div class="margin-45px-bottom xs-margin-25px-bottom">
                             <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase text-small font-weight-600 aside-title"><span>About Me</span></div>
                             <a href="about-me.html"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fchittagongit.com%2Fimages%2Favatar-icon-images%2Favatar-icon-images-4.jpg&f=1" alt="" class="margin-25px-bottom"/></a>
-                            <p class="margin-20px-bottom text-small"><?php echo $etudiant->getDescription();?>.</p>
+                            <p class="margin-20px-bottom text-small"><?php echo  nl2br(htmlspecialchars($etudiant->getDescription()));?>.</p>
                             <a class="btn btn-very-small btn-dark-gray text-uppercase" href="">Modifier Description</a>
                         </div>
                         <div class="margin-50px-bottom">

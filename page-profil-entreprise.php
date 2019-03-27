@@ -4,6 +4,8 @@ require_once ('connexion.php');
 $appliBD = new connexion();
 
 session_start();
+//$idEntreprise = $_SESSION['idEntreprise'];
+
 $contactEmail1 = $_SESSION['email'];
 $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($contactEmail1);
 $idEntreprise = $idEntrepriseByEmail->getId();
@@ -122,7 +124,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                     <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
                         <div class="display-table-cell vertical-align-middle text-center">
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom"><?php echo $entreprise->getNom();?></h1>
+                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom"><?php echo htmlspecialchars($entreprise->getNom());?></h1>
                             <!-- end page title -->
                             <!-- start sub title -->
                             <span class="text-white opacity6 alt-font">Unlimited power and customization possibilities</span>
@@ -143,24 +145,24 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                       <div class="panel-group col-md-6">
                         <div class="panel panel-default">
                           <div class="panel-heading"><i class="fas fa-building" style="margin-right: 15px;"></i>Société</div>
-                          <div class="panel-body"><?php echo $entreprise->getNom(); ?></div>
+                          <div class="panel-body"><?php echo htmlspecialchars($entreprise->getNom()); ?></div>
                         </div>
 
                         <div class="panel panel-default">
                           <div class="panel-heading"><i class="fas fa-user-circle" style="margin-right: 15px;"></i>Contact</div>
-                          <div class="panel-body"><?php echo $entreprise->getContactNom1();?></div>
+                          <div class="panel-body"><?php echo htmlspecialchars($entreprise->getContactNom1());?></div>
                         </div>
                       </div>
 
                       <div class="panel-group col-md-6">
                         <div class="panel panel-default">
                           <div class="panel-heading"><i class="fas fa-vector-square" style="margin-right: 15px;"></i>Secteur d'Activité</div>
-                          <div class="panel-body"><?php echo $entreprise->getSecteurAtivite();?></div>
+                          <div class="panel-body"><?php echo htmlspecialchars($entreprise->getSecteurAtivite());?></div>
                         </div>
 
                         <div class="panel panel-default">
                           <div class="panel-heading"><i class="fas fa-envelope" style="margin-right: 15px;"></i>Email</div>
-                          <div class="panel-body"><?php echo $entreprise->getContactEmail1();?></div>
+                          <div class="panel-body"><?php echo htmlspecialchars($entreprise->getContactEmail1());?></div>
                         </div>
                       </div>
 

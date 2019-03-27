@@ -172,37 +172,37 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <div id="success-project-contact-form" class="no-margin-lr"></div>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="nom" id="name" placeholder="Nom *" class="big-input">
+                        <input type="text" name="nom" id="name" placeholder="Nom *" class="big-input" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="password" name="password" id="password" placeholder="Password" class="big-input">
+                        <input type="password" name="password" id="password" placeholder="Password" class="big-input" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="urlSite" id="url" placeholder="Site Web" class="big-input">
+                        <input type="text" name="urlSite" id="url" placeholder="Site Web" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
+                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="Secteur d'Activité *" class="big-input">
+                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="Secteur d'Activité *" class="big-input" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
+                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input">
+                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
+                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="Nombre de Collaborateur *" class="big-input">
+                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="Nombre de Collaborateur *" class="big-input" required>
                     </div>
                     <div class="col-md-12">
                         <textarea name="description" id="description" placeholder="Adresse et description de votre société"
-                            rows="9" class="big-textarea"></textarea>
+                            rows="9" class="big-textarea" required></textarea>
                     </div>
 
 
@@ -214,13 +214,13 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <div id="register-enterprise" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactNom1" id="nom" placeholder="Nom *" class="big-input">
+                            <input type="text" name="contactNom1" id="nom" placeholder="Nom *" class="big-input" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom *" class="big-input">
+                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom *" class="big-input" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" class="alert-success" name="contactEmail1" id="email" placeholder="E-mail *        Attention !  Cet email sera utilisée comme Login" class="big-input">
+                            <input type="text" class="alert-success" name="contactEmail1" id="email" placeholder="E-mail *        Attention !  Cet email sera utilisée comme Login" class="big-input" required>
                         </div>
                         <h5 class="title text-center mt-4">Contacts 2</h5>
                         <div class="col-md-12 mt-4">
