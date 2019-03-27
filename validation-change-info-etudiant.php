@@ -22,12 +22,18 @@ $newEmail = $_POST['email'];
 $newPassword = $_POST['password'];
 $passwordHash = password_hash($newPassword, PASSWORD_BCRYPT);
 
-//$newInfo = $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $description, $telephone, $jourDisponibles);
+
+ $appliBD->setEtudiant($id, $nom, $prenom, $description, $telephone, $jourDisponibles);
+
 
 $motCles = $_POST['motClesEtudiant'];
-if($motCles != null && !empty($motCles)){
-    $appliBD->replaceMotClesEtudiant($idEtudiant, $motCles);
+
+if ($motCles != null && !empty($motCles)) {
+
+  $appliBD->replaceMotClesEtudiant($idEtudiant, $motCles);
 }
+
+
 
 if($nom != null && !empty($nom)){
   $appliBD->setEtudiantNom($idEtudiant, $nom);
@@ -62,7 +68,7 @@ if($newPassword != null && !empty($newPassword)){
 }
 
 
-header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+// header('Location: page-profil-etudiant.php?id='.$idEtudiant);
 
 
 

@@ -110,13 +110,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
                         <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                            <!-- breadcrumb -->
-                            <ul class="xs-text-center">
-                                <li><a href="#" class="text-dark-gray">Pages</a></li>
-                                <li><a href="#" class="text-dark-gray">Contact</a></li>
-                                <li class="text-dark-gray">Contact us classic</li>
-                            </ul>
-                            <!-- end breadcrumb -->
+                          
                         </div>
                     </div>
                 </div>

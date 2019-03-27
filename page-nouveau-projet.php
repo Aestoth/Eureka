@@ -98,7 +98,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
-                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php?id='.$entreprise->getId().'">Profil Entreprise</a><i
+                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php">Profil Entreprise</a><i
                                     class="fas fa-sign-up-alt"></i>';
                                 ?>
                                 </li>
@@ -115,7 +115,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        
+
         <!-- end page title section -->
         <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.annoncerlacouleur.be%2Fsites%2Ffiles_alc%2Fprojet%2Ffichier%2FAPP_Visuel%2520lancement%2520ALC.jpg&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>

@@ -55,7 +55,7 @@ $_SESSION['role'] = $role;
 
 $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
 $idEntreprise = $idEntrepriseByEmail->getId();
-header('Location: page-profil-entreprise.php?id='.$idEntreprise);
+header('Location: page-profil-entreprise.php');
 
 
 

@@ -90,7 +90,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
-                                echo'<li class="dropdown simple-dropdown"><a href= "page-profil-entreprise.php?id='.$idEntreprise.'">Profil entreprise</a><i
+                                echo'<li class="dropdown simple-dropdown"><a href= "page-profil-entreprise.php">Profil entreprise</a><i
                                     class="fas fa-sign-up-alt"></i>';
                                     ?>
                                 </li>
