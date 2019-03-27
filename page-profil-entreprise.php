@@ -100,7 +100,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
-                                echo'<li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php?id='.$entreprise->getId().'">Ajouter un Projet</a><i
+                                echo'<li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php" >Ajouter un Projet</a><i
                                     class="fas fa-sign-up-alt"></i>';
                                   ?>
                                 </li>
