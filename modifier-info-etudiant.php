@@ -280,7 +280,6 @@ $listeMotCles = $appliBD->getListeMotCles();
                                               foreach ($halfDays as $value) {
                                                 $fill[$value] = true;
                                               }
-
                                                ?>
 
                                               <td><input type="checkbox" name="jourDisponibles[]" value="0" checked="<?php echo $fill[0] ?>"></td>
