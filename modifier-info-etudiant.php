@@ -72,7 +72,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
-                            <a href="index.html" title="Pofo" class="logo"><img src="images/eureka-dark.png" data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
+                            <a href="index.html" title="Pofo" class="logo"><img src="images/eureka-dark.png" data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/eureka-light@2x.png" alt="Pofo" class="logo-light"></a>
                         </div>
                         <!-- end logo -->
                         <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">

@@ -288,6 +288,7 @@ section.half-section {padding:80px 0;}
 
 .extra-big-input, .extra-big-textarea, .extra-big-select select { padding: 18px 25px; font-size: 14px; line-height: 24px; height: 62px;}
 .big-input, .big-textarea, .big-select select { padding: 18px 25px; font-size: 14px; border-radius: 0;}
+.date-fixed, .period-fixed { height: 4.0em;}
 
 .medium-input, .medium-textarea, .medium-select select { padding: 12px 20px; font-size: 14px; line-height: normal; border-radius: 0;}
 .small-input, .small-textarea { padding: 12px 15px; font-size: 11px; line-height: normal}
@@ -4144,6 +4145,7 @@ aside .latest-post li figure {width: 75px;}
 .ml-auto,.mx-auto{
     margin-left:auto!important
 }
+
 /* ===================================
    demo page css
 ====================================== */
