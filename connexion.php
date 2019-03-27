@@ -1378,21 +1378,6 @@ public function getEntrepriseByProjet($idProjet){
     return $matching;
   }
 
-//Fonction Afficher entreprise par le projet/////////////////////////////////////////
-  public function getEntrepriseByProjet($idProjet) {
-    $requete_prepare=$this->connexion->prepare(
-    "SELECT * FROM Entreprise en
-        INNER JOIN Relation_Entreprise_Projet
-        ON idEntreprise = en.id
-        WHERE idProjet = :id");
- 
-    $requete_prepare->execute(array("id"=> $idProjet));
- 
-    $EntrepriseByProjet = $requete_prepare->fetchObject("Entreprise");
- 
-    return $EntrepriseByProjet;
- }
-
 //Fonction Etat du projet///////////////////////////////////////////////////////////
 
 public function getProjetByEtat($etat){
