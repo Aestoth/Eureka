@@ -8,7 +8,6 @@ $email = $_SESSION['email'];
 $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
 $idEntreprise = $idEntrepriseByEmail->getId();
 
-
 $titre = $_POST['titre'];
 $photo = $_FILES["photo"]["name"];
 $description = $_POST['description'];

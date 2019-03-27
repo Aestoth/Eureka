@@ -115,30 +115,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
-            <div class="container">
-                <div class="row equalize xs-equalize-auto">
-                    <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
-                        <div class="display-table-cell vertical-align-middle text-left xs-text-center">
-                            <!-- start page title -->
-                            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase"><i class="far fa-newspaper" style="margin-right:10px;"></i>Nouveau Projet</h1>
-                            <!-- end page title -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
-                        <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                            <!-- breadcrumb -->
-                            <ul class="xs-text-center">
-                                <li><a href="#" class="text-dark-gray">Pages</a></li>
-                                <li><a href="#" class="text-dark-gray">Contact</a></li>
-                                <li class="text-dark-gray">Contact us classic</li>
-                            </ul>
-                            <!-- end breadcrumb -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- end page title section -->
         <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.annoncerlacouleur.be%2Fsites%2Ffiles_alc%2Fprojet%2Ffichier%2FAPP_Visuel%2520lancement%2520ALC.jpg&f=1');">
             <div class="opacity-medium bg-extra-dark-gray"></div>

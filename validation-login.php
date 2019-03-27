@@ -35,18 +35,18 @@ $derniereConnexion = date("Y-m-d");
      $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($email);
      $idEntreprise = $idEntrepriseByEmail->getId();
      $appliBD->setDateConnexion($idUtilisateur, $derniereConnexion);
-
+    
     header('Location: page-profil-entreprise.php?id='.$idEntreprise);
 
 
-    }elseif($role == 2){
+   }elseif($role == 2){
       $listEtudiant = $appliBD->getEtudiantByEmail($email);
       $idEtudiant = $listEtudiant->getId();
       $appliBD->setDateConnexion($idUtilisateur, $derniereConnexion);
 
-        header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+      header('Location: page-profil-etudiant.php?id='.$idEtudiant);
 
-       }else{
+   }else{
          $listAdmin = $appliBD->getAdministrateurByEmail($email);
          $idAdministrateur = $listAdmin->getId();
         header('Location: page-profil-administrateur.php?id='.$idAdministrateur);

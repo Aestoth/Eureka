@@ -56,6 +56,12 @@ $listeMotCles = $appliBD->getListeMotCles();
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
+        <style>
+
+      .alert-success {
+        padding: 15px;
+        }
+        </style>
     </head>
     <body>
         <!-- start header -->
@@ -66,7 +72,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
-                            <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png" data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
+                            <a href="index.html" title="Pofo" class="logo"><img src="images/eureka-dark.png" data-rjs="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
                         </div>
                         <!-- end logo -->
                         <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
@@ -77,31 +83,20 @@ $listeMotCles = $appliBD->getListeMotCles();
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
-                                <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
+                                <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal"
+                                    data-in="fadeIn" data-out="fadeOut">
                                     <!-- start menu item -->
                                     <li class="dropdown megamenu-fw">
-                                        <a href="javascript:void(0);">Home</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
+                                        <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                            data-toggle="dropdown" aria-hidden="true"></i>
                                     </li>
-                                    <!-- end menu item -->
-                                    <li class="dropdown simple-dropdown"><a href="javascript:void(0);">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
+                                    <?php
+                                    echo'<li class="dropdown simple-dropdown"><a href= "page-profil-etudiant.php?id='.$idEtudiant.'">Profil etudiant</a><i
+                                        class="fas fa-sign-up-alt"></i>';
+                                        ?>
                                     </li>
-                                    <li class="dropdown megamenu-fw">
-                                        <a href="javascript:void(0);">Portfolio</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
-                                    </li>
-                                    <li class="dropdown simple-dropdown"><a href="javascript:void(0);" title="Blog">Blog</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
-                                        <!-- end sub menu -->
-                                    </li>
-                                    <li class="dropdown megamenu-fw">
-                                        <a href="javascript:void(0);">Elements</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
-                                    </li>
-                                    <li class="dropdown megamenu-fw">
-                                        <a href="javascript:void(0);">Features</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-
+                                    <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i
+                                        class="fas fa-sign-up-alt"></i>
                                     </li>
                                 </ul>
                             </div>
@@ -142,13 +137,6 @@ $listeMotCles = $appliBD->getListeMotCles();
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-text-left xs-margin-10px-top">
                         <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                            <!-- breadcrumb -->
-                            <ul class="xs-text-center">
-                                <li><a href="#" class="text-light-gray">Elements</a></li>
-                                <li><a href="#" class="text-light-gray">General elements</a></li>
-                                <li class="text-light-gray">Accordions</li>
-                            </ul>
-                            <!-- end breadcrumb -->
                         </div>
                     </div>
                 </div>
@@ -179,17 +167,9 @@ $listeMotCles = $appliBD->getListeMotCles();
                                 <input type="text" name="prenom" id="prenom" placeholder="Prénom" class="big-input">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="email" id="email" placeholder="E-mail *" class="big-input">
-                            </div>
-                            <div class="col-md-6">
                                 <input type="text" name="telephone" id="telephone" placeholder="Téléphone *" class="big-input">
                             </div>
-                          
                             <div class="col-md-6">
-
-                                <input type="password" name="password" id="password" placeholder="Mot de passe*" class="big-input">
-                            </div>
-                            <div class="col-md-12">
                               <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
                               <div id="demo" class="collapse">
 
@@ -248,12 +228,17 @@ $listeMotCles = $appliBD->getListeMotCles();
                                         </select>
                                     </div>
                                   </div>
-
-
                               </div>
                             </div>
                             <div class="col-md-12">
                                 <textarea name="description" id="description" placeholder="Votre description" rows="6" class="big-textarea"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="alert-success" name="email" id="email" placeholder="Pour changer votre E-mail !" class="big-input">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="password" class="alert-success" name="password" id="password" placeholder="Pour changer votre Mot de passe !" class="big-input">
                             </div>
 
                                       <div class="form-group col-md-12 mt-3">
@@ -303,295 +288,14 @@ $listeMotCles = $appliBD->getListeMotCles();
                                     </div>
                                  </div>
                                </div>
-
                             <div class="col-md-12 text-center">
                                 <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Valider</button>
                             </div>
                         </div>
                     </form>
-      </div>
+                  </div>
+        </section>
 
-
-    </div>
-
-        </section>
-        <!-- end accordions style 01 section -->
-        <!-- start accordions style 02 section -->
-        <section class="wow fadeIn bg-extra-dark-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-sm-12 col-xs-12 center-col text-center margin-100px-bottom xs-margin-40px-bottom">
-                        <div class="position-relative overflow-hidden width-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Accordions Style 02</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 center-col">
-                        <!-- start accordion -->
-                        <div class="panel-group accordion-style1" id="accordion-design2">
-                            <!-- start accordion item -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion-design2" href="#accordion-design2-design1" class="collapsed" aria-expanded="false"><div class="panel-title font-weight-500 text-white text-uppercase">What does royalty free mean?<span class="pull-right"><i class="ti-minus"></i></span></div></a>
-                                </div>
-                                <div id="accordion-design2-design1" class="panel-collapse collapse in" aria-expanded="false" role="tablist">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end accordion item -->
-                            <!-- start accordion item -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion-design2" href="#accordion-design2-design2" class="collapsed" aria-expanded="false"><div class="panel-title font-weight-500 text-white text-uppercase">What do you mean by item and end product?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="accordion-design2-design2" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end accordion item -->
-                            <!-- start accordion item -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion-design2" href="#accordion-design2-design3" class="collapsed" aria-expanded="false"><div class="panel-title font-weight-500 text-white text-uppercase">What are some examples of permitted end products?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="accordion-design2-design3" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end accordion item -->
-                            <!-- start accordion item -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion-design2" href="#accordion-design2-design4" class="collapsed" aria-expanded="false"><div class="panel-title font-weight-500 text-white text-uppercase">Am i allowed to modify the item that i purchased?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="accordion-design2-design4" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end accordion item -->
-                            <!-- start accordion item -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion-design2" href="#accordion-design2-design5" class="collapsed" aria-expanded="false"><div class="panel-title font-weight-500 text-white text-uppercase">I'm not sure if my use is covered. what should i do?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="accordion-design2-design5" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end accordion item -->
-                        </div>
-                        <!-- end accordion -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end accordions style 02 section -->
-        <!-- start accordions style 03 section -->
-        <section class="wow fadeIn">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-sm-12 col-xs-12 center-col text-center margin-100px-bottom xs-margin-40px-bottom">
-                        <div class="position-relative overflow-hidden width-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Accordions Style 03</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 center-col">
-                        <!-- start accordion -->
-                        <div class="panel-group accordion-style3" id="accordion-3">
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#accordion-3-One">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">01</span>
-                                            <span class="text-white xs-width-80 display-inline-block">Unique and bold website design</span>
-                                            <i class="fas fa-angle-up pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="accordion-3-One" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#accordion-3-Two">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">02</span>
-                                            <span class="text-white xs-width-80 display-inline-block">We're ready to start now</span>
-                                            <i class="indicator fas fa-angle-down pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="accordion-3-Two" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#accordion-3-Three">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">03</span>
-                                            <span class="text-white xs-width-80 display-inline-block">We Deliver the highest quality</span>
-                                            <i class="indicator fas fa-angle-down pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="accordion-3-Three" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                        </div>
-                        <!-- end accordion -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end accordions style 03 section -->
-        <!-- start accordions style 04 section -->
-        <section class="wow fadeIn bg-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-sm-12 col-xs-12 center-col text-center margin-100px-bottom xs-margin-40px-bottom">
-                        <div class="position-relative overflow-hidden width-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Accordions Style 04</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 center-col">
-                        <!-- start accordion -->
-                        <div class="panel-group accordion-style2" id="accordion-main">
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-main" href="#collapseOne">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">01</span>
-                                            <span class="text-extra-dark-gray xs-width-80 display-inline-block">Unique and bold website design</span>
-                                            <i class="fas fa-angle-up pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-main" href="#collapseTwo">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">02</span>
-                                            <span class="text-extra-dark-gray xs-width-80 display-inline-block">We're ready to start now</span>
-                                            <i class="indicator fas fa-angle-down pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                            <!-- start tab content -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-main" href="#collapseThree">
-                                        <div class="panel-title">
-                                            <span class="alt-font font-weight-600 text-deep-pink tab-tag">03</span>
-                                            <span class="text-extra-dark-gray xs-width-80 display-inline-block">We Deliver the highest quality</span>
-                                            <i class="indicator fas fa-angle-down pull-right text-extra-dark-gray "></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse">
-                                    <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                                </div>
-                            </div>
-                            <!-- end tab content -->
-                        </div>
-                        <!-- end accordion -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end accordions style 04 section -->
-        <!-- start toggle style 01 section -->
-        <section class="wow fadeIn border-top border-color-extra-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-sm-12 col-xs-12 center-col text-center margin-100px-bottom xs-margin-40px-bottom">
-                        <div class="position-relative overflow-hidden width-100">
-                            <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase">Toggle Style 01</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 center-col">
-                        <!-- start toggle -->
-                        <div class="panel-group toggles">
-                            <!-- start toggle item -->
-                            <div class="panel panel-default" id="collapse-one">
-                                <div role="tablist" id="toggles-One" class="panel-heading">
-                                    <a data-toggle="collapse" href="#toggles-OneLink"><div class="panel-title font-weight-500 text-extra-dark-gray text-uppercase">Is the regular license the same thing as an editorial license?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="toggles-OneLink" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end toggle item -->
-                            <!-- start toggle item -->
-                            <div class="panel panel-default">
-                                <div role="tablist" id="toggles-Two" class="panel-heading">
-                                    <a data-toggle="collapse" href="#toggles-TwoLink"><div class="panel-title font-weight-500 text-extra-dark-gray text-uppercase">Which license do i need to use an item in a commercial?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="toggles-TwoLink" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end toggle item -->
-                            <!-- start toggle item -->
-                            <div class="panel panel-default">
-                                <div role="tablist" id="toggles-Three" class="panel-heading">
-                                    <a data-toggle="collapse" href="#toggles-ThreeLink"><div class="panel-title font-weight-500 text-extra-dark-gray text-uppercase">What are allowed variations of a single application?<span class="pull-right"><i class="ti-plus"></i></span></div></a>
-                                </div>
-                                <div id="toggles-ThreeLink" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end toggle item -->
-                        </div>
-                        <!-- end toggle  -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- start toggle style 01 section -->
         <!-- start footer -->
         <footer class="footer-standard-dark bg-extra-dark-gray">
             <div class="footer-widget-area padding-five-tb xs-padding-30px-tb">
@@ -599,7 +303,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     <div class="row equalize xs-equalize-auto">
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray sm-no-border-right sm-margin-30px-bottom xs-text-center">
                             <!-- start logo -->
-                            <a href="index.html" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo"></a>
+                            <a href="index.html" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-dark.png" data-rjs="images/logo-white@2x.png" alt="Pofo"></a>
                             <!-- end logo -->
                             <p class="text-small width-95 xs-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <!-- start social media -->

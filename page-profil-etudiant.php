@@ -7,7 +7,6 @@ $idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
 $idEtudiant = $idEtudiantByEmail->getId();
 $utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
 $idUtilisateur = $utilisateurByEmail->getId();
-
 $etudiant = $appliBD->getEtudiantById($idEtudiant);
 $projets = $appliBD->getListeProjetEtudiant($idEtudiant);
 $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
@@ -149,7 +148,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                             <div class="container">
                               <div class="row" style="font-size: 20px;">
                               <div class="panel-group col-md-8">
-                                <div class="panel panel-default" style="height: 45%">
+                                <div class="panel panel-default">
                                   <div class="panel-heading"><i class="fas fa-user-graduate" style="margin-right: 15px;"></i>Nom</div>
                                   <div class="panel-body1" style="margin-left: 80px;"><?php echo $etudiant->getNom(); ?></div>
                                 </div>

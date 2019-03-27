@@ -58,6 +58,11 @@ $listeMotCles = $appliBD->getListeMotCles();
     input, textarea, select {
     padding: 1px 15px;
     }
+
+    .alert-success {
+      padding: 15px;
+    }
+
     </style>
 </head>
 
@@ -118,13 +123,6 @@ $listeMotCles = $appliBD->getListeMotCles();
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
                     <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                        <!-- breadcrumb -->
-                        <ul class="xs-text-center">
-                            <li><a href="#" class="text-dark-gray">Pages</a></li>
-                            <li><a href="#" class="text-dark-gray">Contact</a></li>
-                            <li class="text-dark-gray">Contact us classic</li>
-                        </ul>
-                        <!-- end breadcrumb -->
                     </div>
                 </div>
             </div>
@@ -186,29 +184,25 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurActivite *" class="big-input">
+                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="Secteur d'Activité *" class="big-input">
                     </div>
 
                     <div class="col-md-6">
                         <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
+                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="linkdin" id="linkdin" placeholder="Linkedin *" class="big-input">
+                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
                     </div>
 
                     <div class="col-md-6">
                         <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="Nombre de Collaborateur *" class="big-input">
                     </div>
                     <div class="col-md-12">
-                        <textarea name="adresse" id="adresse" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
-                            rows="6" class="big-textarea"></textarea>
-                    </div>
-                    <div class="col-md-12">
-                        <textarea name="description" id="description" placeholder="Description de votre société"
-                            rows="6" class="big-textarea"></textarea>
+                        <textarea name="description" id="description" placeholder="Adresse et description de votre société"
+                            rows="9" class="big-textarea"></textarea>
                     </div>
 
 
@@ -226,7 +220,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom *" class="big-input">
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactEmail1" id="email" placeholder="E-mail *" class="big-input">
+                            <input type="text" class="alert-success" name="contactEmail1" id="email" placeholder="E-mail *        Attention !  Cet email sera utilisée comme Login" class="big-input">
                         </div>
                         <h5 class="title text-center mt-4">Contacts 2</h5>
                         <div class="col-md-12 mt-4">

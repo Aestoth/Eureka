@@ -220,11 +220,19 @@ $listeEtudiant = $appliBD->getListeEtudiant();
           <p class="text-center">Type something in the input field to search the list for specific items:</p>
           <input class="form-control" id="myInput" type="text" placeholder="Search..">
           <br>
+
         <ul class="list-group" id="myList">
           <?php
-            foreach ($listeEtudiant as $value) {
-          echo'<li class="list-group-item">'.$value->getPrenom()." ".$value->getNom().'<button type="button" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
-          }?>
+          foreach ($listeEtudiant as $etudiant) {
+          ?>
+             <li class="list-group-item">
+                <form id="project-contact-form" action="delete-etudiant.php" method="post">
+                   <input type="hidden" name="emailEtudiant" value=<?php echo '"'.$etudiant->getEmail().'"' ?>>
+                    <label><?php echo $etudiant->getPrenom()." ".$etudiant->getNom()." " ?></label><i class="far fa-edit"></i><input type="submit" class="btn btn-link" value="Supprimer">
+                </form>
+             </li>
+          <?php } ?>
+
 
         </ul>
           </div>
@@ -234,14 +242,18 @@ $listeEtudiant = $appliBD->getListeEtudiant();
             <input class="form-control" id="myInput2" type="text" placeholder="Search..">
             <br>
           <ul class="list-group" id="myList2">
-            <form id="project-contact-form" action="delete-entreprise.php" method="post">
             <?php
-              foreach ($listeEntreprise as $value) {
-            echo'<li class="list-group-item" >'.$value->getNom().'<button type="submit" name="'.$value->getId().'" class="btn btn-link"><i class="far fa-edit"></i> Supprimer</button></li>';
-            }?>
-          </form>
+            foreach ($listeEntreprise as $entreprise) {
+            ?>
+               <li class="list-group-item">
+                  <form id="project-contact-form" action="delete-entreprise.php" method="post">
+                     <input type="hidden" name="emailEntreprise" value=<?php echo '"'.$entreprise->getContactEmail1().'"' ?>>
+                      <label><?php echo $entreprise->getNom()." " ?></label><i class="far fa-edit"></i><input type="submit" class="btn btn-link" value="Supprimer">
+                  </form>
+               </li>
+            <?php } ?>
           </ul>
-            </div>
+         </div>
         </div>
       </div>
         <!-- end form section -->

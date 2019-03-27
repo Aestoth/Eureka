@@ -124,8 +124,12 @@
 
 }
 body {
-    background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.jimcdn.com%2Fapp%2Fcms%2Fimage%2Ftransf%2Fnone%2Fpath%2Fsaac8cb9ff3b062be%2Fbackgroundarea%2Fi770692930d533142%2Fversion%2F1488974054%2Fimage.jpg&f=1");
+    background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.maximumwall.com%2Fwp-content%2Fuploads%2F2016%2F12%2Ffond-ecran-wallpaper-image-fonds-ecran-abstrait-noir-et-blanc-08.jpg&f=1");
 }
+    .size{
+      width: 30%;
+    }
+
     </style>
 
 </head>
@@ -191,7 +195,8 @@ $(()=>{
     $('#logreg-forms #cancel_reset').click(toggleResetPswd);
     $('#logreg-forms #btn-signup').click(toggleSignUp);
     $('#logreg-forms #cancel_signup').click(toggleSignUp);
-})g" target="_blank" style="color:black">ESPACE EUREKA</a>
+})g" target="_blank" style="color:black"><a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
+        data-rjs="images/logo@2x.png" class="logo-dark default size" alt="Eureka"></a></a>
     </p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

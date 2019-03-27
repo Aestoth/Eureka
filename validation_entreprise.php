@@ -9,7 +9,7 @@ $password = $_POST['password'];
 $urlSite = $_POST['urlSite'];
 $description = $_POST['description'];
 $facebook = $_POST['facebook'];
-$linkdin = $_POST['linkdin'];
+$linkedin = $_POST['linkedin'];
 $instagram = $_POST['instagram'];
 $secteurAtivite =  $_POST['secteurAtivite'];
 $logo = $_FILES["logo"]["name"];
@@ -36,7 +36,7 @@ $imageMoved = move_uploaded_file($_FILES["logo"]["tmp_name"], $destinationFolder
 
 $role = 1;
 $idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role, $derniereConnexion);
-$idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkdin, $instagram, $secteurAtivite, $logo,
+$idEntreprise = $appliBD->insertEntreprise($nom, $passwordHash, $urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo,
 $nombCollaborateurs, $contactNom1, $contactPrenom1, $email, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur);
 
 

@@ -119,13 +119,14 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
 
 //$motCles = $appliBD->setEtudiantMotCles(5, 3);
 
-$projetmatching = $appliBD->getEtudiantByProjetMatching(1);
-echo $projetmatching->getId();
 
- 
-
+/*$idUtilisateur = $appliBD->insertUtilisateur("gugugugu", "edede", 1, "2019-01-19");
+echo "</br>".$idUtilisateur;*/
 
 
+
+$projet = $appliBD->getProjetByEntreprise(27);
+echo $projet->getTitre();
 
 
 

@@ -44,6 +44,7 @@ class Connexion {
   public function insertEntreprise($nom,$password,$urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
     $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3, $idUtilisateur ){
 
+      $this->connexion->beginTransaction();
       $requete_prepare = $this->connexion->prepare("
       INSERT INTO Entreprise (nom, password, urlSite, description, facebook, linkedin, instagram, secteurAtivite, logo, nombCollaborateurs,
       contactNom1, contactPrenom1, contactEmail1, contactNom2, contactPrenom2, contactEmail2, contactNom3, contactPrenom3, contactEmail3, idUtilisateur )
@@ -74,6 +75,7 @@ class Connexion {
             )
         );
         $idEntreprise= $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $idEntreprise;
     }
 
@@ -83,6 +85,7 @@ class Connexion {
 
   public function insertEtudiant($nom, $prenom, $password, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur){
 
+      $this->connexion->beginTransaction();
       $requete_prepare = $this->connexion->prepare("
        INSERT INTO Etudiant (nom, prenom, password, description, email, telephone, avatar, jourDisponibles, idUtilisateur) values (:nom, :prenom, :password, :description, :email, :telephone, :avatar, :jourDisponibles, :idUtilisateur)");
       $requete_prepare->execute(
@@ -99,9 +102,8 @@ class Connexion {
             )
         );
 
-        print_r($requete_prepare->errorInfo());
-
         $idEtudiant = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $idEtudiant;
 
   }
@@ -109,8 +111,9 @@ class Connexion {
 
       //Function InsertProjet//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet,$datesDisponibles, $idEntreprise){
+    public function insertProjet($titre, $photo, $description, $date1, $periode1, $date2, $periode2, $date3, $periode3, $typeEvenement, $etatProjet, $datesDisponibles, $idEntreprise){
 
+      $this->connexion->beginTransaction();
         $requete_prepare = $this->connexion->prepare("
          INSERT INTO Projet (titre, photo, description, date1, periode1, date2, periode2, date3, periode3, typeEvenement, etatProjet, datesDisponibles, idEntreprise)
           values (:titre, :photo, :description, :date1, :periode1, :date2, :periode2, :date3, :periode3, :typeEvenement, :etatProjet, :datesDisponibles, :idEntreprise)");
@@ -132,8 +135,8 @@ class Connexion {
               )
           );
 
-          print_r($requete_prepare->errorInfo());
           $idProjet = $this->connexion->lastInsertId();
+          $this->connexion->commit();
           return $idProjet;
     }
 
@@ -141,6 +144,7 @@ class Connexion {
 
   public function insertFournisseur($nomSociete, $prix, $nomService, $descriptionService, $nom, $prenom, $email, $telephone, $adresse){
 
+      $this->connexion->beginTransaction();
       $requete_prepare = $this->connexion->prepare("
        INSERT INTO Fournisseur (nomSociete, prix, nomService, descriptionService, nom, prenom, email, telephone, adresse)
         values (:nomSociete, :prix, :nomService, :descriptionService, :nom, :prenom, :email, :telephone, :adresse)");
@@ -158,6 +162,7 @@ class Connexion {
             )
         );
         $idFournisseur = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $idFournisseur;
   }
 
@@ -167,6 +172,7 @@ class Connexion {
 
   public function insertUtilisateur($email, $password, $role, $derniereConnexion){
 
+      $this->connexion->beginTransaction();
       $requete_prepare = $this->connexion->prepare("
         INSERT INTO Utilisateur (email, password, role, derniereConnexion)
         values (:email, :password, :role, :derniereConnexion)");
@@ -178,7 +184,9 @@ class Connexion {
               'derniereConnexion' => $derniereConnexion
             )
         );
+
         $idUtilisateur = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $idUtilisateur;
   }
 
@@ -188,6 +196,7 @@ class Connexion {
 
   public function insertAdministrateur($email, $password, $idUtilisateur){
 
+      $this->connexion->beginTransaction();
       $requete_prepare = $this->connexion->prepare("
         INSERT INTO Administrateur (email, password, idUtilisateur)
         values (:email, :password, :idUtilisateur)");
@@ -199,6 +208,7 @@ class Connexion {
             )
         );
         $idAdministrateur = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $idAdministrateur;
   }
 
@@ -207,6 +217,7 @@ class Connexion {
 
   public function insertCategories($nomCategories){
 
+     $this->connexion->beginTransaction();
      $requete_prepare = $this->connexion->prepare("
        INSERT INTO Categories (nomCategories)
         values (:nomCategories)");
@@ -216,6 +227,7 @@ class Connexion {
             )
         );
         $categorie = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $categorie;
   }
 
@@ -242,6 +254,7 @@ class Connexion {
 
   public function insertMotCles($nom){
 
+     $this->connexion->beginTransaction();
      $requete_prepare = $this->connexion->prepare("
        INSERT INTO MotCles (nom)
         values (:nom)");
@@ -251,6 +264,7 @@ class Connexion {
             )
         );
         $listeMotCles = $this->connexion->lastInsertId();
+        $this->connexion->commit();
         return $listeMotCles;
   }
 
@@ -322,7 +336,6 @@ class Connexion {
                    'idProjet' => $idProjet
                  )
             );
-              print_r($requete_prepare->errorInfo());
                 return true;
         }
 
@@ -471,19 +484,60 @@ class Connexion {
   }
 
 
+
+
 ///Function Delete Entreprise/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  function deleteEntreprise($id) {
+function deleteProjet($id) {
 
-    $requete_prepare = $this->connexion->prepare(
+  $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM MotCles_projet
+    WHERE idProjet = :id"
+    );
+  $requete_prepare->execute(array("id"=>$id));
+
+
+  $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM Relation_Entreprise_Projet
+    WHERE idProjet = :id"
+    );
+  $requete_prepare->execute(array("id"=>$id));
+
+
+  $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM Relation_Etudiant_Projet
+    WHERE idProjet = :id"
+    );
+  $requete_prepare->execute(array("id"=>$id));
+
+
+  $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM Projet
+    WHERE id = :id"
+    );
+  $requete_prepare->execute(array("id"=>$id));
+
+}
+
+
+
+
+function deleteEntreprise($id) {
+
+  $requete_prepare = $this->connexion->prepare(
     "DELETE
     FROM Entreprise
     WHERE id = :id"
     );
-      $requete_prepare->execute(array("id"=>$id));
+  $requete_prepare->execute(array("id"=>$id));
 
-      $requete_prepare->fetchObject("Entreprise");
-  }
+}
+
+
 
 ///Function Delete Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -491,13 +545,44 @@ class Connexion {
 
     $requete_prepare = $this->connexion->prepare(
     "DELETE
+    FROM MotCles_etudiant
+    WHERE idEtudiant = :id"
+    );
+    $requete_prepare->execute(array("id"=>$id));
+
+
+//Delete Relation Etudiant Projet///////////////////
+
+    $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM Relation_Etudiant_Projet
+    WHERE idEtudiant = :id"
+    );
+    $requete_prepare->execute(array("id"=>$id));
+
+
+    $requete_prepare = $this->connexion->prepare(
+    "DELETE
     FROM Etudiant
+    WHERE id = :id"
+    );
+    $requete_prepare->execute(array("id"=>$id));
+
+  }
+
+//Delete Utilisateur//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function deleteUtilisateur($id) {
+
+    $requete_prepare = $this->connexion->prepare(
+    "DELETE
+    FROM Utilisateur
     WHERE id = :id"
     );
       $requete_prepare->execute(array("id"=>$id));
 
-      $requete_prepare->fetchObject("Etudiant");
   }
+
 
 ///Function Delete Fournisseur////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -513,42 +598,25 @@ class Connexion {
       $requete_prepare->fetchObject("Fournisseur");
   }
 
-//Function Delete Projet//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  function deleteProjet($id) {
-
-    $requete_prepare = $this->connexion->prepare(
-    "DELETE
-    FROM Projet
-    WHERE id = :id"
-    );
-      $requete_prepare->execute(array("id"=>$id));
-
-      $requete_prepare->fetchObject("Projet");
-  }
-
 
 
   //Function Set Etreprise////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public function setEntreprise($id, $password, $urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $logo, $nombCollaborateurs,
-     $contactNom1, $contactPrenom1, $contactEmail1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3) {
+    public function setEntreprise($id, $nom, $urlSite, $description, $facebook, $linkedin, $instagram, $secteurAtivite, $nombCollaborateurs,
+     $contactNom1, $contactPrenom1, $contactNom2, $contactPrenom2, $contactEmail2, $contactNom3, $contactPrenom3, $contactEmail3) {
 
       $requete_prepare = $this->connexion->prepare(
        "UPDATE Entreprise
-       SET
-         password = '$password',
+       SET nom = '$nom',
          urlSite = '$urlSite',
          description = '$description',
          facebook = '$facebook',
          linkedin = '$linkedin',
          instagram = '$instagram',
          secteurAtivite = '$secteurAtivite',
-         logo = '$logo',
          nombCollaborateurs = '$nombCollaborateurs',
          contactNom1 = '$contactNom1',
          contactPrenom1 = '$contactPrenom1',
-         contactEmail1 = '$contactEmail1',
          contactNom2 = '$contactNom2',
          contactPrenom2 = '$contactPrenom2',
          contactEmail2 = '$contactEmail2',
@@ -558,11 +626,9 @@ class Connexion {
         WHERE id = :id"
        );
        $requete_prepare->execute(array("id"=>$id));
-
-      $newDonnes = $requete_prepare->fetchObject("Entreprise");
-       return $newDonnes;
-
   }
+
+
 
 //Function Set Entreprise Contac 1 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -580,6 +646,175 @@ class Connexion {
     return $newContact1;
 
 }
+
+//Function Set Entreprise Nom ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseNom($id, $nom) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET nom = '$nom'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $nonEntreprise = $requete_prepare->fetchObject("Entreprise");
+    return $nonEntreprise;
+
+}
+
+//Function set entreprise email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function setEntrepriseContactEmail1($id, $contactEmail1) {
+  $requete_prepare = $this->connexion->prepare(
+   "UPDATE Entreprise
+    SET contactEmail1  = '$contactEmail1'
+    WHERE id = :id"
+ );
+ $requete_prepare->execute(array("id"=>$id));
+}
+
+//Function Set Entreprise  Password///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntreprisePassword($id, $password) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET password = '$password'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newPassword = $requete_prepare->fetchObject("Entreprise");
+    return $newPassword;
+
+}
+
+//Function Set Entreprise lien Site Web///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseUrlSite($id, $urlSite) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET urlSite = '$urlSite'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newUrl = $requete_prepare->fetchObject("Entreprise");
+    return $newUrl;
+
+}
+
+//Function Set Entreprise Description///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseDescription($id, $description) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET description = '$description'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newDescription = $requete_prepare->fetchObject("Entreprise");
+    return $newDescription;
+
+}
+
+
+
+//Function Set Entreprise Facebook///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseFacebook($id, $facebook) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET facebook = '$facebook'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newfacebook = $requete_prepare->fetchObject("Entreprise");
+    return $newfacebook;
+
+}
+
+//Function Set Entreprise Linkedin///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseLinkedin($id, $linkedin) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET linkedin = '$linkedin'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newLinkedin = $requete_prepare->fetchObject("Entreprise");
+    return $newLinkedin;
+
+}
+
+
+//Function Set Entreprise Instagram///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseInstagram($id, $instagram) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET instagram = '$instagram'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newInstagram = $requete_prepare->fetchObject("Entreprise");
+    return $newInstagram;
+
+}
+
+
+//Function Set Entreprise Secteur Activite///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseSecteurActivite($id, $secteurAtivite) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET secteurAtivite = '$secteurAtivite'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newSecteurActivite = $requete_prepare->fetchObject("Entreprise");
+    return $newSecteurActivite;
+
+}
+
+
+//Function Set Entreprise Logo///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseLogo($id, $logo) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET logo = '$logo'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newLogo = $requete_prepare->fetchObject("Entreprise");
+    return $newLogo;
+
+}
+
+
+
+//Function Set Entreprise Nombre Collaborateur///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEntrepriseNombreCollaborateur($id, $nombCollaborateurs) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Entreprise
+      SET nombCollaborateurs = '$nombCollaborateurs'
+      WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newNombCollaborateurs = $requete_prepare->fetchObject("Entreprise");
+    return $newNombCollaborateurs;
+
+}
+
 
 //Function Set Entreprise Contac 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -619,25 +854,20 @@ class Connexion {
 
 //Function Set Etudiant////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  public function setEtudiant($id, $nom, $prenom, $password,  $description, $email, $telephone, $jourDisponibles) {
+  public function setEtudiant($id, $nom, $prenom, $description, $telephone, $jourDisponibles) {
 
     $requete_prepare = $this->connexion->prepare(
      "UPDATE Etudiant
      SET nom = '$nom',
        prenom = '$prenom',
-       password = '$password',
        description = '$description',
-       email = '$email',
        telephone = '$telephone',
        jourDisponibles = '$jourDisponibles'
      WHERE id = :id"
      );
      $requete_prepare->execute(array("id"=>$id));
-
-    $newDonnes = $requete_prepare->fetchObject("Etudiant");
-     return $newDonnes;
-
 }
+
 
 //Function Set Etudiant description/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -648,15 +878,68 @@ class Connexion {
        WHERE id = :id"
    );
    $requete_prepare->execute(array("id"=>$id));
+}
 
-   print_r($requete_prepare->errorInfo());
+//Function Set Etudiant email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-   $newDescription = $requete_prepare->fetchObject("Etudiant");
-    return $newDescription;
+  public function setEtudiantEmail($id, $email) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Etudiant
+      SET email = '$email'
+       WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+   $newEmail = $requete_prepare->fetchObject("Etudiant");
+    return $newEmail;
 
 }
 
-//Function Set Etudiant telephone/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public function setUtilisateurEmail($id, $email) {
+  $requete_prepare = $this->connexion->prepare(
+   "UPDATE Utilisateur
+    SET email = '$email'
+     WHERE id = :id"
+ );
+ $requete_prepare->execute(array("id"=>$id));
+}
+
+//Function Set Etudiant Nom/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEtudiantNom($id, $nom) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Etudiant
+      SET nom = '$nom'
+       WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+
+   $newNom = $requete_prepare->fetchObject("Etudiant");
+    return $newNom;
+
+}
+
+
+
+//Function Set Etudiant Prenom/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public function setEtudiantPrenom($id, $prenom) {
+    $requete_prepare = $this->connexion->prepare(
+     "UPDATE Etudiant
+      SET prenom = '$prenom'
+       WHERE id = :id"
+   );
+   $requete_prepare->execute(array("id"=>$id));
+
+
+   $newPrenom = $requete_prepare->fetchObject("Etudiant");
+    return $newPrenom;
+
+}
+
+
+//Function Set Etudiant Telephone/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function setEtudiantTelephone($id, $telephone) {
     $requete_prepare = $this->connexion->prepare(
@@ -666,12 +949,12 @@ class Connexion {
    );
    $requete_prepare->execute(array("id"=>$id));
 
-   //print_r($requete_prepare->errorInfo());
 
    $newTelephone = $requete_prepare->fetchObject("Etudiant");
     return $newTelephone;
 
 }
+
 
 //Function Set Etudiant Jour Disponibles///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -698,8 +981,19 @@ class Connexion {
    );
    $requete_prepare->execute(array("id"=>$id));
 
-   $newPassword = $requete_prepare->fetchObject("Etudiant");
-   return $newPassword;
+
+
+}
+
+public function setUtilisateurPassword($id, $password) {
+  $requete_prepare = $this->connexion->prepare(
+   "UPDATE Utilisateur
+   SET password = '$password'
+   WHERE id = :id"
+ );
+ $requete_prepare->execute(array("id"=>$id));
+
+
 
 }
 
@@ -972,20 +1266,38 @@ function getListeEtudiantByProjet($idProjet) {
 }
 
 
+
+
+public function getEntrepriseByProjet($idProjet){
+
+ $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM Relation_Entreprise_Projet me
+    INNER JOIN Entreprise e
+    ON me.idEntreprise = e.id
+    where me.idProjet = :idProjet");
+ $requete_prepare->execute(array("idProjet"=>$idProjet));
+
+ $resultat = $requete_prepare->fetchObject("Entreprise");
+   return $resultat;
+
+}
+
+
+
+
 ///function entreprise par email/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function getEntrepriseByEmail($email){
-     $requete_prepare = $this->connexion->prepare(
+    $requete_prepare = $this->connexion->prepare(
      "SELECT *
-      FROM Entreprise WHERE contactEmail1 = :contactEmail1");
-       $requete_prepare->execute(array("contactEmail1"=>$email));
+      FROM Entreprise WHERE contactEmail1 = :contactEmail1"
+    );
+   $requete_prepare->execute(array("contactEmail1"=>$email));
 
-       $resultat = $requete_prepare->fetchObject("Entreprise");
-       return $resultat;
-
+   $resultat = $requete_prepare->fetchObject("Entreprise");
+     return $resultat;
   }
-
-
 
 
 //Functio Utilisateur by Email//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
@@ -1026,7 +1338,8 @@ function getListeEtudiantByProjet($idProjet) {
 
    $requete_prepare = $this->connexion->prepare(
      "SELECT *
-      FROM Administrateur WHERE email = :email");
+      FROM Administrateur WHERE email = :email"
+    );
    $requete_prepare->execute(array("email"=>$email));
 
      $resultat = $requete_prepare->fetchObject("Administrateur");

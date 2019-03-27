@@ -2,7 +2,11 @@
 require_once 'connexion.php';
 $appliBD = new connexion();
 session_start();
-
+$email = $_SESSION['email'];
+$utilisateurByEmail = $appliBD->getUtilisateurByEmail($email);
+$idUtilisateur = $utilisateurByEmail->getId();
+$entreprise = $appliBD->getEntrepriseByEmail($email);
+$idEntreprise = $entreprise->getId();
 ?>
 
 <!doctype html>
@@ -93,6 +97,10 @@ session_start();
                                     <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
+                                <?php
+                                echo'<li class="dropdown simple-dropdown"><a href="page-profil-entreprise.php?id='.$entreprise->getId().'">Profil Entreprise</a><i
+                                    class="fas fa-sign-up-alt"></i>';
+                                  ?>
                                 <li class="dropdown simple-dropdown"><a href="page-nouveau-projet.php">Ajouter un Projet</a><i
                                     class="fas fa-sign-up-alt"></i>
                                 </li>
@@ -109,47 +117,18 @@ session_start();
     </header>
     <!-- end header -->
     <!-- start page title section -->
-    <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
+    <section class="wow fadeIn bg-extra-dark-gray padding-35px-tb page-title-small top-space">
         <div class="container">
-            <div class="row equalize xs-equalize-auto">
+            <div class="row equalize">
                 <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
                     <div class="display-table-cell vertical-align-middle text-left xs-text-center">
                         <!-- start page title -->
-                        <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">
-                            Modifier Informations</h1>
+                        <h1 class="alt-font text-white font-weight-600 no-margin-bottom text-uppercase">Informations Générales</h1>
                         <!-- end page title -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-text-left xs-margin-10px-top">
                     <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                        <!-- breadcrumb -->
-                        <ul class="xs-text-center">
-                            <li><a href="#" class="text-dark-gray">Pages</a></li>
-                            <li><a href="#" class="text-dark-gray">Contact</a></li>
-                            <li class="text-dark-gray">Contact us classic</li>
-                        </ul>
-                        <!-- end breadcrumb -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end page title section -->
-    <section class="wow fadeIn cover-background background-position-top top-space"
-        style="background-image:url('https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fponcier.org%2Fblog%2Fwp-content%2F2012%2F11%2Fdigial.jpg&f=1');">
-        <div class="opacity-medium bg-extra-dark-gray"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
-                    <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
-                        <!-- start sub title -->
-                        <span
-                            class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We
-                            are located in downtown New York</span>
-                        <!-- end sub title -->
-                        <!-- start page title -->
-                        <h1 class="alt-font text-white font-weight-600 no-margin-bottom"></h1>
-                        <!-- end page title -->
                     </div>
                 </div>
             </div>
@@ -178,41 +157,59 @@ session_start();
                         <div id="success-project-contact-form" class="no-margin-lr"></div>
                     </div>
                     <div class="col-md-12">
-                        <input type="text" name="contactEmail1" id="name" placeholder="Confimez Email *" class="big-input">
+                      <?php
+                        echo'<input type="text" name="nom" value="'.$entreprise->getNom().'" id="nom" placeholder="Entrez votre nom" class="big-input">';
+                      ?>
                     </div>
                     <div class="col-md-12">
-                        <input type="password" name="password" id="password" placeholder=" Confimez Password" class="big-input">
+                      <?php
+                      echo'  <input type="text" name="contactEmail1" value="'.$entreprise->getContactEmail1().'" id="contactEmail1" placeholder="Entrez votre E-mail" class="big-input">';
+                      ?>
                     </div>
+
                     <div class="col-md-12">
-                        <input type="text" name="urlSite" id="url" placeholder="Site Web *" class="big-input">
+                      <?php
+                        echo'<input type="password" name="password" id="password" placeholder="Password" class="big-input">';
+                      ?>
+                    </div>
+
+                    <div class="col-md-12">
+                      <?php
+                        echo'<input type="text" name="urlSite" value="'.$entreprise->getUrlSite().'" id="url" placeholder="Entrez l\'URL de votre Site" class="big-input">';
+                      ?>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
+                      <?php
+                        echo'<input type="text" name="facebook" value="'.$entreprise->getFacebook().'" id="facebook" placeholder="Entrez lien Facebook" class="big-input">';
+                        ?>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="secteurActivite *" class="big-input">
+                      <?php
+                        echo'<input type="text" name="secteurAtivite" value="'.$entreprise->getSecteurAtivite().'" id="secteurAtivite" placeholder="Entrez Secteur d\'activieé" class="big-input">';
+                        ?>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
+                      <?php
+                        echo'<input type="text" name="instagram" value="'.$entreprise->getInstagram().'" id="instagram" placeholder="Entrez Lien Instagram" class="big-input">';
+                        ?>
                     </div>
                     <div class="col-md-6">
-                        <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="linkedin" id="linkdin" placeholder="Linkedin *" class="big-input">
+                      <?php
+                        echo'<input type="text" name="linkedin" value="'.$entreprise->getLinkedin().'" id="linkdin" placeholder="" class="big-input">';
+                        ?>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="nombCollaborateurs" id="nombCollaborateurs" placeholder="Nombre Collaborateurs *" class="big-input">
-                    </div>
+                      <?php
+                        echo'<input type="text" name="nombCollaborateurs" value="'.$entreprise->getNombCollaborateurs().'" id="nombCollaborateurs" placeholder="Nombre Collaborateurs: " class="big-input">';
+                      ?>
+                  </div>
+
                     <div class="col-md-12">
-                        <textarea name="adresse" id="adresse" placeholder=" Adresse: Rue St Martin 12, 1213 Genève, Suisse"
-                            rows="6" class="big-textarea"></textarea>
-                    </div>
-                    <div class="col-md-12">
-                        <textarea name="description" id="description" placeholder="Description de votre société"
-                            rows="6" class="big-textarea"></textarea>
+                      <?php
+                        echo'<textarea name="description" id="description" placeholder="Adressse et description de votre société:" rows="8" class="big-textarea">'.$entreprise->getDescription().'</textarea>';
+                      ?>
                     </div>
 
 
@@ -224,31 +221,47 @@ session_start();
                             <div id="register-enterprise" class="no-margin-lr"></div>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactNom1" id="nom" placeholder="Nom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactNom1" value="'.$entreprise->getContactNom1().'" id="nom" placeholder=" Entrez Nom" class="big-input">';
+                          ?>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom1" id="prenom" placeholder="Prénom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactPrenom1" value="'.$entreprise->getContactPrenom1().'" id="prenom" placeholder="Entrez Prenom" class="big-input">';
+                            ?>
                         </div>
 
                         <h5 class="title text-center mt-4">Contacts 2</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="contactNom2" id="nom" placeholder="Nom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactNom2" value="'.$entreprise->getContactNom2().'" id="nom" placeholder="Entrez Nom" class="big-input">';
+                            ?>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom2" id="prenom" placeholder="Prénom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactPrenom2"  value="'.$entreprise->getContactPrenom2().'" id="prenom" placeholder="Entrez Prénom" class="big-input">';
+                            ?>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactEmail2" id="email" placeholder="E-mail *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactEmail2" value="'.$entreprise->getContactEmail2().'" id="email" placeholder="Entrez E-mail" class="big-input">';
+                          ?>
                         </div>
                         <h5 class="title text-center mt-4">Contacts 3</h5>
                         <div class="col-md-12 mt-4">
-                            <input type="text" name="contactNom3" id="nom" placeholder="Nom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactNom3" value="'.$entreprise->getContactNom3().'" id="nom" placeholder="Entrez Nom" class="big-input">';
+                            ?>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactPrenom3" id="prenom" placeholder="Prénom *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactPrenom3" value="'.$entreprise->getContactPrenom3().'" id="prenom" placeholder="Entrez Prénom" class="big-input">';
+                            ?>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="contactEmail3" id="email" placeholder="E-mail *" class="big-input">
+                          <?php
+                            echo'<input type="text" name="contactEmail3" value="'.$entreprise->getContactEmail3().'" id="email" placeholder="Entrez E-mail" class="big-input">';
+                            ?>
                         </div>
                     </div>
                   </div>

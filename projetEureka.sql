@@ -54,6 +54,7 @@ CREATE TABLE Projet (
     periode3 VARCHAR(100),
     typeEvenement VARCHAR(255),
     etatProjet VARCHAR(255),
+    datesDisponibles INT (100),
     idEntreprise INT(100),
     PRIMARY KEY (id),
     FOREIGN KEY (idEntreprise) REFERENCES Entreprise(id)

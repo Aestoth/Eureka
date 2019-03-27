@@ -15,9 +15,6 @@ $derniereConnexion = date("Y-m-d");
 $jourDisponibles = to_bitfield($_POST['jourDisponibles']);
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
-
-
-
 $role = 2;
 $idUtilisateur = $appliBD->insertUtilisateur($email, $passwordHash, $role, $derniereConnexion);
 $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $description, $email, $telephone, $avatar, $jourDisponibles, $idUtilisateur);
@@ -27,6 +24,14 @@ $idEtudiant = $appliBD->insertEtudiant($nom, $prenom, $passwordHash, $descriptio
 foreach ($_POST["motClesEtudiant"] as $value) {
     $appliBD->insertMotCles_etudiant($idEtudiant, $value);
 }
+session_start();
+$_SESSION['id'] = $idUtilisateur;
+$_SESSION['email'] = $email;
+$_SESSION['role'] = $role;
+
+
+$idEtudiantByEmail = $appliBD->getEtudiantByEmail($email);
+$idEtudiant = $idEtudiantByEmail->getId();
 
 header("Location: page-profil-etudiant.php?id=$idEtudiant");
 

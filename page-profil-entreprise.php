@@ -7,7 +7,6 @@ session_start();
 $contactEmail1 = $_SESSION['email'];
 $idEntrepriseByEmail = $appliBD->getEntrepriseByEmail($contactEmail1);
 $idEntreprise = $idEntrepriseByEmail->getId();
-
 $entreprise = $appliBD->getEntrepriseById($idEntreprise);
 $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
 ?>
