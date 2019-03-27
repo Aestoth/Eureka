@@ -130,6 +130,15 @@ CREATE TABLE MotCles_projet (
   FOREIGN KEY (idProjet) REFERENCES Projet(id)
 );
 
+CREATE TABLE Notifications (
+  id int(100) AUTO_INCREMENT,
+  idEtudiant int(100),
+  idProjet int(100),
+  PRIMARY KEY (id),
+  FOREIGN KEY (idEtudiant) REFERENCES Etudiant(id),
+  FOREIGN KEY (idProjet) REFERENCES Projet(id)
+);
+
 CREATE TABLE Categories (
   id int(100) AUTO_INCREMENT,
   nomCategories VARCHAR(255),
