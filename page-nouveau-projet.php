@@ -76,8 +76,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                     <!-- start logo -->
                     <div class="col-md-2 col-xs-5">
                         <a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
-                                data-rjs="images/logo@2x.png" class="logo-dark default" alt="Eureka"><img
-                                src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt="Eureka"
+                                data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Eureka"><img
+                                src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"
                                 class="logo-light"></a>
                     </div>
                     <!-- end logo -->
@@ -235,11 +235,11 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                         </div>
 
                         <div class="col-md-6">
-                            <input type="date" name="date1" id="date1" class="big-input">
+                            <input type="date" name="date1" id="date1" class="big-input" class="date-fixed">
                         </div>
 
                         <div class="col-md-6">
-                            <div class="select-style big-select">
+                            <div class="select-style big-select period-fixed">
                                 <select name="periode1" id="periode1"  class="bg-transparent no-margin-bottom">
                                     <option value="">Période</option>
                                     <option value="AM">matin</option>
@@ -249,10 +249,10 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                         </div>
 
                         <div class="col-md-6">
-                            <input type="date" name="date2" id="date2" placeholder="" class="big-input">
+                            <input type="date" name="date2" id="date2" placeholder="" class="big-input" class="date-fixed">
                         </div>
                         <div class="col-md-6">
-                            <div class="select-style big-select">
+                            <div class="select-style big-select period-fixed">
                                 <select name="periode2" id="periode2" class="bg-transparent no-margin-bottom">
                                     <option value="">Période</option>
                                     <option value="AM">matin</option>
@@ -261,10 +261,10 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <input type="date" name="date3" id="date3" class="big-input">
+                            <input type="date" name="date3" id="date3" class="big-input" class="date-fixed">
                         </div>
                         <div class="col-md-6">
-                            <div class="select-style big-select">
+                            <div class="select-style big-select period-fixed">
                                 <select name="periode3" id="periode3" class="bg-transparent no-margin-bottom">
                                     <option value="">Période</option>
                                     <option value="AM">matin</option>
