@@ -1,6 +1,7 @@
 
 <?php
 require_once 'connexion.php';
+require_once 'bit_count.php';
 $appliBD = new connexion();
 session_start();
 $email = $_SESSION['email'];
@@ -281,26 +282,26 @@ $listeMotCles = $appliBD->getListeMotCles();
 
                                                ?>
 
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="0" checked></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="2"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="4"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="6"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="8"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="10"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="12"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="0" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="2" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="4" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="6" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="8" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="10" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="12" checked="<?php echo $fill[$value] ?>"></td>
                                             </tr>
                                           </tbody>
 
                                           <tbody>
                                             <tr class="text-center">
                                               <td>pm</td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="1"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="3"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="5"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="7"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="9"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="11"></td>
-                                              <td><input type="checkbox" name="jourDisponibles[]" value="13"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="1" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="3" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="5" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="7" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="9" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="11" checked="<?php echo $fill[$value] ?>"></td>
+                                              <td><input type="checkbox" name="jourDisponibles[]" value="13" checked="<?php echo $fill[$value] ?>"></td>
                                             <?php }?>
                                             </tr>
                                           </tbody>
