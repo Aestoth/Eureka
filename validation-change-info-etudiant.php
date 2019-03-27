@@ -23,7 +23,7 @@ $newPassword = $_POST['password'];
 $passwordHash = password_hash($newPassword, PASSWORD_BCRYPT);
 
 
- $appliBD->setEtudiant($id, $nom, $prenom, $description, $telephone, $jourDisponibles);
+ $appliBD->setEtudiant($idEtudiant, $nom, $prenom, $description, $telephone, $jourDisponibles);
 
 
 $motCles = $_POST['motClesEtudiant'];
@@ -68,7 +68,7 @@ if($newPassword != null && !empty($newPassword)){
 }
 
 
-// header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+header('Location: page-profil-etudiant.php?id='.$idEtudiant);
 
 
 
