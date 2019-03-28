@@ -75,7 +75,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                 <div class="row">
                     <!-- start logo -->
                     <div class="col-md-2 col-xs-5">
-                        <a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
+                        <a href="index.php" title="Eureka" class="logo"><img src="images/eureka-dark.png"
                                 data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Eureka"><img
                                 src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"
                                 class="logo-light"></a>
@@ -234,8 +234,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                             <textarea name="description" id="description" placeholder="Description du Projet" rows="6" class="big-textarea"></textarea>
                         </div>
 
-                        <div class="col-md-6">
-                            <input type="date" name="date1" id="date1" class="big-input" class="date-fixed">
+                        <div class="col-md-6 date-fixed">
+                            <input type="date" name="date1" id="date1" class="big-input">
                         </div>
 
                         <div class="col-md-6">
@@ -248,8 +248,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <input type="date" name="date2" id="date2" placeholder="" class="big-input" class="date-fixed">
+                        <div class="col-md-6 date-fixed">
+                            <input type="date" name="date2" id="date2" placeholder="" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select period-fixed">
@@ -260,8 +260,8 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <input type="date" name="date3" id="date3" class="big-input" class="date-fixed">
+                        <div class="col-md-6 date-fixed">
+                            <input type="date" name="date3" id="date3" class="big-input">
                         </div>
                         <div class="col-md-6">
                             <div class="select-style big-select period-fixed">
@@ -306,7 +306,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                     <div class="row equalize xs-equalize-auto">
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray sm-no-border-right sm-margin-30px-bottom xs-text-center">
                             <!-- start logo -->
-                            <a href="#" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt=""></a>
+                            <a href="#" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt=""></a>
                             <!-- end logo -->
                             <p class="text-small width-95 xs-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <!-- start social media -->

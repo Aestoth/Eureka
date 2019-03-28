@@ -86,7 +86,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                 <div class="row">
                     <!-- start logo -->
                     <div class="col-md-2 col-xs-5">
-                        <a href="#" title="Eureka" class="logo"><img src="images/eureka-dark.png"
+                        <a href="index.php" title="Eureka" class="logo"><img src="images/eureka-dark.png"
                                 data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Eureka"><img
                                 src="images/logo-white.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"
                                 class="logo-light"></a>
@@ -319,7 +319,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                         <!-- start logo -->
                         <div class="col-md-4 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <a href="#"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/logo-white@2x.png" alt="Eureka"></a>
+                                <a href="index.php"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"></a>
                             </div>
                         </div>
                         <!-- end logo -->
