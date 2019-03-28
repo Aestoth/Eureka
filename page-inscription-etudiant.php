@@ -176,7 +176,6 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
-                                        <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>

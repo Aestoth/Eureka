@@ -1272,14 +1272,14 @@ public function getEntrepriseByProjet($idProjet){
 
  $requete_prepare = $this->connexion->prepare(
    "SELECT *
-    FROM Relation_Entreprise_Projet me
+    FROM Projet p
     INNER JOIN Entreprise e
-    ON me.idEntreprise = e.id
-    where me.idProjet = :idProjet");
+    ON p.idEntreprise = e.id
+    where p.id = :idProjet");
  $requete_prepare->execute(array("idProjet"=>$idProjet));
 
  $resultat = $requete_prepare->fetchObject("Entreprise");
-   return $resultat;
+  return $resultat;
 
 }
 

@@ -123,10 +123,18 @@ $idAdministrateur = $appliBD->insertAdministrateur($email, $passwordHash, $idUti
 /*$idUtilisateur = $appliBD->insertUtilisateur("gugugugu", "edede", 1, "2019-01-19");
 echo "</br>".$idUtilisateur;*/
 
+/* $projet = $appliBD->getProjetByEntreprise(27);
+echo $projet->getTitre(); */
+
+// $entreprise = $appliBD->getEntrepriseByProjet(1);
+// var_dump ($entreprise);
+
+$etat = "en cours";
+$projetsActifs = $appliBD->getProjetByEtat($etat);
+var_dump ($projetsActifs);
 
 
-$projet = $appliBD->getProjetByEntreprise(27);
-echo $projet->getTitre();
+
 
 
 
