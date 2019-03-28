@@ -73,7 +73,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
-                            <a href="index.html" title="Pofo" class="logo"><img src="images/eureka-dark.png" data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/eureka-light@2x.png" alt="Pofo" class="logo-light"></a>
+                            <a href="index.php" title="Pofo" class="logo"><img src="images/eureka-dark.png" data-rjs="images/eureka-dark@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/eureka-light@2x.png" alt="Pofo" class="logo-light"></a>
                         </div>
                         <!-- end logo -->
                         <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
@@ -325,7 +325,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     <div class="row equalize xs-equalize-auto">
                         <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray sm-no-border-right sm-margin-30px-bottom xs-text-center">
                             <!-- start logo -->
-                            <a href="index.html" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-dark.png" data-rjs="images/logo-white@2x.png" alt="Pofo"></a>
+                            <a href="index.html" class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt="Pofo"></a>
                             <!-- end logo -->
                             <p class="text-small width-95 xs-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <!-- start social media -->

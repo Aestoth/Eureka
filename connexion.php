@@ -340,26 +340,6 @@ class Connexion {
         }
 
 
-
-
-//Function insert Relation Entreprise projet////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  public function insertRelationEntrepriseProjet ($idEntreprise, $idProjet) {
-
-      $requete_prepare = $this->connexion->prepare(
-        "INSERT INTO Relation_Entreprise_Projet (idEntreprise, idProjet)
-               values (:idEntreprise, :idProjet)");
-
-         $requete_prepare->execute(
-          array(
-                 'idEntreprise' => $idEntreprise,
-                 'idProjet' => $idProjet
-               )
-          );
-          return true;
-  }
-
-
 //////Function Utilisateur by Id///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function getUtilisateurById($id){
@@ -484,8 +464,6 @@ class Connexion {
   }
 
 
-
-
 ///Function Delete Entreprise/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function deleteProjet($id) {
@@ -493,14 +471,6 @@ function deleteProjet($id) {
   $requete_prepare = $this->connexion->prepare(
     "DELETE
     FROM MotCles_projet
-    WHERE idProjet = :id"
-    );
-  $requete_prepare->execute(array("id"=>$id));
-
-
-  $requete_prepare = $this->connexion->prepare(
-    "DELETE
-    FROM Relation_Entreprise_Projet
     WHERE idProjet = :id"
     );
   $requete_prepare->execute(array("id"=>$id));
@@ -1231,14 +1201,11 @@ function getListeProjetEtudiant($idEtudiant) {
 function getListeProjetEntreprise($idEntreprise) {
 
     $requete_prepare=$this->connexion->prepare(
-        "SELECT * FROM Projet p
-        INNER JOIN Relation_Entreprise_Projet r
-        ON r.idProjet = p.id
-        WHERE r.idEntreprise = :id");
+        "SELECT * FROM Projet 
+        WHERE idEntreprise = :id");
 
     $requete_prepare->execute(
         array("id"=> $idEntreprise));
-
 
     $listeProjetEntreprise = $requete_prepare->fetchAll(PDO::FETCH_CLASS, "Projet");
 

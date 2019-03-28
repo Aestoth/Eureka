@@ -354,7 +354,7 @@ foreach ($projetsActifs as $projet) {
             echo "Test email send to ".$to."<br/>";
             $notify = $appliBD->insertNotifications($idEtudiants, $idProjet);
         } else {
-            echo "Failed to send to ".$emailEtudiant."<br/>";
+            echo "AlreaySent to ".$emailEtudiant."<br/>";
         }
 
     }       
