@@ -15,7 +15,7 @@ function from_bitfield($bitfield) {
     if ($bitfield & 1 == 1) {
       $halfdays[] = $i;
     }
-    $bitfieldEtudiant >>= 1;
+    $bitfield >>= 1;
   }
   return $halfdays;
 }
