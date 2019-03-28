@@ -64,7 +64,7 @@ if($password != null && !empty($password)){
 }
 
 
-header('Location: page-profil-entreprise.php?id='.$idEntreprise);
+header('Location: page-profil-entreprise.php');
 
 
 
