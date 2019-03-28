@@ -162,11 +162,3 @@ CREATE TABLE Relation_Etudiant_Projet (
   FOREIGN KEY (idEtudiant) REFERENCES Etudiant(id)
 );
 
-
-CREATE TABLE Relation_Entreprise_Projet(
-  idEntreprise int(100),
-  idProjet int(100),
-  PRIMARY KEY (idEntreprise, idProjet),
-  FOREIGN KEY (idProjet) REFERENCES Projet(id),
-  FOREIGN KEY (idEntreprise) REFERENCES Entreprise(id)
-);
