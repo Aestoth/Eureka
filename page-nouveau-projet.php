@@ -172,7 +172,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
 
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott" required>
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -183,7 +183,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott" required>
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -194,7 +194,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott" required>
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -205,7 +205,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott" required>
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -216,7 +216,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                               </div>
                               <div class="col-md-6">
                                 <div class="select-style">
-                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott">
+                                    <select name="motClesProjet[]" id="motClesProjet" class="transparent no-margin-bott" required>
                                         <option value="">Centre d'Interet</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
@@ -231,7 +231,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                         </div>
 
                         <div class="col-md-12">
-                            <textarea name="description" id="description" placeholder="Description du Projet" rows="6" class="big-textarea"></textarea>
+                            <textarea name="description" id="description" placeholder="Description du Projet" rows="6" class="big-textarea" required></textarea>
                         </div>
 
                         <div class="col-md-6 date-fixed">

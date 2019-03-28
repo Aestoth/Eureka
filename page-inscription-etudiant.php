@@ -110,7 +110,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
                         <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-                          
+
                         </div>
                     </div>
                 </div>
@@ -176,6 +176,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
+                                          <option value="">-- Centre d'Interet --</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>
@@ -186,7 +187,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
-                                        <option value="">Centre d'Interet</option>
+                                        <option value="">-- Centre d'Interet --</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>
@@ -197,7 +198,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
-                                        <option value="">Centre d'Interet</option>
+                                        <option value="">-- Centre d'Interet --</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>
@@ -208,7 +209,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
-                                        <option value="">Centre d'Interet</option>
+                                        <option value="">-- Centre d'Interet --</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>
@@ -219,7 +220,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                               <div class="col-md-6">
                                 <div class="select-style">
                                     <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott" required>
-                                        <option value="">Centre d'Interet</option>
+                                        <option value="">-- Centre d'Interet --</option>
                                         <?php foreach ($listeMotCles as $value){
                                            echo' <option value='.$value->id.'>'.$value->nom.'</option>';
                                             }?>
