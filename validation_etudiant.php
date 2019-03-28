@@ -157,7 +157,7 @@ $headers = "From:" . $from . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 mail($to, $subject, $body, $headers);
 
-header("Location: page-profil-etudiant.php?id=$idEtudiant");
+header("Location: page-profil-etudiant.php");
 
 
 

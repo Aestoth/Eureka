@@ -8,6 +8,7 @@ $email = $_SESSION['email'];
 $etudiantByEmail = $appliBD->getEtudiantByEmail($email);
 $idEtudiant = $etudiantByEmail->getId();
 $listeMotCles = $appliBD->getListeMotCles();
+$listeMotClesEtudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
 ?>
 
 <!doctype html>
@@ -180,62 +181,20 @@ $listeMotCles = $appliBD->getListeMotCles();
                             <div class="col-md-6">
                               <button type="button" class="btn btn-dark-gray" data-toggle="collapse" data-target="#demo" style="margin-bottom: 20px;">Clickez ici pour choisir 5 Tags</button>
                               <div id="demo" class="collapse">
-
+                                  <?php for($i = 0; $i <= 4; $i++){ ?>
                                   <div class="col-md-6">
                                     <div class="select-style">
                                         <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
-                                            <option value="">Centre d'Interet</option>
-                                            <?php foreach ($listeMotCles as $value){
-                                               echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                                }?>
-
+                                            <option value="">-- Centre d'Interet --</option>
+                                            <?php foreach ($listeMotCles as $motCles){ ?>
+                                              <option value="<?php echo $motCles->id?>"
+                                                <?php if ($motCles->id === $listeMotClesEtudiant[$i]->id) echo 'selected'; ?>
+                                                ><?php echo $motCles->nom ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                   </div>
-                                  <div class="col-md-6">
-                                    <div class="select-style">
-                                        <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
-                                            <option value="">Centre d'Interet</option>
-                                            <?php foreach ($listeMotCles as $value){
-                                               echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                                }?>
-
-                                        </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="select-style">
-                                        <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
-                                            <option value="">Centre d'Interet</option>
-                                            <?php foreach ($listeMotCles as $value){
-                                               echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                                }?>
-
-                                        </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="select-style">
-                                        <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
-                                            <option value="">Centre d'Interet</option>
-                                            <?php foreach ($listeMotCles as $value){
-                                               echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                                }?>
-
-                                        </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="select-style">
-                                        <select name="motClesEtudiant[]" id="motClesEtudiant" class="transparent no-margin-bott">
-                                            <option value="">Centre d'Interet</option>
-                                            <?php foreach ($listeMotCles as $value){
-                                               echo' <option value='.$value->id.'>'.$value->nom.'</option>';
-                                                }?>
-
-                                        </select>
-                                    </div>
-                                  </div>
+                                  <?php  } ?>
                               </div>
                             </div>
                             <div class="col-md-12">
@@ -276,7 +235,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                                               <?php
                                               $jours = $etudiantByEmail->getJourDisponibles();
                                               $halfDays = from_bitfield($jours);
-                                              $fill = array_fill(0, 13, false);
+                                              $fill = array_fill(0, 14, false);
                                               foreach ($halfDays as $value) {
                                                 $fill[$value] = true;
                                               }
