@@ -135,9 +135,41 @@ var_dump ($projetsActifs);
 
 
 
+<<<<<<< HEAD
+//$projet = $appliBD->getProjetByEntreprise(27);
+//echo $projet->getTitre();
+
+/*if($nom != null && !empty($nom)){
+  $appliBD->setEtudiantNom($idEtudiant, $nom);
+}
+
+if($prenom != null && !empty($prenom)){
+  $appliBD->setEtudiantPrenom($idEtudiant, $prenom);
+}
+
+if($description != null && !empty($description)){
+  $appliBD->setEtudiantDescription($idEtudiant, $description);
+}
+
+if($telephone != null && !empty($telephone)){
+  $appliBD->setEtudiantTelephone($idEtudiant, $telephone);
+}
+
+if($jourDisponibles != null && !empty($jourDisponibles)){
+  $appliBD->setEtudiantJourDisponibles($idEtudiant, $jourDisponibles);
+}
+=======
+>>>>>>> master
 
 
+if($newEmail != null && !empty($newEmail)){
+  $appliBD->setEtudiantEmail($idEtudiant, $newEmail);
+  $appliBD->setUtilisateurEmail($idUtilisateur, $newEmail);
+  $_SESSION['email'] = $newEmail;
+}*/
 
+/*$listeMotClesEtudiant = $appliBD->getEtudiantListeMotCles(9);
+var_dump($listeMotClesEtudiant);*/
 
 
 
