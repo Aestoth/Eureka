@@ -167,8 +167,13 @@ $idEntreprise = $entreprise->getId();
                       ?>
                     </div>
 
+<<<<<<< HEAD
+                    <div class="col-md-12">
+                      <input type="password" name="password" id="password" placeholder="Password" class="big-input">';
+=======
                     <div class="col-md-12">                      
                       <input type="password" name="password" id="password" placeholder="Password" class="big-input">
+>>>>>>> master
                     </div>
 
                     <div class="col-md-12">

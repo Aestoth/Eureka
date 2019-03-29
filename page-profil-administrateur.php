@@ -115,7 +115,7 @@ $listeEtudiant = $appliBD->getListeEtudiant();
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-margin-15px-top">
                         <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
                             <!-- breadcrumb -->
-                          
+
                             <!-- end breadcrumb -->
                         </div>
                     </div>
