@@ -86,7 +86,7 @@ $listeEtudiant = $appliBD->getListeEtudiant();
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <li class="dropdown simple-dropdown"><a href="logout.php">Deconnexion</a><i

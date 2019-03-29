@@ -41,7 +41,7 @@ if($newPassword != null && !empty($newPassword)){
 }
 
 
-header('Location: page-profil-etudiant.php?id='.$idEtudiant);
+header('Location: page-profil-etudiant.php');
 
 
 

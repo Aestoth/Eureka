@@ -261,7 +261,7 @@ foreach ($projetsActifs as $projet) {
                             <div class="content">
                             <table bgcolor="#999999">
                                 <tr>
-                                    <td><img src="Eureka/images/eureka-light.png" /></td>
+                                    <td><img src="https://espace-eureka.ch/images/eureka-light.png" /></td>
                                 </tr>
                             </table>
                             </div>

@@ -94,7 +94,7 @@ $listeMotCles = $appliBD->getListeMotCles();
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <li class="dropdown simple-dropdown"><a href="page-login.php">Connexion</a><i
@@ -181,17 +181,17 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <input type="text" name="urlSite" id="url" placeholder="Site Web" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input" required>
+                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="Secteur d'Activité *" class="big-input" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input" required>
+                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input" required>
+                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">

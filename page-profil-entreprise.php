@@ -96,7 +96,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
@@ -242,10 +242,9 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                             <div class="overlay-content text-center">
                                                 <div class="display-table height-100 width-100">
                                                     <div class="vertical-align-middle display-table-cell icon-social-small">
-                                                        <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                        <a href="http://www.twitter.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                        <a href="http://www.plus.google.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                                        <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
+                                                        <a href="'.$entreprise->getFacebook().'" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                        <a href="'.$entreprise->getLinkedin().'" class="text-white text-white-hover" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                                        <a href="'.$entreprise->getInstagram().'" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -253,7 +252,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                         </div>
                                         <figcaption>
                                             <div class="team-member-position margin-20px-top text-center">
-                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">'.$value->getTitre().'</div>
+                                                <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase"><a href="page-projet.php?id='.$value->getId().'">'.$value->getTitre().'</a></div>
                                                 <div class="text-extra-small text-uppercase text-medium-gray">Creative Director</div>
                                             </div>
                                         </figcaption>

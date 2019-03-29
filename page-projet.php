@@ -86,7 +86,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
@@ -113,11 +113,8 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
                         <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
-                            <!-- start sub title -->
-                            <span class="text-white opacity6 alt-font margin-10px-bottom display-block text-uppercase text-small">25 April 2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by <a href="blog-masonry.html" class="text-white">Jay Benjamin</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="blog-masonry.html" class="text-white">Design</a>, <a href="blog-masonry.html" class="text-white">Branding</a></span>
-                            <!-- end sub title -->
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 margin-10px-bottom">"Projet bien enregistré"</h1>
+                            <h1 class="text-white alt-font font-weight-600 margin-10px-bottom"><?php echo $projets->getTitre();?></h1>
                             <!-- end page title -->
                         </div>
                     </div>
@@ -143,7 +140,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                                     <img src="http://placehold.it/149x149" class="img-circle width-100px" alt="" />
                                 </div>
                                 <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
-                                    <a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">Alexander Harvard</a>
+                                    <p class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><?php echo $idEntrepriseByEmail->getContactPrenom1()." ".$idEntrepriseByEmail->getContactNom1();?></p>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
                                     <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
                                 </div>
@@ -173,7 +170,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                             <?php
                                 foreach ($motsClesprojet as $tagsprojet) {
                                 echo'
-                                    <a href="#">'.$tagsprojet->nom.'</a>
+                                    <a>'.$tagsprojet->nom.'</a>
                                 ';}?>
                             </ul>
                         </div>
@@ -210,7 +207,7 @@ $ListeEtudiantByProjet = $appliBD->getListeEtudiantByProjet(($_GET["id"]));
                         <!-- start logo -->
                         <div class="col-md-4 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <a href="index.php"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"></a>
+                                <a href="index.php"><img class="footer-logo" src="images/eureka-light.png" data-rjs="images/eureka-light@2x.png" alt="Eureka"></a>
                             </div>
                         </div>
                         <!-- end logo -->

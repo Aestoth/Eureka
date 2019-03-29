@@ -11,11 +11,11 @@ class Connexion {
     private $connexion;
 
     public function __construct() {
-        $PARAM_hote= 'localhost';
-        $PARAM_port='3306';
-        $PARAM_nom_bd='ProjetEureka';
-        $PARAM_utilisateur='projetEurekaAdmin';
-        $PARAM_mot_passe='Eurek@';
+      $PARAM_hote= 'lg3hp.myd.sharedbox.com';
+      $PARAM_port='3306';
+      $PARAM_nom_bd='lg3hp_3u3ka';
+      $PARAM_utilisateur='lg3hp_3u3ka';
+      $PARAM_mot_passe='3u3ka5698*';
 
         try{
             $this->connexion = new PDO(

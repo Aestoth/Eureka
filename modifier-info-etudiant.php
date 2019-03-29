@@ -89,7 +89,7 @@ $listeMotClesEtudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                                     data-in="fadeIn" data-out="fadeOut">
                                     <!-- start menu item -->
                                     <li class="dropdown megamenu-fw">
-                                        <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                        <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                             data-toggle="dropdown" aria-hidden="true"></i>
                                     </li>
 
