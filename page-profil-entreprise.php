@@ -96,7 +96,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
@@ -167,7 +167,7 @@ $listeProjetEntreprise = $appliBD->getListeProjetEntreprise($idEntreprise);
                       </div>
 
                       </div>
-                      <div class="text-center">                
+                      <div class="text-center">
                          <a title="Titre du lien" href="changer-info-entreprise.php">
                           <button type="button" class="btn btn-danger" style="margin-bottom: 25px;">Modifier Informations Générales</button>
                         </a>

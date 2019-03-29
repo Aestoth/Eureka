@@ -94,7 +94,7 @@ $idEntreprise = $entreprise->getId();
                                 data-in="fadeIn" data-out="fadeOut">
                                 <!-- start menu item -->
                                 <li class="dropdown megamenu-fw">
-                                    <a href="home-classic-digital-agency.html">Home</a><i class="fas fa-angle-down dropdown-toggle"
+                                    <a href="index.php">Home</a><i class="fas fa-angle-down dropdown-toggle"
                                         data-toggle="dropdown" aria-hidden="true"></i>
                                 </li>
                                 <?php
@@ -167,7 +167,7 @@ $idEntreprise = $entreprise->getId();
                       ?>
                     </div>
 
-                    <div class="col-md-12">                      
+                    <div class="col-md-12">
                       <input type="password" name="password" id="password" placeholder="Password" class="big-input">';
                     </div>
 
