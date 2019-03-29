@@ -276,7 +276,7 @@ $motsClesetudiant = $appliBD->getEtudiantListeMotCles($idEtudiant);
                             <?php
                             foreach ($motsClesetudiant as $tagsetudiant) {
                             echo'
-                                <a href="#">'.$tagsetudiant->nom.'</a>
+                                <a>'.$tagsetudiant->nom.'</a>
                             ';}?>
                             </div>
                         </div>

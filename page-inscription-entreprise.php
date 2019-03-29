@@ -181,17 +181,17 @@ $listeMotCles = $appliBD->getListeMotCles();
                         <input type="text" name="urlSite" id="url" placeholder="Site Web" class="big-input" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input" required>
+                        <input type="text" name="facebook" id="facebook" placeholder="Facebook *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="text" name="secteurAtivite" id="secteurAtivite" placeholder="Secteur d'Activité *" class="big-input" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input" required>
+                        <input type="text" name="instagram" id="instagram" placeholder="Instagram *" class="big-input">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input" required>
+                        <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin *" class="big-input">
                     </div>
                     <div class="col-md-6">
                         <input type="file" name="logo" id="logo" placeholder=" *" class="big-input">

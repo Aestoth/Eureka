@@ -1,8 +1,8 @@
 
 CREATE DATABASE ProjetEureka;
 
-CREATE USER 'projetEurekaAdmin'@'localhost' IDENTIFIED BY 'Eurek@';
- GRANT ALL PRIVILEGES ON ProjetEureka.* TO 'projetEurekaAdmin'@'localhost';
+CREATE USER 'projetEurekaAdmin'@'lg3hp.myd.sharedbox.com' IDENTIFIED BY 'Eurek@';
+ GRANT ALL PRIVILEGES ON ProjetEureka.* TO 'projetEurekaAdmin'@'lg3hp.myd.sharedbox.com';
 
 
  CREATE TABLE Utilisateur (
